@@ -1,0 +1,213 @@
+@use "atomic/positioning";
+@use "atomic/coordinates";
+@use "atomic/border-radius";
+@use "atomic/spacing";
+@use "atomic/sizes";
+@use "utils/variables";
+
+@import "utils/sizes";
+
+:root {
+  @each $key, $value in $sizes {
+    --spacing-#{$key}: #{$value};
+  }
+
+  @include variables.dark-theme;
+
+  .light-theme {
+    @include variables.light-theme;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+main {
+  height: 100%;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 969px;
+  padding: var(--spacing-s);
+
+  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  line-height: 1.4;
+
+  color: var(--text-color);
+  background: var(--bg-color);
+}
+
+.shrink {
+  flex: 2 2;
+}
+
+hstack {
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+  flex-direction: row;
+}
+
+hstack[shrink] > * {
+  flex: 2 2;
+}
+
+hstack[spacing="xl"] > * {
+  margin-right: var(--spacing-xl);
+}
+
+hstack[spacing="l"] > * {
+  margin-right: var(--spacing-l);
+}
+
+hstack[spacing="m"] > * {
+  margin-right: var(--spacing-m);
+}
+
+hstack[spacing="s"] > * {
+  margin-right: var(--spacing-s);
+}
+
+hstack[spacing="xs"] > * {
+  margin-right: var(--spacing-xs);
+}
+
+hstack[spacing="2xs"] > * {
+  margin-right: var(--spacing-2xs);
+}
+
+hstack[spacing] > :last-child {
+  margin-right: 0;
+}
+
+hstack[align-y="top"] {
+  align-items: flex-start;
+}
+
+hstack[align-y="center"] {
+  align-items: center;
+}
+
+hstack[align-y="bottom"] {
+  align-items: flex-end;
+}
+
+hstack[align-x="left"] {
+  justify-content: flex-start;
+}
+
+hstack[align-x="center"] {
+  justify-content: center;
+}
+
+hstack[align-x="right"] {
+  justify-content: flex-end;
+}
+
+vstack {
+  display: flex;
+  align-self: stretch;
+  flex-direction: column;
+}
+
+vstack[spacing="xl"] > * {
+  margin-bottom: var(--spacing-xl);
+}
+
+vstack[spacing="l"] > * {
+  margin-bottom: var(--spacing-l);
+}
+
+vstack[spacing="m"] > * {
+  margin-bottom: var(--spacing-m);
+}
+
+vstack[spacing="s"] > * {
+  margin-bottom: var(--spacing-s);
+}
+
+vstack[spacing="xs"] > * {
+  margin-bottom: var(--spacing-xs);
+}
+
+vstack[spacing="2xs"] > * {
+  margin-bottom: var(--spacing-2xs);
+}
+
+vstack[spacing] > :last-child {
+  margin-bottom: 0;
+}
+
+vstack[align-x="left"] {
+  align-items: flex-start;
+}
+
+vstack[align-x="center"] {
+  align-items: center;
+}
+
+vstack[align-x="right"] {
+  align-items: flex-end;
+}
+
+vstack[align-y="top"] {
+  justify-content: flex-start;
+}
+
+vstack[align-y="center"] {
+  justify-content: center;
+}
+
+vstack[align-y="bottom"] {
+  justify-content: flex-end;
+}
+
+button.active {
+  background: var(--main-color);
+  color: var(--bg-color);
+}
+
+button:hover,
+.button:hover {
+  color: var(--bg-color);
+  background: var(--text-color);
+  outline: none;
+}
+
+button,
+.button {
+  color: var(--text-color);
+  cursor: pointer;
+  transition:
+    background 0.125s,
+    color 0.125s,
+    opacity 0.125s;
+  padding: 0.5em;
+  border-radius: var(--spacing-2xs);
+  background: var(--sub-alt-color);
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  align-content: center;
+  height: -moz-min-content;
+  height: min-content;
+  line-height: 1.25;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1em;
+  display: inline-flex;
+  gap: 0.5em;
+  align-items: baseline;
+  justify-content: center;
+}

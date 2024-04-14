@@ -1,0 +1,74 @@
+/*
+  SPACING
+ */
+
+@import "../utils/sizes";
+
+$ext-size: (
+  0: 0,
+  auto: auto
+);
+
+$all-sizes: map-merge($sizes, $ext-size);
+
+@each $key, $value in $all-sizes {
+  .pa-#{$key} {
+    padding: #{$value};
+  }
+
+  .pl-#{$key} {
+    padding-left: #{$value};
+  }
+
+  .pr-#{$key} {
+    padding-right: #{$value};
+  }
+
+  .pb-#{$key} {
+    padding-bottom: #{$value};
+  }
+
+  .pt-#{$key} {
+    padding-top: #{$value};
+  }
+
+  .py-#{$key} {
+    padding-top: #{$value};
+    padding-bottom: #{$value};
+  }
+
+  .px-#{$key} {
+    padding-left: #{$value};
+    padding-right: #{$value};
+  }
+
+  .ma-#{$key} {
+    margin: #{$value};
+  }
+
+  .ml-#{$key} {
+    margin-left: #{$value};
+  }
+
+  .mr-#{$key} {
+    margin-right: #{$value};
+  }
+
+  .mb-#{$key} {
+    margin-bottom: #{$value};
+  }
+
+  .mt-#{$key} {
+    margin-top: #{$value};
+  }
+
+  .my-#{$key} {
+    margin-top: #{$value};
+    margin-bottom: #{$value};
+  }
+
+  .mx-#{$key} {
+    margin-left: #{$value};
+    margin-right: #{$value};
+  }
+}

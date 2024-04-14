@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InitCSS Example</title>
+  <link rel="stylesheet" href="../css/init.css">
+</head>
+
+<body>
+  <hstack align-x="right" class="mb-m">
+    <button id="theme-button" class="py-2xs px-xs br-2xs" onclick="toggleTheme()">
+      <svg class="w-s" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z">
+        </path>
+      </svg>
+    </button>
+  </hstack>
+
+  <hstack spacing="m" align-x="center">
+    <button class="br-xs">button xs</button>
+    <button class="br-2xs">button 2xs</button>
+    <button class="br-3xs">button 3xs</button>
+    <button class="br-s">button s</button>
+    <button class="active br-0">active 0</button>
+  </hstack>
+
+  <hstack spacing="m" align-x="center" class="mt-xs">
+    <button class="br-100">radius 100</button>
+    <button class="br-pill">radius pill</button>
+    <button class="br-top br-xs">radius top</button>
+    <button class="br-bottom br-xs">radius bottom</button>
+    <button class="br-right br-xs">radius right</button>
+    <button class="br-left br-xs">radius left</button>
+  </hstack>
+
+
+  <h1>H1 tag</h1>
+  <h2>H2 tag</h2>
+  <h3>H3 tag</h3>
+  <p>P tag</p>
+
+</body>
+
+<script>
+  function toggleTheme() {
+    document.body.classList.toggle("light-theme");
+  }
+</script>
+
+</html>

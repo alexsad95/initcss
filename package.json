@@ -1,0 +1,36 @@
+{
+  "name": "@alexsad95/initcss",
+  "version": "0.1.0",
+  "description": "Minimal CSS Framework",
+  "author": "alexsad95",
+  "main": "css/init.min.css",
+  "homepage": "https://github.com/alexsad95/initcss",
+  "scripts": {
+    "dev": "sass --watch scss/init.scss:css/init.css --no-source-map --no-error-css",
+    "build": "sass scss/init.scss:css/init.min.css --style=compressed --no-source-map --no-error-css"
+  },
+  "devDependencies": {
+    "sass": "^1.75.0"
+  },
+  "keywords": [
+    "css",
+    "css-framework",
+    "dark-mode",
+    "dark-theme",
+    "lightweight",
+    "minimal",
+    "minimalist",
+    "minimalistic",
+    "native-html",
+    "scss-framework",
+    "semantic"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexsad95/initcss.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alexsad95/initcss/issues"
+  },
+  "license": "MIT"
+}

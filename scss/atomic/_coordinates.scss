@@ -1,0 +1,62 @@
+/*
+  COORDINATES
+ */
+
+.top-0 {
+  top: 0;
+}
+.right-0 {
+  right: 0;
+}
+.bottom-0 {
+  bottom: 0;
+}
+.left-0 {
+  left: 0;
+}
+
+.top-s {
+  top: var(--spacing-s);
+}
+.right-s {
+  right: var(--spacing-s);
+}
+.bottom-s {
+  bottom: var(--spacing-s);
+}
+.left-s {
+  left: var(--spacing-s);
+}
+
+.top-m {
+  top: var(--spacing-m);
+}
+.right-m {
+  right: var(--spacing-m);
+}
+.bottom-m {
+  bottom: var(--spacing-m);
+}
+.left-m {
+  left: var(--spacing-m);
+}
+
+.top-l {
+  top: var(--spacing-l);
+}
+.right-l {
+  right: var(--spacing-l);
+}
+.bottom-l {
+  bottom: var(--spacing-l);
+}
+.left-l {
+  left: var(--spacing-l);
+}
+
+.fill {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}

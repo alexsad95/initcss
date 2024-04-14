@@ -1,0 +1,35 @@
+/*
+  WIDTHS, HEIGHTS
+ */
+
+@import "../utils/sizes";
+
+$all-sizes: map-merge($sizes, $sizes-2);
+
+@each $key, $value in $all-sizes {
+  .w-#{$key} {
+    width: var(--spacing-#{$key});
+  }
+
+  .max-w-#{$key} {
+    max-width: var(--spacing-#{$key});
+  }
+
+  .min-w-#{$key} {
+    min-width: var(--spacing-#{$key});
+  }
+}
+
+@each $key, $value in $all-sizes {
+  .h-#{$key} {
+    height: var(--spacing-#{$key});
+  }
+
+  .max-h-#{$key} {
+    max-height: var(--spacing-#{$key});
+  }
+
+  .min-h-#{$key} {
+    min-height: var(--spacing-#{$key});
+  }
+}
