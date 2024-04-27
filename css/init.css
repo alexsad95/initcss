@@ -2906,6 +2906,7 @@
   --spacing-2xl: 16rem;
   --spacing-3xl: 32rem;
   --spacing-4xl: 64rem;
+  --font: "Roboto Mono", "Roboto Mono", "Vazirmatn", monospace;
   --bg-color: #2f3338;
   --main-color: #d6d2bc;
   --caret-color: #d6d2bc;
@@ -2932,17 +2933,11 @@
   box-sizing: border-box;
 }
 
-html,
-body,
-main {
-  height: 100%;
-}
-
 body {
   margin: 0 auto;
   max-width: 969px;
   padding: var(--spacing-s);
-  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: var(--font);
   line-height: 1.4;
   color: var(--text-color);
   background: var(--bg-color);
@@ -3111,4 +3106,54 @@ button,
   gap: 0.5em;
   align-items: baseline;
   justify-content: center;
+}
+
+input,
+textarea {
+  outline: none;
+  border: none;
+  border-radius: var(--spacing-2xs);
+  background: var(--sub-alt-color);
+  color: var(--text-color);
+  padding: 0.5em;
+  font-size: 1em;
+  font-family: var(--font);
+  caret-color: var(--main-color);
+  line-height: 1.25em;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+  box-shadow: 0 0 0 0.1rem var(--bg-color), 0 0 0 0.2rem var(--text-color);
+}
+
+textarea {
+  resize: vertical;
+  width: 100%;
+  padding: 10px;
+  line-height: 1.2rem;
+  min-height: 3rem;
+  max-height: 16rem;
+}
+
+:autofill,
+:-webkit-autofill,
+:-webkit-autofill:hover,
+:-webkit-autofill:focus,
+:-webkit-autofill:active {
+  -webkit-text-fill-color: var(--text-color);
+  -webkit-box-shadow: 0 0 0 1000px var(--sub-alt-color) inset !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+
+/* Code for Firefox */
+::-moz-selection {
+  background: var(--text-color);
+  color: var(--sub-alt-color);
+}
+
+::selection {
+  background-color: var(--main-color);
+  color: var(--sub-alt-color);
 }

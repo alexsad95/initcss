@@ -1,3 +1,7 @@
+@mixin main {
+  --font: "Roboto Mono", "Roboto Mono", "Vazirmatn", monospace;
+}
+
 @mixin light-theme {
   --bg-color: #efead0;
   --main-color: #5f605e;
