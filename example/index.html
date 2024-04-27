@@ -53,9 +53,8 @@
 
   <hstack spacing="s">
     <a href="#">Simple link</a>
-    <a href="https://github.com/alexsad95/initcss" class="textButton" target="_blank" rel="noreferrer noopener"
-      style="align-items: center;">
-      <svg class="w-s" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+    <a href="https://github.com/alexsad95/initcss" class="text" target="_blank" rel="noreferrer noopener">
+      <svg class="w-20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
         <path
           d="M24 12L18.3431 17.6569L16.9289 16.2426L21.1716 12L16.9289 7.75736L18.3431 6.34315L24 12ZM2.82843 12L7.07107 16.2426L5.65685 17.6569L0 12L5.65685 6.34315L7.07107 7.75736L2.82843 12ZM9.78845 21H7.66009L14.2116 3H16.3399L9.78845 21Z">
         </path>
@@ -87,10 +86,21 @@
 
   <hstack spacing="s">
     <span>Type of button:</span>
-    <button>default</button>
-    <button class="danger">danger</button>
-    <button id="active-button" class="active" onclick="toggleActiveButton()">active</button>
-    <button disabled>disabled</button>
+    <vstack spacing="xs">
+      <hstack spacing="s">
+        <button>default</button>
+        <button class="danger">danger</button>
+        <button id="active-button" class="active" onclick="toggleActiveButton('active-button')">active</button>
+        <button disabled>disabled</button>
+      </hstack>
+      <hstack spacing="s">
+        <button class="outline">default</button>
+        <button class="outline danger">danger</button>
+        <button id="active-outline-button" class="outline active" onclick="toggleActiveButton('active-outline-button')">
+          active
+        </button>
+      </hstack>
+    </vstack>
   </hstack>
 
   <hstack spacing="s" class="mt-s">
@@ -135,8 +145,8 @@
     document.body.classList.toggle("light-theme");
   }
 
-  function toggleActiveButton() {
-    const activeButtonElement = document.getElementById('active-button');
+  function toggleActiveButton(elemID) {
+    const activeButtonElement = document.getElementById(elemID);
     activeButtonElement?.classList.toggle("active");
     activeButtonElement.innerText = activeButtonElement.innerText === 'active'
       ? 'not active'
