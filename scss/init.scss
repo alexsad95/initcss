@@ -245,7 +245,6 @@ textarea {
   background-clip: text !important;
 }
 
-/* for Firefox */
 ::-moz-selection {
   background: var(--text-color);
   color: var(--sub-alt-color);
@@ -274,4 +273,44 @@ blockquote > footer {
 
 blockquote cite {
   font-style: normal;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+  text-decoration: none;
+  cursor: help;
+}
+
+small {
+  font-size: x-small;
+}
+
+sub {
+  font-size: x-small;
+}
+
+sup {
+  font-size: x-small;
+}
+
+var {
+  font-size: small;
+}
+
+mark {
+  background-color: var(--highlight);
+  border-radius: var(--spacing-4px);
+  padding: var(--spacing-px);
+  color: var(--black);
+}
+
+kbd {
+  color: var(--bg-color);
+  background-color: var(--sub-color);
+  border-radius: var(--spacing-2px);
+  padding: 0.2rem 0.3rem;
+  margin: 0;
+  display: inline-block;
+  font-size: 0.7rem;
+  line-height: 0.7rem;
 }
