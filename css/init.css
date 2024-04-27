@@ -3070,46 +3070,6 @@ vstack[align-y=bottom] {
   justify-content: flex-end;
 }
 
-button.active {
-  background: var(--main-color);
-  color: var(--bg-color);
-}
-
-button:hover,
-.button:hover {
-  color: var(--bg-color);
-  background: var(--text-color);
-  outline: none;
-}
-
-button,
-.button {
-  color: var(--text-color);
-  cursor: pointer;
-  transition: background 0.125s, color 0.125s, opacity 0.125s;
-  padding: 0.5em;
-  border-radius: var(--spacing-2xs);
-  background: var(--sub-alt-color);
-  text-align: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  align-content: center;
-  height: -moz-min-content;
-  height: min-content;
-  line-height: 1.25;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  font-family: inherit;
-  font-size: 1em;
-  display: inline-flex;
-  gap: 0.5em;
-  align-items: baseline;
-  justify-content: center;
-}
-
 input,
 textarea {
   outline: none;
@@ -3217,4 +3177,272 @@ kbd {
   display: inline-block;
   font-size: 0.7rem;
   line-height: 0.7rem;
+}
+
+.textButton {
+  text-decoration: none;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+button,
+.button,
+input[type=button],
+input[type=reset],
+input[type=submit] {
+  text-align: center;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: background 0.125s, color 0.125s, opacity 0.125s;
+  padding: 0.5em;
+  border-radius: var(--spacing-xs);
+  background: var(--sub-alt-color);
+  text-align: center;
+  -webkit-user-select: none;
+  user-select: none;
+  align-content: center;
+  height: -moz-min-content;
+  height: min-content;
+  line-height: 1.25;
+  appearance: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1em;
+  display: inline-flex;
+  gap: 0.5em;
+  align-items: baseline;
+  justify-content: center;
+}
+button.danger,
+.button.danger,
+input[type=button].danger,
+input[type=reset].danger,
+input[type=submit].danger {
+  background: var(--error-color);
+  color: var(--bg-color);
+}
+button.active,
+.button.active,
+input[type=button].active,
+input[type=reset].active,
+input[type=submit].active {
+  background: var(--main-color);
+  color: var(--bg-color);
+}
+button.active:hover,
+.button.active:hover,
+input[type=button].active:hover,
+input[type=reset].active:hover,
+input[type=submit].active:hover {
+  background: var(--text-color);
+}
+button.active:active,
+.button.active:active,
+input[type=button].active:active,
+input[type=reset].active:active,
+input[type=submit].active:active {
+  background: var(--sub-color);
+  color: var(--bg-color);
+}
+button[disabled], button.disabled,
+.button[disabled],
+.button.disabled,
+input[type=button][disabled],
+input[type=button].disabled,
+input[type=reset][disabled],
+input[type=reset].disabled,
+input[type=submit][disabled],
+input[type=submit].disabled {
+  opacity: 0.33;
+  pointer-events: none;
+}
+button[disabled]:hover, button.disabled:hover,
+.button[disabled]:hover,
+.button.disabled:hover,
+input[type=button][disabled]:hover,
+input[type=button].disabled:hover,
+input[type=reset][disabled]:hover,
+input[type=reset].disabled:hover,
+input[type=submit][disabled]:hover,
+input[type=submit].disabled:hover {
+  background: var(--text-color);
+  outline: none;
+}
+button[disabled]:active, button.disabled:active,
+.button[disabled]:active,
+.button.disabled:active,
+input[type=button][disabled]:active,
+input[type=button].disabled:active,
+input[type=reset][disabled]:active,
+input[type=reset].disabled:active,
+input[type=submit][disabled]:active,
+input[type=submit].disabled:active {
+  background: var(--sub-color);
+  color: var(--bg-color);
+}
+button:hover,
+.button:hover,
+input[type=button]:hover,
+input[type=reset]:hover,
+input[type=submit]:hover {
+  color: var(--bg-color);
+  background: var(--text-color);
+  outline: none;
+}
+button:focus-visible,
+.button:focus-visible,
+input[type=button]:focus-visible,
+input[type=reset]:focus-visible,
+input[type=submit]:focus-visible {
+  box-shadow: 0 0 0 0.1rem var(--bg-color), 0 0 0 0.2rem var(--text-color);
+  outline: none;
+}
+button:active,
+.button:active,
+input[type=button]:active,
+input[type=reset]:active,
+input[type=submit]:active {
+  background: var(--sub-color);
+  color: var(--bg-color);
+}
+button[smallest],
+.button[smallest],
+input[type=button][smallest],
+input[type=reset][smallest],
+input[type=submit][smallest] {
+  padding: 0.3rem 0.5rem;
+  font-size: 0.65rem;
+}
+button[small],
+.button[small],
+input[type=button][small],
+input[type=reset][small],
+input[type=submit][small] {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.9rem;
+}
+button[large],
+.button[large],
+input[type=button][large],
+input[type=reset][large],
+input[type=submit][large] {
+  padding: 0.4rem 0.8rem;
+  font-size: 1.5rem;
+}
+button[largest],
+.button[largest],
+input[type=button][largest],
+input[type=reset][largest],
+input[type=submit][largest] {
+  padding: 0.6rem 1.2rem;
+  font-size: 1.7rem;
+}
+
+button.text,
+.button.text,
+.textButton {
+  color: var(--sub-color);
+  cursor: pointer;
+  transition: background 0.125s, color 0.125s, opacity 0.125s;
+  border-radius: var(--spacing-xs);
+  background: none;
+  text-align: center;
+  -webkit-user-select: none;
+  user-select: none;
+  align-content: center;
+  height: -moz-min-content;
+  height: min-content;
+  line-height: 1.25;
+  appearance: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1em;
+  display: inline-flex;
+  gap: 0.5em;
+  align-items: baseline;
+  justify-content: center;
+}
+button.text.danger,
+.button.text.danger,
+.textButton.danger {
+  color: var(--error-color);
+  background: none;
+}
+button.text.active,
+.button.text.active,
+.textButton.active {
+  color: var(--main-color);
+  background: none;
+}
+button.text.active:hover,
+.button.text.active:hover,
+.textButton.active:hover {
+  color: var(--text-color);
+  background: none;
+}
+button.text.active:active,
+.button.text.active:active,
+.textButton.active:active {
+  color: var(--sub-color);
+  background: none;
+}
+button.text[disabled]:hover, button.text.disabled:hover,
+.button.text[disabled]:hover,
+.button.text.disabled:hover,
+.textButton[disabled]:hover,
+.textButton.disabled:hover {
+  color: var(--text-color);
+  outline: none;
+}
+button.text[disabled]:active, button.text.disabled:active,
+.button.text[disabled]:active,
+.button.text.disabled:active,
+.textButton[disabled]:active,
+.textButton.disabled:active {
+  background: var(--sub-color);
+  color: var(--bg-color);
+}
+button.text:hover,
+.button.text:hover,
+.textButton:hover {
+  color: var(--text-color);
+  background: none;
+  outline: none;
+}
+button.text:focus-visible,
+.button.text:focus-visible,
+.textButton:focus-visible {
+  box-shadow: 0 0 0 0.1rem var(--text-color);
+  outline: none;
+}
+button.text:active,
+.button.text:active,
+.textButton:active {
+  color: var(--sub-color);
+  background: none;
+}
+
+a {
+  display: inline-block;
+  color: var(--sub-color);
+  transition: color 0.125s, opacity 0.125s, background 0.125s;
+}
+a:hover {
+  color: var(--text-color);
+}
+a:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 0.1rem var(--bg-color), 0 0 0 0.2rem var(--text-color);
+  border-radius: calc(var(--spacing-xs) / 2);
+}
+
+a.button,
+a.textButton {
+  text-decoration: none;
+}
+
+a.textButton:focus-visible,
+a.text:focus-visible,
+a.button:focus-visible {
+  border-radius: var(--spacing-xs);
 }

@@ -49,6 +49,21 @@
     Text <sup>Sup</sup>
   </p>
 
+  <h1>Link</h1>
+
+  <hstack spacing="s">
+    <a href="#">Simple link</a>
+    <a href="https://github.com/alexsad95/initcss" class="textButton" target="_blank" rel="noreferrer noopener"
+      style="align-items: center;">
+      <svg class="w-s" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M24 12L18.3431 17.6569L16.9289 16.2426L21.1716 12L16.9289 7.75736L18.3431 6.34315L24 12ZM2.82843 12L7.07107 16.2426L5.65685 17.6569L0 12L5.65685 6.34315L7.07107 7.75736L2.82843 12ZM9.78845 21H7.66009L14.2116 3H16.3399L9.78845 21Z">
+        </path>
+      </svg>
+      github
+    </a>
+  </hstack>
+
   <h1>Forms</h1>
 
   <vstack spacing="s" class="mt-s">
@@ -70,40 +85,62 @@
 
   <h1>Buttons</h1>
 
-  <hstack spacing="m" align-x="center">
+  <hstack spacing="s">
+    <span>Type of button:</span>
+    <button>default</button>
+    <button class="danger">danger</button>
+    <button id="active-button" class="active" onclick="toggleActiveButton()">active</button>
+    <button disabled>disabled</button>
+  </hstack>
+
+  <hstack spacing="s" class="mt-s">
+    <span>Rounded button:</span>
+    <button class="br-0">button 0</button>
     <button class="br-xs">button xs</button>
     <button class="br-2xs">button 2xs</button>
     <button class="br-3xs">button 3xs</button>
-    <button class="active br-0">active 0</button>
+  </hstack>
+
+  <hstack spacing="s" class="mt-s">
+    <span>Button size:</span>
+    <button smallest>smallest</button>
+    <button small>small</button>
+    <button>default</button>
+    <button large>large</button>
+    <button largest>largest</button>
   </hstack>
 
   <h1>H1 tag</h1>
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
     malesuada eget vitae augue. Cras fermentum imperdiet lorem. Quisque eu mauris laoreet, molestie augue
-    at, gravida dui. Praesent velegestas enim. Etiam et malesuada nunc. Fusce varius lobortis nisl eu maximus. Ut a
-    erat augue. Curabitur eu pulvinar ipsum. Morbi suscipit enim vitae lectus suscipit, a feugiat diam tristique.
-    Morbi nec leo eu ex laoreet luctus.
+    at, gravida dui.
   </p>
   <h2>H2 tag</h2>
   <p>
-    Vivamus fringilla magna lectus, bibendum pretium neque mattis lobortis. Donec congue dignissim turpis ut cursus.
-    Maecenas sapien augue, efficitur sagittis nisi lobortis, pellentesque placerat lectus. Mauris efficitur faucibus
-    fringilla. Pellentesque vitae tortor urna. Quisque eu venenatis mauris. Vestibulum ac nulla eu urna placerat
-    venenatis vel eu nisi. Curabitur in laoreet lorem. Nulla dapibus tellus ac interdum lacinia. Morbi semper augue
-    dui, ut pellentesque mauris fermentum vitae
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
+    malesuada eget vitae augue. Cras fermentum imperdiet lorem. Quisque eu mauris laoreet, molestie augue
+    at, gravida dui.
   </p>
   <h3>H3 tag</h3>
   <p>
-    Fusce hendrerit odio vel blandit gravida. Phasellus lacus est, aliquet at felis sed, mollis euismod lacus.
-    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec sit amet
-    convallis arcu. Quisque efficitur leo eu suscipit vulputate
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
+    malesuada eget vitae augue. Cras fermentum imperdiet lorem. Quisque eu mauris laoreet, molestie augue
+    at, gravida dui.
   </p>
 </body>
 
 <script>
   function toggleTheme() {
     document.body.classList.toggle("light-theme");
+  }
+
+  function toggleActiveButton() {
+    const activeButtonElement = document.getElementById('active-button');
+    activeButtonElement?.classList.toggle("active");
+    activeButtonElement.innerText = activeButtonElement.innerText === 'active'
+      ? 'not active'
+      : 'active';
   }
 </script>
 
