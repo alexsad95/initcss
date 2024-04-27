@@ -245,7 +245,7 @@ textarea {
   background-clip: text !important;
 }
 
-/* Code for Firefox */
+/* for Firefox */
 ::-moz-selection {
   background: var(--text-color);
   color: var(--sub-alt-color);
@@ -254,4 +254,24 @@ textarea {
 ::selection {
   background-color: var(--main-color);
   color: var(--sub-alt-color);
+}
+
+blockquote {
+  border-left: 4px solid var(--main-color);
+  margin: 1.5rem 0rem;
+  padding: 0.5rem 1rem;
+  font-style: italic;
+}
+
+blockquote > footer {
+  margin-left: var(--spacing-xs);
+  margin-top: var(--spacing-xs);
+  font-style: normal;
+  font-size: 0.8rem;
+  color: var(--main-color);
+  border: 0;
+}
+
+blockquote cite {
+  font-style: normal;
 }
