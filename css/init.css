@@ -2915,6 +2915,10 @@
   --sub-alt-color: #3a3c3d;
   --sub-color: #8f8e84;
   --text-color: #d6d2bc;
+  --success-color: #05aa6d;
+  --success-extra-color: #028f5b;
+  --info-color: #2196f3;
+  --info-extra-color: #0d75ca;
   --error-color: #ff4a59;
   --error-extra-color: #c43c53;
 }
@@ -2925,6 +2929,10 @@
   --sub-color: #8f8e84;
   --sub-alt-color: #dbd6c4;
   --text-color: #333538;
+  --success-color: #05aa6d;
+  --success-extra-color: #028f5b;
+  --info-color: #2196f3;
+  --info-extra-color: #0d75ca;
   --error-color: #c43c53;
   --error-extra-color: #a52632;
 }
@@ -3222,6 +3230,42 @@ input[type=submit].outline {
   background: var(--bg-color);
   color: var(--text-color);
 }
+button.outline.success,
+.button.outline.success,
+input[type=button].outline.success,
+input[type=reset].outline.success,
+input[type=submit].outline.success {
+  border: 2px solid var(--success-color);
+  background: var(--bg-color);
+  color: var(--success-color);
+}
+button.outline.success:hover,
+.button.outline.success:hover,
+input[type=button].outline.success:hover,
+input[type=reset].outline.success:hover,
+input[type=submit].outline.success:hover {
+  color: var(--bg-color);
+  background: var(--success-color);
+  border: 2px solid var(--success-color);
+}
+button.outline.info,
+.button.outline.info,
+input[type=button].outline.info,
+input[type=reset].outline.info,
+input[type=submit].outline.info {
+  border: 2px solid var(--info-color);
+  background: var(--bg-color);
+  color: var(--info-color);
+}
+button.outline.info:hover,
+.button.outline.info:hover,
+input[type=button].outline.info:hover,
+input[type=reset].outline.info:hover,
+input[type=submit].outline.info:hover {
+  color: var(--bg-color);
+  background: var(--info-color);
+  border: 2px solid var(--info-color);
+}
 button.outline.danger,
 .button.outline.danger,
 input[type=button].outline.danger,
@@ -3237,8 +3281,54 @@ input[type=button].outline.danger:hover,
 input[type=reset].outline.danger:hover,
 input[type=submit].outline.danger:hover {
   color: var(--bg-color);
-  background: var(--text-color);
-  border: 2px solid var(--text-color);
+  background: var(--error-color);
+  border: 2px solid var(--error-color);
+}
+button.success,
+.button.success,
+input[type=button].success,
+input[type=reset].success,
+input[type=submit].success {
+  background: var(--success-color);
+  color: var(--bg-color);
+}
+button.success:hover,
+.button.success:hover,
+input[type=button].success:hover,
+input[type=reset].success:hover,
+input[type=submit].success:hover {
+  background: var(--success-extra-color);
+}
+button.success:active,
+.button.success:active,
+input[type=button].success:active,
+input[type=reset].success:active,
+input[type=submit].success:active {
+  background: var(--success-extra-color);
+  opacity: 0.8;
+}
+button.info,
+.button.info,
+input[type=button].info,
+input[type=reset].info,
+input[type=submit].info {
+  background: var(--info-color);
+  color: var(--bg-color);
+}
+button.info:hover,
+.button.info:hover,
+input[type=button].info:hover,
+input[type=reset].info:hover,
+input[type=submit].info:hover {
+  background: var(--info-extra-color);
+}
+button.info:active,
+.button.info:active,
+input[type=button].info:active,
+input[type=reset].info:active,
+input[type=submit].info:active {
+  background: var(--info-extra-color);
+  opacity: 0.8;
 }
 button.danger,
 .button.danger,
@@ -3247,6 +3337,21 @@ input[type=reset].danger,
 input[type=submit].danger {
   background: var(--error-color);
   color: var(--bg-color);
+}
+button.danger:hover,
+.button.danger:hover,
+input[type=button].danger:hover,
+input[type=reset].danger:hover,
+input[type=submit].danger:hover {
+  background: var(--error-extra-color);
+}
+button.danger:active,
+.button.danger:active,
+input[type=button].danger:active,
+input[type=reset].danger:active,
+input[type=submit].danger:active {
+  background: var(--error-extra-color);
+  opacity: 0.8;
 }
 button.active,
 .button.active,
