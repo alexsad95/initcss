@@ -7,6 +7,8 @@
 
 @import "utils/sizes";
 
+@import "_layout";
+
 :root {
   @each $key, $value in $sizes {
     --spacing-#{$key}: #{$value};
@@ -38,127 +40,6 @@ body {
 
 .shrink {
   flex: 2 2;
-}
-
-hstack {
-  display: flex;
-  align-self: stretch;
-  align-items: center;
-  flex-direction: row;
-}
-
-hstack[shrink] > * {
-  flex: 2 2;
-}
-
-hstack[spacing="xl"] > * {
-  margin-right: var(--spacing-xl);
-}
-
-hstack[spacing="l"] > * {
-  margin-right: var(--spacing-l);
-}
-
-hstack[spacing="m"] > * {
-  margin-right: var(--spacing-m);
-}
-
-hstack[spacing="s"] > * {
-  margin-right: var(--spacing-s);
-}
-
-hstack[spacing="xs"] > * {
-  margin-right: var(--spacing-xs);
-}
-
-hstack[spacing="2xs"] > * {
-  margin-right: var(--spacing-2xs);
-}
-
-hstack[spacing] > :last-child {
-  margin-right: 0;
-}
-
-hstack[align-y="top"] {
-  align-items: flex-start;
-}
-
-hstack[align-y="center"] {
-  align-items: center;
-}
-
-hstack[align-y="bottom"] {
-  align-items: flex-end;
-}
-
-hstack[align-x="left"] {
-  justify-content: flex-start;
-}
-
-hstack[align-x="center"] {
-  justify-content: center;
-}
-
-hstack[align-x="right"] {
-  justify-content: flex-end;
-}
-
-vstack {
-  display: flex;
-  align-self: stretch;
-  flex-direction: column;
-}
-
-vstack[spacing="xl"] > * {
-  margin-bottom: var(--spacing-xl);
-}
-
-vstack[spacing="l"] > * {
-  margin-bottom: var(--spacing-l);
-}
-
-vstack[spacing="m"] > * {
-  margin-bottom: var(--spacing-m);
-}
-
-vstack[spacing="s"] > * {
-  margin-bottom: var(--spacing-s);
-}
-
-vstack[spacing="xs"] > * {
-  margin-bottom: var(--spacing-xs);
-}
-
-vstack[spacing="2xs"] > * {
-  margin-bottom: var(--spacing-2xs);
-}
-
-vstack[spacing] > :last-child {
-  margin-bottom: 0;
-}
-
-vstack[align-x="left"] {
-  align-items: flex-start;
-}
-
-vstack[align-x="center"] {
-  align-items: center;
-}
-
-vstack[align-x="right"] {
-  align-items: flex-end;
-}
-
-vstack[align-y="top"] {
-  justify-content: flex-start;
-}
-
-vstack[align-y="center"] {
-  justify-content: center;
-}
-
-vstack[align-y="bottom"] {
-  justify-content: flex-end;
 }
 
 input,
@@ -278,6 +159,32 @@ kbd {
   line-height: 1rem;
 }
 
+@mixin outline-property-basis($type-of-var) {
+  border: 2px solid var(--#{$type-of-var}-color);
+  background: var(--bg-color);
+  color: var(--#{$type-of-var}-color);
+}
+
+@mixin button-style($type-of-button) {
+  $button-class: $type-of-button;
+
+  @if ($type-of-button == "error") {
+    $button-class: "danger";
+  }
+
+  &.#{$button-class} {
+    background: var(--#{$type-of-button}-color);
+    color: var(--bg-color);
+    &:hover {
+      background: var(--#{$type-of-button}-extra-color);
+    }
+    &:active {
+      background: var(--#{$type-of-button}-extra-color);
+      opacity: 0.8;
+    }
+  }
+}
+
 button,
 .button,
 input[type="button"],
@@ -310,77 +217,40 @@ input[type="submit"] {
   justify-content: center;
 
   &.outline {
-    border: 2px solid var(--text-color);
-    background: var(--bg-color);
-    color: var(--text-color);
+    @include outline-property-basis(text);
 
     &.success {
-      border: 2px solid var(--success-color);
-      background: var(--bg-color);
-      color: var(--success-color);
+      @include outline-property-basis(success);
+
       &:hover {
-        color: var(--bg-color);
-        background: var(--success-color);
         border: 2px solid var(--success-color);
+        background: var(--success-color);
+        color: var(--bg-color);
       }
     }
     &.info {
-      border: 2px solid var(--info-color);
-      background: var(--bg-color);
-      color: var(--info-color);
+      @include outline-property-basis(info);
+
       &:hover {
-        color: var(--bg-color);
-        background: var(--info-color);
         border: 2px solid var(--info-color);
+        background: var(--info-color);
+        color: var(--bg-color);
       }
     }
     &.danger {
-      border: 2px solid var(--error-color);
-      background: var(--bg-color);
-      color: var(--error-color);
+      @include outline-property-basis(error);
+
       &:hover {
-        color: var(--bg-color);
-        background: var(--error-color);
         border: 2px solid var(--error-color);
+        background: var(--error-color);
+        color: var(--bg-color);
       }
     }
   }
 
-  &.success {
-    background: var(--success-color);
-    color: var(--bg-color);
-    &:hover {
-      background: var(--success-extra-color);
-    }
-    &:active {
-      background: var(--success-extra-color);
-      opacity: 0.8;
-    }
-  }
-
-  &.info {
-    background: var(--info-color);
-    color: var(--bg-color);
-    &:hover {
-      background: var(--info-extra-color);
-    }
-    &:active {
-      background: var(--info-extra-color);
-      opacity: 0.8;
-    }
-  }
-
-  &.danger {
-    background: var(--error-color);
-    color: var(--bg-color);
-    &:hover {
-      background: var(--error-extra-color);
-    }
-    &:active {
-      background: var(--error-extra-color);
-      opacity: 0.8;
-    }
-  }
+  @include button-style(success);
+  @include button-style(info);
+  @include button-style(error);
 
   &.active {
     background: var(--main-color);

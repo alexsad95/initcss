@@ -1,0 +1,120 @@
+hstack {
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+  flex-direction: row;
+}
+
+hstack[shrink] > * {
+  flex: 2 2;
+}
+
+hstack[spacing="xl"] > * {
+  margin-right: var(--spacing-xl);
+}
+
+hstack[spacing="l"] > * {
+  margin-right: var(--spacing-l);
+}
+
+hstack[spacing="m"] > * {
+  margin-right: var(--spacing-m);
+}
+
+hstack[spacing="s"] > * {
+  margin-right: var(--spacing-s);
+}
+
+hstack[spacing="xs"] > * {
+  margin-right: var(--spacing-xs);
+}
+
+hstack[spacing="2xs"] > * {
+  margin-right: var(--spacing-2xs);
+}
+
+hstack[spacing] > :last-child {
+  margin-right: 0;
+}
+
+hstack[align-y="top"] {
+  align-items: flex-start;
+}
+
+hstack[align-y="center"] {
+  align-items: center;
+}
+
+hstack[align-y="bottom"] {
+  align-items: flex-end;
+}
+
+hstack[align-x="left"] {
+  justify-content: flex-start;
+}
+
+hstack[align-x="center"] {
+  justify-content: center;
+}
+
+hstack[align-x="right"] {
+  justify-content: flex-end;
+}
+
+vstack {
+  display: flex;
+  align-self: stretch;
+  flex-direction: column;
+}
+
+vstack[spacing="xl"] > * {
+  margin-bottom: var(--spacing-xl);
+}
+
+vstack[spacing="l"] > * {
+  margin-bottom: var(--spacing-l);
+}
+
+vstack[spacing="m"] > * {
+  margin-bottom: var(--spacing-m);
+}
+
+vstack[spacing="s"] > * {
+  margin-bottom: var(--spacing-s);
+}
+
+vstack[spacing="xs"] > * {
+  margin-bottom: var(--spacing-xs);
+}
+
+vstack[spacing="2xs"] > * {
+  margin-bottom: var(--spacing-2xs);
+}
+
+vstack[spacing] > :last-child {
+  margin-bottom: 0;
+}
+
+vstack[align-x="left"] {
+  align-items: flex-start;
+}
+
+vstack[align-x="center"] {
+  align-items: center;
+}
+
+vstack[align-x="right"] {
+  align-items: flex-end;
+}
+
+vstack[align-y="top"] {
+  justify-content: flex-start;
+}
+
+vstack[align-y="center"] {
+  justify-content: center;
+}
+
+vstack[align-y="bottom"] {
+  justify-content: flex-end;
+}

@@ -66,17 +66,15 @@
   <h1>Forms</h1>
 
   <vstack spacing="s" class="mt-s">
-    <vstack>
+    <vstack spacing="xs">
       <label for="name">Name</label>
       <input id="name" type="text">
     </vstack>
-
-    <vstack>
+    <vstack spacing="xs">
       <label for="email">Email</label>
       <input id="email" type="email">
     </vstack>
-
-    <vstack>
+    <vstack spacing="xs">
       <label for="description">Description</label>
       <textarea id="description" name="description" rows="3"></textarea>
     </vstack>
@@ -84,7 +82,7 @@
 
   <h1>Buttons</h1>
 
-  <hstack spacing="s">
+  <hstack spacing="s" align-y="top">
     <span>Type of button:</span>
     <vstack spacing="xs">
       <hstack spacing="s">
@@ -103,6 +101,7 @@
         <button id="active-outline-button" class="outline active" onclick="toggleActiveButton('active-outline-button')">
           active
         </button>
+        <button disabled class="outline">disabled</button>
       </hstack>
     </vstack>
   </hstack>
