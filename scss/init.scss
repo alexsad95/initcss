@@ -260,6 +260,19 @@ input[type="submit"] {
     }
   }
 
+  &.link {
+    background: none;
+    color: var(--sub-color);
+
+    &:hover {
+      background: none;
+      color: var(--text-color);
+    }
+    &:active {
+      color: var(--sub-color);
+    }
+  }
+
   &.active {
     background: var(--main-color);
     color: var(--bg-color);

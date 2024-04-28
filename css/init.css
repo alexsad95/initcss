@@ -3308,6 +3308,29 @@ input[type=submit].text:active {
   opacity: 0.8;
   color: var(--text-color);
 }
+button.link,
+.button.link,
+input[type=button].link,
+input[type=reset].link,
+input[type=submit].link {
+  background: none;
+  color: var(--sub-color);
+}
+button.link:hover,
+.button.link:hover,
+input[type=button].link:hover,
+input[type=reset].link:hover,
+input[type=submit].link:hover {
+  background: none;
+  color: var(--text-color);
+}
+button.link:active,
+.button.link:active,
+input[type=button].link:active,
+input[type=reset].link:active,
+input[type=submit].link:active {
+  color: var(--sub-color);
+}
 button.active,
 .button.active,
 input[type=button].active,
