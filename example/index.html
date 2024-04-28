@@ -80,6 +80,46 @@
     </vstack>
   </vstack>
 
+  <h1>Checkboxes</h1>
+
+  <fieldset bordered>
+    <legend>Language preferences (horizontal):</legend>
+    <input type="checkbox" id="checked" checked />
+    <label for="checked">checked</label>
+    <input type="checkbox" id="indeterminate" />
+    <label for="indeterminate">indeterminate</label>
+    <input type="checkbox" id="disabled" disabled />
+    <label for="disabled" aria-disabled="true">disabled</label>
+  </fieldset>
+
+  <fieldset bordered class="mt-s">
+    <legend>Language preferences (vertical):</legend>
+    <label>
+      <input type="checkbox" name="english" checked />
+      English
+    </label>
+    <label>
+      <input type="checkbox" name="french" />
+      French
+    </label>
+    <label>
+      <input type="checkbox" name="spanish" disabled />
+      Spanish
+    </label>
+  </fieldset>
+
+  <fieldset class="mt-s">
+    <legend>Language preferences (not bordered):</legend>
+    <label>
+      <input type="checkbox" name="hindi" />
+      Hindi
+    </label>
+    <label>
+      <input type="checkbox" name="swahili" />
+      Swahili
+    </label>
+  </fieldset>
+
   <h1>Buttons</h1>
 
   <hstack spacing="s" align-y="top">
@@ -157,6 +197,9 @@
       ? 'not active'
       : 'active';
   }
+
+  const indeterminateInput = document.getElementById('indeterminate');
+  indeterminateInput.indeterminate = true;
 </script>
 
 </html>
