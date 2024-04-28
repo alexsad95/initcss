@@ -4,10 +4,9 @@
 @use "atomic/spacing";
 @use "atomic/sizes";
 @use "utils/variables";
+@use "_layout";
 
 @import "utils/sizes";
-
-@import "_layout";
 
 :root {
   @each $key, $value in $sizes {
@@ -248,9 +247,18 @@ input[type="submit"] {
     }
   }
 
-  @include button-style(success);
-  @include button-style(info);
-  @include button-style(error);
+  &.text {
+    background: var(--bg-color);
+    color: var(--text-color);
+    &:hover {
+      color: var(--text-color);
+      background: var(--sub-alt-color);
+    }
+    &:active {
+      opacity: 0.8;
+      color: var(--text-color);
+    }
+  }
 
   &.active {
     background: var(--main-color);
@@ -263,6 +271,10 @@ input[type="submit"] {
       color: var(--bg-color);
     }
   }
+
+  @include button-style(success);
+  @include button-style(info);
+  @include button-style(error);
 
   &[disabled],
   &.disabled {

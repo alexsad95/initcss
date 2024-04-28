@@ -3284,6 +3284,53 @@ input[type=submit].outline.danger:hover {
   background: var(--error-color);
   color: var(--bg-color);
 }
+button.text,
+.button.text,
+input[type=button].text,
+input[type=reset].text,
+input[type=submit].text {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+button.text:hover,
+.button.text:hover,
+input[type=button].text:hover,
+input[type=reset].text:hover,
+input[type=submit].text:hover {
+  color: var(--text-color);
+  background: var(--sub-alt-color);
+}
+button.text:active,
+.button.text:active,
+input[type=button].text:active,
+input[type=reset].text:active,
+input[type=submit].text:active {
+  opacity: 0.8;
+  color: var(--text-color);
+}
+button.active,
+.button.active,
+input[type=button].active,
+input[type=reset].active,
+input[type=submit].active {
+  background: var(--main-color);
+  color: var(--bg-color);
+}
+button.active:hover,
+.button.active:hover,
+input[type=button].active:hover,
+input[type=reset].active:hover,
+input[type=submit].active:hover {
+  background: var(--text-color);
+}
+button.active:active,
+.button.active:active,
+input[type=button].active:active,
+input[type=reset].active:active,
+input[type=submit].active:active {
+  background: var(--sub-color);
+  color: var(--bg-color);
+}
 button.success,
 .button.success,
 input[type=button].success,
@@ -3352,29 +3399,6 @@ input[type=reset].danger:active,
 input[type=submit].danger:active {
   background: var(--error-extra-color);
   opacity: 0.8;
-}
-button.active,
-.button.active,
-input[type=button].active,
-input[type=reset].active,
-input[type=submit].active {
-  background: var(--main-color);
-  color: var(--bg-color);
-}
-button.active:hover,
-.button.active:hover,
-input[type=button].active:hover,
-input[type=reset].active:hover,
-input[type=submit].active:hover {
-  background: var(--text-color);
-}
-button.active:active,
-.button.active:active,
-input[type=button].active:active,
-input[type=reset].active:active,
-input[type=submit].active:active {
-  background: var(--sub-color);
-  color: var(--bg-color);
 }
 button[disabled], button.disabled,
 .button[disabled],
