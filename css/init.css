@@ -3092,6 +3092,10 @@ textarea {
   caret-color: var(--main-color);
   line-height: 1.25em;
 }
+input:disabled,
+textarea:disabled {
+  opacity: 0.3;
+}
 
 input:focus-visible,
 textarea:focus-visible {
@@ -3205,6 +3209,22 @@ sup {
 
 var {
   font-size: small;
+}
+
+ol,
+ul,
+dl {
+  margin: 0;
+}
+
+dt {
+  font-size: large;
+  font-weight: 600;
+}
+
+dd {
+  margin-left: var(--spacing-28px);
+  margin-top: var(--spacing-10px);
 }
 
 mark {

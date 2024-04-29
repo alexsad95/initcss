@@ -79,11 +79,13 @@
 
     <vstack spacing="s" class="mt-s">
       <label for="name">Name</label>
-      <input id="name" type="text">
+      <input id="name" type="text" placeholder="Name">
       <label for="email">Email</label>
-      <input id="email" type="email">
+      <input id="email" type="email" placeholder="Email">
+      <label for="disabled">Disabled</label>
+      <input id="disabled" type="text" name="text" placeholder="Disabled" aria-label="Disabled input" disabled />
       <label for="description">Description</label>
-      <textarea id="description" name="description" rows="3"></textarea>
+      <textarea id="description" name="description" placeholder="Description" rows="3"></textarea>
     </vstack>
   </section>
 
@@ -104,6 +106,31 @@
         github
       </a>
     </hstack>
+  </section>
+
+  <!-- List Section -->
+
+  <section class="mt-l">
+    <vstack spacing="s">
+      <h1>Lists</h1>
+
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+      </ul>
+
+      <ol>
+        <li>First item</li>
+        <li>Second item</li>
+      </ol>
+
+      <dl>
+        <dt>CSS (Cascading Style Sheets)</dt>
+        <dd>Is a style sheet language used for specifying the presentation and styling of a document written in a
+          markup language such as HTML or XML.</dd>
+        <dd>CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</dd>
+      </dl>
+    </vstack>
   </section>
 
   <!-- Checkboxes Section -->
