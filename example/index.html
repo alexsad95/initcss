@@ -19,112 +19,11 @@
     </button>
   </hstack>
 
-  <h1>Blockquote</h1>
+  <section class="mt-l">
+    <h1>Buttons</h1>
 
-  <blockquote>
-    “Design is a funny word. Some people think
-    design means how it looks. But of course, if
-    you dig deeper, it's really how it works.”
-    <footer>
-      <cite>— Steve Jobs</cite>
-    </footer>
-  </blockquote>
-
-  <h1>Typography</h1>
-
-  <p>
-    <strong>strong</strong>
-    <b>b</b>
-    <em>em</em>
-    <i>italic</i>
-    <u>underline</u>
-    <s>strikethrough</s>
-    <mark>mark</mark>
-    <br>
-    <var>l x w x h</var>
-    <kbd>CMD + P</kbd>
-    <abbr title="Abbreviation">Abbr</abbr>
-    <small>Small</small>
-    Text <sub>Sub</sub>
-    Text <sup>Sup</sup>
-  </p>
-
-  <h1>Link</h1>
-
-  <hstack spacing="s">
-    <a href="#">Simple link</a>
-    <a href="https://github.com/alexsad95/initcss" class="text" target="_blank" rel="noreferrer noopener">
-      <svg class="w-20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-        <path
-          d="M24 12L18.3431 17.6569L16.9289 16.2426L21.1716 12L16.9289 7.75736L18.3431 6.34315L24 12ZM2.82843 12L7.07107 16.2426L5.65685 17.6569L0 12L5.65685 6.34315L7.07107 7.75736L2.82843 12ZM9.78845 21H7.66009L14.2116 3H16.3399L9.78845 21Z">
-        </path>
-      </svg>
-      github
-    </a>
-  </hstack>
-
-  <h1>Forms</h1>
-
-  <vstack spacing="s" class="mt-s">
-    <vstack spacing="xs">
-      <label for="name">Name</label>
-      <input id="name" type="text">
-    </vstack>
-    <vstack spacing="xs">
-      <label for="email">Email</label>
-      <input id="email" type="email">
-    </vstack>
-    <vstack spacing="xs">
-      <label for="description">Description</label>
-      <textarea id="description" name="description" rows="3"></textarea>
-    </vstack>
-  </vstack>
-
-  <h1>Checkboxes</h1>
-
-  <fieldset bordered>
-    <legend>Language preferences (horizontal):</legend>
-    <input type="checkbox" id="checked" checked />
-    <label for="checked">checked</label>
-    <input type="checkbox" id="indeterminate" />
-    <label for="indeterminate">indeterminate</label>
-    <input type="checkbox" id="disabled" disabled />
-    <label for="disabled" aria-disabled="true">disabled</label>
-  </fieldset>
-
-  <fieldset bordered class="mt-s">
-    <legend>Language preferences (vertical):</legend>
-    <label>
-      <input type="checkbox" name="english" checked />
-      English
-    </label>
-    <label>
-      <input type="checkbox" name="french" />
-      French
-    </label>
-    <label>
-      <input type="checkbox" name="spanish" disabled />
-      Spanish
-    </label>
-  </fieldset>
-
-  <fieldset class="mt-s">
-    <legend>Language preferences (not bordered):</legend>
-    <label>
-      <input type="checkbox" name="hindi" />
-      Hindi
-    </label>
-    <label>
-      <input type="checkbox" name="swahili" />
-      Swahili
-    </label>
-  </fieldset>
-
-  <h1>Buttons</h1>
-
-  <hstack spacing="s" align-y="top">
-    <span>Type of button:</span>
-    <vstack spacing="xs">
+    <hstack spacing="s" class="mt-s">
+      <span>Filled:</span>
       <hstack spacing="s">
         <button class="link">link</button>
         <button class="text">text</button>
@@ -135,6 +34,10 @@
         <button id="active-button" class="active" onclick="toggleActiveButton('active-button')">active</button>
         <button disabled>disabled</button>
       </hstack>
+    </hstack>
+
+    <hstack spacing="s" class="mt-s">
+      <span>Outlined:</span>
       <hstack spacing="s">
         <button class="outline">default</button>
         <button class="outline success">success</button>
@@ -145,61 +48,179 @@
         </button>
         <button disabled class="outline">disabled</button>
       </hstack>
+    </hstack>
+
+    <hstack spacing="s" class="mt-s">
+      <span>Rounded:</span>
+      <button class="br-0">button 0</button>
+      <button class="br-xs">button xs</button>
+      <button class="br-2xs">button 2xs</button>
+      <button class="br-3xs">button 3xs</button>
+    </hstack>
+
+    <hstack spacing="s" class="mt-s">
+      <span>Sizes:</span>
+      <button smallest>smallest</button>
+      <button small>small</button>
+      <button>default</button>
+      <button large>large</button>
+      <button largest>largest</button>
+    </hstack>
+  </section>
+
+  <section class="mt-l">
+    <h1>Forms</h1>
+
+    <vstack spacing="s" class="mt-s">
+      <vstack spacing="xs">
+        <label for="name">Name</label>
+        <input id="name" type="text">
+      </vstack>
+      <vstack spacing="xs">
+        <label for="email">Email</label>
+        <input id="email" type="email">
+      </vstack>
+      <vstack spacing="xs">
+        <label for="description">Description</label>
+        <textarea id="description" name="description" rows="3"></textarea>
+      </vstack>
     </vstack>
-  </hstack>
+  </section>
 
-  <hstack spacing="s" class="mt-s">
-    <span>Rounded button:</span>
-    <button class="br-0">button 0</button>
-    <button class="br-xs">button xs</button>
-    <button class="br-2xs">button 2xs</button>
-    <button class="br-3xs">button 3xs</button>
-  </hstack>
+  <section class="mt-l">
 
-  <hstack spacing="s" class="mt-s">
-    <span>Button size:</span>
-    <button smallest>smallest</button>
-    <button small>small</button>
-    <button>default</button>
-    <button large>large</button>
-    <button largest>largest</button>
-  </hstack>
+    <h1>Links</h1>
 
-  <h1>H1 tag</h1>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
-    malesuada eget vitae augue. Cras fermentum imperdiet lorem. Quisque eu mauris laoreet, molestie augue
-    at, gravida dui.
-  </p>
-  <h2>H2 tag</h2>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
-    malesuada eget vitae augue. Cras fermentum imperdiet lorem. Quisque eu mauris laoreet, molestie augue
-    at, gravida dui.
-  </p>
-  <h3>H3 tag</h3>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
-    malesuada eget vitae augue. Cras fermentum imperdiet lorem. Quisque eu mauris laoreet, molestie augue
-    at, gravida dui.
-  </p>
+    <hstack spacing="s" class="mt-s">
+      <a href="#">simple link</a>
+      <a href="https://github.com/alexsad95/initcss" class="text" target="_blank" rel="noreferrer noopener">
+        <svg class="w-20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M24 12L18.3431 17.6569L16.9289 16.2426L21.1716 12L16.9289 7.75736L18.3431 6.34315L24 12ZM2.82843 12L7.07107 16.2426L5.65685 17.6569L0 12L5.65685 6.34315L7.07107 7.75736L2.82843 12ZM9.78845 21H7.66009L14.2116 3H16.3399L9.78845 21Z">
+          </path>
+        </svg>
+        github
+      </a>
+    </hstack>
+  </section>
+
+  <section class="mt-l">
+    <h1>Fieldsets</h1>
+
+    <fieldset bordered class="mt-s">
+      <legend>Bordered vertical fieldset:</legend>
+      <label>
+        <input type="checkbox" name="hindi" checked />
+        check
+      </label>
+      <label>
+        <input type="checkbox" name="swahili" />
+        check 2
+      </label>
+    </fieldset>
+
+
+    <fieldset class="mt-s">
+      <legend>Not bordered horizontal fieldset:</legend>
+      <input type="checkbox" id="check" checked />
+      <label for="check">check</label>
+      <input type="checkbox" id="check-2" />
+      <label for="check-2">check 2</label>
+    </fieldset>
+  </section>
+
+  <section class="mt-l">
+    <h1>Checkboxes</h1>
+
+    <fieldset class="mt-s">
+      <legend>Language preference:</legend>
+      <input type="checkbox" id="checkbox-english" checked />
+      <label for="checkbox-english">english</label>
+      <input type="checkbox" id="checkbox-french" />
+      <label for="checkbox-french">french</label>
+      <input type="checkbox" id="checkbox-spanish" disabled />
+      <label for="checkbox-spanish" aria-disabled="true">spanish</label>
+    </fieldset>
+  </section>
+
+  <section class="mt-l">
+    <h1>Radios</h1>
+
+    <fieldset class="mt-s">
+      <legend>Language preference:</legend>
+      <input type="radio" name="language" id="radio-english" />
+      <label for="radio-english">english</label>
+      <input type="radio" name="language" id="radio-french" />
+      <label for="radio-french">french</label>
+      <input type="radio" name="language" id="radio-spanish" disabled />
+      <label for="radio-spanish">spanish</label>
+    </fieldset>
+  </section>
+
+  <section class="mt-l">
+    <h1>Blockquote</h1>
+
+    <blockquote class="mt-s">
+      “Design is a funny word. Some people think design means how it looks.
+      But of course, if you dig deeper, it's really how it works.”
+      <footer>
+        <cite>— Steve Jobs</cite>
+      </footer>
+    </blockquote>
+  </section>
+
+  <section class="mt-l">
+    <h1>Typography</h1>
+
+    <p class="mt-s">
+      <strong>strong</strong>
+      <b>b</b>
+      <em>em</em>
+      <i>italic</i>
+      <u>underline</u>
+      <s>strikethrough</s>
+      <mark>mark</mark>
+      <br>
+      <var>l x w x h</var>
+      <kbd>CMD + P</kbd>
+      <abbr title="Abbreviation">Abbr</abbr>
+      <small>Small</small>
+      Text <sub>Sub</sub>
+      Text <sup>Sup</sup>
+    </p>
+
+    <h1 class="mt-s">H1 tag</h1>
+    <h2>H2 tag</h2>
+    <h3>H3 tag</h3>
+
+    <p class="mt-s">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
+      malesuada eget vitae augue. Cras fermentum imperdiet lorem. Quisque eu mauris laoreet, molestie augue
+      at, gravida dui.
+    </p>
+  </section>
+
 </body>
 
 <script>
+  const indeterminateCheckbox = document.getElementById('checkbox-french');
+  indeterminateCheckbox.indeterminate = true;
+
   function toggleTheme() {
     document.body.classList.toggle("light-theme");
   }
 
   function toggleActiveButton(elemID) {
     const activeButtonElement = document.getElementById(elemID);
-    activeButtonElement?.classList.toggle("active");
-    activeButtonElement.innerText = activeButtonElement.innerText === 'active'
-      ? 'not active'
-      : 'active';
-  }
+    if (!activeButtonElement) {
+      return;
+    }
 
-  const indeterminateInput = document.getElementById('indeterminate');
-  indeterminateInput.indeterminate = true;
+    activeButtonElement.classList.toggle("active");
+
+    const isActive = activeButtonElement.innerText === 'active';
+    activeButtonElement.innerText = isActive ? 'not active' : 'active';
+  }
 </script>
 
 </html>
