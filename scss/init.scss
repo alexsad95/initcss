@@ -4,6 +4,7 @@
 @use "atomic/spacing";
 @use "atomic/sizes";
 @use "utils/variables";
+@use "utils/helpers";
 @use "_layout";
 
 @import "utils/sizes";
@@ -158,32 +159,6 @@ kbd {
   line-height: 1rem;
 }
 
-@mixin outline-property-basis($type-of-var) {
-  border: 2px solid var(--#{$type-of-var}-color);
-  background: var(--bg-color);
-  color: var(--#{$type-of-var}-color);
-}
-
-@mixin button-style($type-of-button) {
-  $button-class: $type-of-button;
-
-  @if ($type-of-button == "error") {
-    $button-class: "danger";
-  }
-
-  &.#{$button-class} {
-    background: var(--#{$type-of-button}-color);
-    color: var(--bg-color);
-    &:hover {
-      background: var(--#{$type-of-button}-extra-color);
-    }
-    &:active {
-      background: var(--#{$type-of-button}-extra-color);
-      opacity: 0.8;
-    }
-  }
-}
-
 button,
 .button,
 input[type="button"],
@@ -216,10 +191,10 @@ input[type="submit"] {
   justify-content: center;
 
   &.outline {
-    @include outline-property-basis(text);
+    @include helpers.outline-property-basis(text);
 
     &.success {
-      @include outline-property-basis(success);
+      @include helpers.outline-property-basis(success);
 
       &:hover {
         border: 2px solid var(--success-color);
@@ -228,7 +203,7 @@ input[type="submit"] {
       }
     }
     &.info {
-      @include outline-property-basis(info);
+      @include helpers.outline-property-basis(info);
 
       &:hover {
         border: 2px solid var(--info-color);
@@ -237,7 +212,7 @@ input[type="submit"] {
       }
     }
     &.danger {
-      @include outline-property-basis(error);
+      @include helpers.outline-property-basis(error);
 
       &:hover {
         border: 2px solid var(--error-color);
@@ -285,9 +260,9 @@ input[type="submit"] {
     }
   }
 
-  @include button-style(success);
-  @include button-style(info);
-  @include button-style(error);
+  @include helpers.button-style(success);
+  @include helpers.button-style(info);
+  @include helpers.button-style(error);
 
   &[disabled],
   &.disabled {
@@ -381,47 +356,37 @@ fieldset[bordered] {
   padding: 10px;
 }
 
+legend {
+  margin-bottom: var(--spacing-8px);
+}
+
 label {
   width: fit-content;
   display: block;
 }
 
-label:has([type="checkbox"]) {
+label:has([type="checkbox"], [type="radio"]) {
   cursor: pointer;
 }
 
-label:has([type="checkbox"]:disabled) {
+label:has([type="checkbox"]:disabled, [type="radio"]:disabled) {
   cursor: default;
   opacity: 0.3;
 }
 
-input[type="checkbox"]:indeterminate {
+input[type="checkbox"]:indeterminate,
+input[type="radio"]:indeterminate {
   opacity: 0.5;
 }
 
 input[type="checkbox"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -o-appearance: none;
-  appearance: none;
-  padding: 3px;
-  cursor: pointer;
-  vertical-align: middle;
-  background: var(--bg-color);
-  box-shadow: 0 0 0 0.11rem var(--main-color);
-  border: 4px solid var(--bg-color);
-  &:checked {
-    background: var(--main-color);
-    height: 0.8rem;
-    width: 0.75rem;
-  }
-  &:disabled {
-    cursor: default;
-    opacity: 0.3;
-  }
-  &:disabled ~ label {
-    cursor: default;
-  }
+  @include helpers.checkbox-and-radio-style();
+  border-radius: var(--spacing-4px);
+}
+
+input[type="radio"] {
+  @include helpers.checkbox-and-radio-style();
+  border-radius: 100%;
 }
 
 [type="checkbox"] ~ label,

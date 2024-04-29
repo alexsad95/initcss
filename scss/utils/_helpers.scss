@@ -1,0 +1,51 @@
+@mixin checkbox-and-radio-style() {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  padding: var(--spacing-4px);
+  margin: var(--spacing-4px);
+  cursor: pointer;
+  vertical-align: middle;
+  background: var(--bg-color);
+  box-shadow: 0 0 0 0.11rem var(--main-color);
+  border: var(--spacing-4px) solid var(--bg-color);
+  &:checked {
+    background: var(--main-color);
+    height: 0.8rem;
+    width: 0.75rem;
+  }
+  &:disabled {
+    cursor: default;
+    opacity: 0.3;
+  }
+  &:disabled ~ label {
+    cursor: default;
+  }
+}
+
+@mixin outline-property-basis($type-of-var) {
+  border: 2px solid var(--#{$type-of-var}-color);
+  background: var(--bg-color);
+  color: var(--#{$type-of-var}-color);
+}
+
+@mixin button-style($type-of-button) {
+  $button-class: $type-of-button;
+
+  @if ($type-of-button == "error") {
+    $button-class: "danger";
+  }
+
+  &.#{$button-class} {
+    background: var(--#{$type-of-button}-color);
+    color: var(--bg-color);
+    &:hover {
+      background: var(--#{$type-of-button}-extra-color);
+    }
+    &:active {
+      background: var(--#{$type-of-button}-extra-color);
+      opacity: 0.8;
+    }
+  }
+}
