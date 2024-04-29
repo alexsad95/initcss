@@ -2881,6 +2881,7 @@ hstack {
   align-self: stretch;
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 hstack[shrink] > * {
@@ -3067,7 +3068,7 @@ vstack[align-y=bottom] {
 body {
   margin: 0 auto;
   max-width: 969px;
-  padding: var(--spacing-s);
+  padding: var(--spacing-m);
   font-family: var(--font);
   line-height: 1.4;
   color: var(--text-color);
@@ -3129,7 +3130,7 @@ textarea {
 
 blockquote {
   border-left: 4px solid var(--main-color);
-  margin: 1.5rem 0rem;
+  margin: 0;
   padding: 0.5rem 1rem;
   font-style: italic;
 }
@@ -3145,6 +3146,43 @@ blockquote > footer {
 
 blockquote cite {
   font-style: normal;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong,
+th {
+  font-weight: 600;
 }
 
 abbr[title] {

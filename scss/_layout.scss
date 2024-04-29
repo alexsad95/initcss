@@ -3,6 +3,7 @@ hstack {
   align-self: stretch;
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 hstack[shrink] > * {
