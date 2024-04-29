@@ -31,7 +31,7 @@
 body {
   margin: 0 auto;
   max-width: 969px;
-  padding: var(--spacing-s);
+  padding: var(--spacing-m);
   font-family: var(--font);
   line-height: 1.4;
   color: var(--text-color);
@@ -95,7 +95,7 @@ textarea {
 
 blockquote {
   border-left: 4px solid var(--main-color);
-  margin: 1.5rem 0rem;
+  margin: 0;
   padding: 0.5rem 1rem;
   font-style: italic;
 }
