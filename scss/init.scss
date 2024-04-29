@@ -113,6 +113,43 @@ blockquote cite {
   font-style: normal;
 }
 
+h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong,
+th {
+  font-weight: 600;
+}
+
 abbr[title] {
   border-bottom: 1px dotted;
   text-decoration: none;
