@@ -9,6 +9,8 @@
 </head>
 
 <body>
+  <!-- Theme Button -->
+
   <hstack align-x="right" class="mb-m">
     <button id="theme-button" class="py-2xs px-xs br-2xs" onclick="toggleTheme()">
       <svg class="w-s" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -18,6 +20,8 @@
       </svg>
     </button>
   </hstack>
+
+  <!-- Buttons Section -->
 
   <section class="mt-l">
     <h1>Buttons</h1>
@@ -68,24 +72,22 @@
     </hstack>
   </section>
 
+  <!-- Forms Section -->
+
   <section class="mt-l">
     <h1>Forms</h1>
 
     <vstack spacing="s" class="mt-s">
-      <vstack spacing="xs">
-        <label for="name">Name</label>
-        <input id="name" type="text">
-      </vstack>
-      <vstack spacing="xs">
-        <label for="email">Email</label>
-        <input id="email" type="email">
-      </vstack>
-      <vstack spacing="xs">
-        <label for="description">Description</label>
-        <textarea id="description" name="description" rows="3"></textarea>
-      </vstack>
+      <label for="name">Name</label>
+      <input id="name" type="text">
+      <label for="email">Email</label>
+      <input id="email" type="email">
+      <label for="description">Description</label>
+      <textarea id="description" name="description" rows="3"></textarea>
     </vstack>
   </section>
+
+  <!-- Links Section -->
 
   <section class="mt-l">
 
@@ -103,6 +105,40 @@
       </a>
     </hstack>
   </section>
+
+  <!-- Checkboxes Section -->
+
+  <section class="mt-l">
+    <h1>Checkboxes</h1>
+
+    <fieldset class="mt-s">
+      <legend>Language preference:</legend>
+      <input type="checkbox" id="checkbox-english" checked />
+      <label for="checkbox-english">english</label>
+      <input type="checkbox" id="checkbox-french" />
+      <label for="checkbox-french">french</label>
+      <input type="checkbox" id="checkbox-spanish" disabled />
+      <label for="checkbox-spanish" aria-disabled="true">spanish</label>
+    </fieldset>
+  </section>
+
+  <!-- Radios Section -->
+
+  <section class="mt-l">
+    <h1>Radios</h1>
+
+    <fieldset class="mt-s">
+      <legend>Language preference:</legend>
+      <input type="radio" name="language" id="radio-english" />
+      <label for="radio-english">english</label>
+      <input type="radio" name="language" id="radio-french" />
+      <label for="radio-french">french</label>
+      <input type="radio" name="language" id="radio-spanish" disabled />
+      <label for="radio-spanish">spanish</label>
+    </fieldset>
+  </section>
+
+  <!-- Fieldsets Section -->
 
   <section class="mt-l">
     <h1>Fieldsets</h1>
@@ -129,33 +165,7 @@
     </fieldset>
   </section>
 
-  <section class="mt-l">
-    <h1>Checkboxes</h1>
-
-    <fieldset class="mt-s">
-      <legend>Language preference:</legend>
-      <input type="checkbox" id="checkbox-english" checked />
-      <label for="checkbox-english">english</label>
-      <input type="checkbox" id="checkbox-french" />
-      <label for="checkbox-french">french</label>
-      <input type="checkbox" id="checkbox-spanish" disabled />
-      <label for="checkbox-spanish" aria-disabled="true">spanish</label>
-    </fieldset>
-  </section>
-
-  <section class="mt-l">
-    <h1>Radios</h1>
-
-    <fieldset class="mt-s">
-      <legend>Language preference:</legend>
-      <input type="radio" name="language" id="radio-english" />
-      <label for="radio-english">english</label>
-      <input type="radio" name="language" id="radio-french" />
-      <label for="radio-french">french</label>
-      <input type="radio" name="language" id="radio-spanish" disabled />
-      <label for="radio-spanish">spanish</label>
-    </fieldset>
-  </section>
+  <!-- Blockquote Section -->
 
   <section class="mt-l">
     <h1>Blockquote</h1>
@@ -168,6 +178,8 @@
       </footer>
     </blockquote>
   </section>
+
+  <!-- Typography Section -->
 
   <section class="mt-l">
     <h1>Typography</h1>
@@ -199,7 +211,6 @@
       at, gravida dui.
     </p>
   </section>
-
 </body>
 
 <script>
