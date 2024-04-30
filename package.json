@@ -9,6 +9,9 @@
     "dev": "sass --watch scss/init.scss:css/init.css --no-source-map --no-error-css",
     "build": "sass scss/init.scss:css/init.min.css --style=compressed --no-source-map --no-error-css"
   },
+  "exports": {
+    "sass": "./init.scss"
+  },
   "devDependencies": {
     "sass": "^1.75.0"
   },
