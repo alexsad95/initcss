@@ -1,6 +1,6 @@
 {
   "name": "@alexsad95/initcss",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Minimal CSS Framework",
   "author": "alexsad95",
   "main": "css/init.min.css",
