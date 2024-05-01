@@ -1,6 +1,6 @@
 {
   "name": "@alexsad95/initcss",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Minimal CSS Framework",
   "author": "alexsad95",
   "style": "css/init.min.css",
@@ -10,8 +10,12 @@
     "build": "sass scss/init.scss:css/init.min.css --style=compressed --no-source-map --no-error-css"
   },
   "exports": {
-    ".": "./css/init.min.css",
-    "./sass/": "./init.scss"
+    ".": {
+      "import": "./css/init.min.css"
+    },
+    "./sass/": {
+      "import": "./init.scss"
+    }
   },
   "devDependencies": {
     "sass": "^1.75.0"
