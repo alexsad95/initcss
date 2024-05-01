@@ -13,6 +13,6 @@
     "vite": "^5.2.0"
   },
   "dependencies": {
-    "@alexsad95/initcss": "^0.2.2"
+    "@alexsad95/initcss": "^0.2.5"
   }
 }

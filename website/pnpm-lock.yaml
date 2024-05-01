@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@alexsad95/initcss':
-    specifier: ^0.2.2
-    version: 0.2.2
+    specifier: ^0.2.5
+    version: 0.2.5
 
 devDependencies:
   typescript:
@@ -19,8 +19,9 @@ devDependencies:
 
 packages:
 
-  /@alexsad95/initcss@0.2.2:
-    resolution: {integrity: sha512-4HAgv4oY6nffwAe30ScjkBmErYKqns2Nf5VCD6E5wgjKN+SozR7CKFEDzyXCfwUvRMPrYlvnvd4Oa4IWwjG30g==}
+  /@alexsad95/initcss@0.2.5:
+    resolution: {integrity: sha512-FD8HBOvSbTYhE/foah0co7Ssxgt0dY5e4pubMtyRITxFlq0s3MZ7Vq80itraOJyGBBEs5dB73IYtPNg3VY1UWA==}
+    engines: {node: '>=20', pnpm: '>=9'}
     dev: false
 
   /@esbuild/aix-ppc64@0.20.2:
