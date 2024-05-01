@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>InitCSS Example</title>
-  <link rel="stylesheet" href="../css/init.css">
 </head>
 
 <body>
@@ -238,27 +238,29 @@
       at, gravida dui.
     </p>
   </section>
-</body>
 
-<script>
-  const indeterminateCheckbox = document.getElementById('checkbox-french');
-  indeterminateCheckbox.indeterminate = true;
+  <script>
+    const indeterminateCheckbox = document.getElementById('checkbox-french');
+    indeterminateCheckbox.indeterminate = true;
 
-  function toggleTheme() {
-    document.body.classList.toggle("light-theme");
-  }
-
-  function toggleActiveButton(elemID) {
-    const activeButtonElement = document.getElementById(elemID);
-    if (!activeButtonElement) {
-      return;
+    function toggleTheme() {
+      document.body.classList.toggle("light-theme");
     }
 
-    activeButtonElement.classList.toggle("active");
+    function toggleActiveButton(elemID) {
+      const activeButtonElement = document.getElementById(elemID);
+      if (!activeButtonElement) {
+        return;
+      }
 
-    const isActive = activeButtonElement.innerText === 'active';
-    activeButtonElement.innerText = isActive ? 'not active' : 'active';
-  }
-</script>
+      activeButtonElement.classList.toggle("active");
+
+      const isActive = activeButtonElement.innerText === 'active';
+      activeButtonElement.innerText = isActive ? 'not active' : 'active';
+    }
+  </script>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
 
 </html>

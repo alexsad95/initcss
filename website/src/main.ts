@@ -1,0 +1,1 @@
+import '@alexsad95/initcss';

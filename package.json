@@ -10,7 +10,8 @@
     "build": "sass scss/init.scss:css/init.min.css --style=compressed --no-source-map --no-error-css"
   },
   "exports": {
-    "sass": "./init.scss"
+    ".": "./css/init.min.css",
+    "./sass/": "./init.scss"
   },
   "devDependencies": {
     "sass": "^1.75.0"
@@ -34,6 +35,10 @@
   },
   "bugs": {
     "url": "https://github.com/alexsad95/initcss/issues"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
   },
   "license": "MIT"
 }
