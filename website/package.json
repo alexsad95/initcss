@@ -1,7 +1,7 @@
 {
   "name": "website",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,10 +9,11 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "sass": "^1.76.0",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
   },
   "dependencies": {
-    "@alexsad95/initcss": "^0.2.5"
+    "@alexsad95/initcss": "^0.2.6"
   }
 }
