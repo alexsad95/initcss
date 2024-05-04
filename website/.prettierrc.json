@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json.schemastore.org/prettierrc",
+  "tabWidth": 2,
+  "printWidth": 120,
+  "semi": true,
+  "useTabs": false,
+  "singleQuote": true,
+  "bracketSpacing": true,
+  "bracketSameLine": false,
+  "singleAttributePerLine": true,
+  "arrowParens": "always",
+  "trailingComma": "all",
+  "quoteProps": "as-needed",
+  "endOfLine": "lf",
+  "plugins": [
+    "@ianvs/prettier-plugin-sort-imports",
+    "prettier-plugin-multiline-arrays"
+  ],
+  "multilineArraysWrapThreshold": 2,
+  "importOrder": [
+    "<BUILTIN_MODULES>",
+    "^(react|next(.*))$",
+    "<THIRD_PARTY_MODULES>",
+    "<TYPES>",
+    "",
+    "^@/(.*)$",
+    "^~/(.*)$",
+    "^[./]",
+    "<TYPES>^[.]",
+    "^(.*)(sass|css|scss)$"
+  ],
+  "importOrderParserPlugins": [
+    "classProperties",
+    "decorators-legacy",
+    "jsx",
+    "typescript"
+  ]
+}
