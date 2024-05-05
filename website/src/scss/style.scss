@@ -1,1 +1,11 @@
 @import "../node_modules/@alexsad95/initcss/scss/init.scss";
+
+.tippy-arrow {
+  color: var(--text-color);
+}
+
+.tippy-box[data-theme~="custom"] {
+  background: var(--text-color);
+  color: var(--bg-color);
+  border-radius: var(--spacing-2xs);
+}

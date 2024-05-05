@@ -1,11 +1,21 @@
+import tippy from 'tippy.js';
+import type { Props } from 'tippy.js';
+
 import { getCookie, setCookie } from './utils/cookies';
 
+import 'tippy.js/dist/tippy.css';
 import './scss/style.scss';
 
 type Themes = 'dark' | 'light';
 
+const defaultTippyOptions = {
+  delay: [500, 100],
+  theme: 'custom',
+} as Props;
+
 const indeterminateCheckbox = document.getElementById('checkbox-french');
 const toggleThemeButton = document.getElementById('theme-button');
+const themeChangeButton = document.getElementById('theme-changing');
 const activeOutlineButton = document.getElementById('active-outline-button');
 const activeButton = document.getElementById('active-button');
 
@@ -20,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   checkThemeForIcons();
 
-  if (!(indeterminateCheckbox && toggleThemeButton && activeOutlineButton && activeButton)) {
+  if (!(indeterminateCheckbox && toggleThemeButton && activeOutlineButton && activeButton && themeChangeButton)) {
     console.error(
       'Not found some elements: ',
       indeterminateCheckbox,
@@ -41,6 +51,15 @@ document.addEventListener('DOMContentLoaded', () => {
   activeOutlineButton.addEventListener('click', toggleActiveOutliineButtonHandler);
   activeButton.addEventListener('click', toggleActiveButtonHandler);
   toggleThemeButton.addEventListener('click', toggleTheme);
+
+  tippy(toggleThemeButton, {
+    ...defaultTippyOptions,
+    content: 'Theme switcher',
+  });
+  tippy(themeChangeButton, {
+    ...defaultTippyOptions,
+    content: 'Change themes',
+  });
 });
 
 /**

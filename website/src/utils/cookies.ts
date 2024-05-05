@@ -12,7 +12,7 @@ export function setCookie(name: string, value: string, days: number): void {
 /**
  * Function for getting a cookie value
  * @param name Cookie name
- * @returns Cookie value or `undefined` if the cookie is not found
+ * @returns Cookie value or `null` if the cookie is not found
  */
 export function getCookie(name: string): string | null {
   const value = `; ${document.cookie}`;
