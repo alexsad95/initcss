@@ -9,3 +9,28 @@
   color: var(--bg-color);
   border-radius: var(--spacing-2xs);
 }
+
+input[type="color"] {
+  padding: var(--spacing-px);
+  border-radius: var(--spacing-2xs);
+  border: var(--spacing-2px) solid;
+}
+
+#theme-changing-block {
+  position: absolute;
+  display: none;
+  top: var(--spacing-l);
+  text-align: center;
+  z-index: 1;
+  width: 320px;
+  background: var(--sub-alt-color);
+  padding: var(--spacing-16px);
+  border-radius: var(--spacing-2xs);
+  border: var(--spacing-2px) solid;
+  &.active {
+    display: block;
+  }
+  & hstack:not(:last-child) {
+    margin-bottom: var(--spacing-10px);
+  }
+}

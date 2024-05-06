@@ -18,6 +18,7 @@ const toggleThemeButton = document.getElementById('theme-button');
 const themeChangeButton = document.getElementById('theme-changing');
 const activeOutlineButton = document.getElementById('active-outline-button');
 const activeButton = document.getElementById('active-button');
+const themeChangingBlockElement = document.getElementById('theme-changing-block');
 
 document.addEventListener('DOMContentLoaded', () => {
   // get saved theme from cookie
@@ -45,12 +46,11 @@ document.addEventListener('DOMContentLoaded', () => {
   (indeterminateCheckbox as HTMLInputElement).indeterminate = true;
 
   // add events for buttons
-  const toggleActiveOutliineButtonHandler = () => toggleActiveButton('active-outline-button');
-  const toggleActiveButtonHandler = () => toggleActiveButton('active-button');
-
-  activeOutlineButton.addEventListener('click', toggleActiveOutliineButtonHandler);
-  activeButton.addEventListener('click', toggleActiveButtonHandler);
+  document.addEventListener('click', (event) => closeActivatedThemeChanger(event));
   toggleThemeButton.addEventListener('click', toggleTheme);
+  activeOutlineButton.addEventListener('click', () => toggleActiveButton('active-outline-button'));
+  activeButton.addEventListener('click', () => toggleActiveButton('active-button'));
+  themeChangeButton.addEventListener('click', () => activateThemeChanger());
 
   tippy(toggleThemeButton, {
     ...defaultTippyOptions,
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
  * @param {string} elemID Element id
  * @throws {Error} if `elemID` is not a string or empty
  */
-function toggleActiveButton(elemID: string) {
+function toggleActiveButton(elemID: string): void {
   if (!(elemID && typeof elemID === 'string')) {
     throw new Error('Not a string or empty');
   }
@@ -117,5 +117,30 @@ function checkThemeForIcons(): void {
   } else {
     themeLightSvg.style.display = 'none';
     themeDarkSvg.style.display = 'block';
+  }
+}
+
+/**
+ * Activates or deactivates theme changing block
+ */
+function activateThemeChanger(): void {
+  if (!themeChangingBlockElement) {
+    return;
+  }
+
+  themeChangingBlockElement.classList.toggle('active');
+}
+
+/**
+ * Closes theme changing block if it's activated and user clicked outside of it
+ * @param event MouseEvent
+ */
+function closeActivatedThemeChanger(event: MouseEvent): void {
+  const target = event.target as HTMLElement;
+
+  if (themeChangingBlockElement?.classList.contains('active')) {
+    if (target && !target.closest('#theme-changing') && !target.closest('#theme-changing-block')) {
+      themeChangingBlockElement?.classList.remove('active');
+    }
   }
 }
