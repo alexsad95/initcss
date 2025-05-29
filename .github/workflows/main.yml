@@ -2,7 +2,7 @@ name: InitCSS Action
 
 on:
   push:
-    branches: ['main']
+    branches: ["main"]
 
 jobs:
   cache-and-install:
@@ -27,7 +27,7 @@ jobs:
       - name: Installing packages
         uses: pnpm/action-setup@v2.2.2
         with:
-          version: 9.x.x
+          version: 10.11.x
 
       - name: Install dependencies and build website
         run: cd website && pnpm install && pnpm run build
