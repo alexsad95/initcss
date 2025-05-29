@@ -6,13 +6,12 @@
   <link rel="icon" type="image/svg+xml" href="/initcss/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>InitCSS Example</title>
-  <script type="module" crossorigin src="/initcss/assets/index-BCCW1dZK.js"></script>
-  <link rel="stylesheet" crossorigin href="/initcss/assets/index-BYUvOuC7.css">
+  <script type="module" crossorigin src="/initcss/assets/index-DxxzZDe4.js"></script>
+  <link rel="stylesheet" crossorigin href="/initcss/assets/index-k6Piju3V.css">
 </head>
 
 <body>
   <!-- Theme Button -->
-
   <hstack align-x="right" class="mb-m">
     <button id="theme-button" class="mr-s py-2xs px-xs br-2xs">
       <svg class="w-s" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -27,6 +26,8 @@
       </svg>
     </button>
 
+    <!-- Theme Changing Button -->
+    <!--
     <button id="theme-changing" class="py-2xs px-xs br-2xs">
       <svg class="w-s" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
         <path
@@ -34,7 +35,6 @@
         </path>
       </svg>
     </button>
-
     <div id="theme-changing-block">
       <hstack spacing="s">
         <input type="color" id="bg" value="#e66465" class="w-32px" />
@@ -57,11 +57,10 @@
         <label for="main">main color</label>
       </hstack>
     </div>
+    -->
   </hstack>
 
-
   <!-- Buttons Section -->
-
   <section class="mt-l">
     <h1>Buttons</h1>
 
@@ -96,59 +95,34 @@
     <hstack spacing="s" class="mt-s">
       <span>Rounded:</span>
       <button class="br-0">button 0</button>
-      <button class="br-xs">button xs</button>
-      <button class="br-2xs">button 2xs</button>
       <button class="br-3xs">button 3xs</button>
+      <button class="br-2xs">button 2xs</button>
+      <button class="br-xs">button xs</button>
     </hstack>
 
     <hstack spacing="s" class="mt-s">
       <span>Sizes:</span>
-      <button smallest>smallest</button>
-      <button small>small</button>
+      <button data-smallest>smallest</button>
+      <button data-small>small</button>
       <button>default</button>
-      <button large>large</button>
-      <button largest>largest</button>
+      <button data-large>large</button>
+      <button data-largest>largest</button>
     </hstack>
   </section>
 
-  <!-- Forms Section -->
-
+  <!-- Inputs Section -->
   <section class="mt-l">
-    <h1>Forms</h1>
+    <h1>Inputs</h1>
 
     <vstack spacing="s" class="mt-s">
-      <label for="name">Name</label>
-      <input id="name" type="text" placeholder="Name">
-      <label for="email">Email</label>
-      <input id="email" type="email" placeholder="Email">
-      <label for="disabled">Disabled</label>
-      <input id="disabled" type="text" name="text" placeholder="Disabled" aria-label="Disabled input" disabled />
-      <label for="description">Description</label>
-      <textarea id="description" name="description" placeholder="Description" rows="3"></textarea>
+      <input type="text" name="name" placeholder="Name" autocomplete="off">
+      <input type="email" name="email" placeholder="Email" autocomplete="off">
+      <input type="text" name="disabled" placeholder="Disabled" disabled />
+      <textarea name="description" placeholder="Description" rows="3"></textarea>
     </vstack>
   </section>
 
-  <!-- Links Section -->
-
-  <section class="mt-l">
-
-    <h1>Links</h1>
-
-    <hstack spacing="s" class="mt-s">
-      <a href="#">simple link</a>
-      <a href="https://github.com/alexsad95/initcss" class="text" target="_blank" rel="noreferrer noopener">
-        <svg class="w-20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-          <path
-            d="M24 12L18.3431 17.6569L16.9289 16.2426L21.1716 12L16.9289 7.75736L18.3431 6.34315L24 12ZM2.82843 12L7.07107 16.2426L5.65685 17.6569L0 12L5.65685 6.34315L7.07107 7.75736L2.82843 12ZM9.78845 21H7.66009L14.2116 3H16.3399L9.78845 21Z">
-          </path>
-        </svg>
-        github
-      </a>
-    </hstack>
-  </section>
-
-  <!-- List Section -->
-
+  <!-- Lists Section -->
   <section class="mt-l">
     <vstack spacing="s">
       <h1>Lists</h1>
@@ -157,12 +131,10 @@
         <li>Item 1</li>
         <li>Item 2</li>
       </ul>
-
       <ol>
         <li>First item</li>
         <li>Second item</li>
       </ol>
-
       <dl>
         <dt>CSS (Cascading Style Sheets)</dt>
         <dd>Is a style sheet language used for specifying the presentation and styling of a document written in a
@@ -172,67 +144,95 @@
     </vstack>
   </section>
 
-  <!-- Checkboxes Section -->
+  <!-- Links Section -->
+  <section class="mt-l">
+    <h1>Links</h1>
 
+    <hstack spacing="s" class="mt-s">
+      <a href="#">simple link</a>
+      <a href="https://github.com/alexsad95/initcss" class="text" target="_blank" rel="noreferrer noopener">
+        <svg class="w-s" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M24 12L18.3431 17.6569L16.9289 16.2426L21.1716 12L16.9289 7.75736L18.3431 6.34315L24 12ZM2.82843 12L7.07107 16.2426L5.65685 17.6569L0 12L5.65685 6.34315L7.07107 7.75736L2.82843 12ZM9.78845 21H7.66009L14.2116 3H16.3399L9.78845 21Z">
+          </path>
+        </svg>
+        with icon
+      </a>
+    </hstack>
+  </section>
+
+  <!-- Checkboxes Section -->
   <section class="mt-l">
     <h1>Checkboxes</h1>
 
-    <fieldset class="mt-s">
-      <legend>Language preference:</legend>
-      <input type="checkbox" id="checkbox-english" checked />
-      <label for="checkbox-english">english</label>
-      <input type="checkbox" id="checkbox-french" />
-      <label for="checkbox-french">french</label>
-      <input type="checkbox" id="checkbox-spanish" disabled />
-      <label for="checkbox-spanish" aria-disabled="true">spanish</label>
-    </fieldset>
+    <label>
+      <input type="checkbox" name="desires" value="coffe" checked />Coffee in the morning — yes!
+    </label>
+    <label>
+      <input type="checkbox" name="desires" value="friday" />Friday every day — absolutely!
+    </label>
+    <label>
+      <input type="checkbox" name="desires" value="work" disabled />Working after 6 PM — no way!
+    </label>
   </section>
 
   <!-- Radios Section -->
-
   <section class="mt-l">
     <h1>Radios</h1>
 
-    <fieldset class="mt-s">
-      <legend>Language preference:</legend>
-      <input type="radio" name="language" id="radio-english" />
-      <label for="radio-english">english</label>
-      <input type="radio" name="language" id="radio-french" />
-      <label for="radio-french">french</label>
-      <input type="radio" name="language" id="radio-spanish" disabled />
-      <label for="radio-spanish">spanish</label>
-    </fieldset>
+    <label>
+      <input type="radio" name="weekend" value="stayhome" />Stay home, do nothing, recharge
+    </label>
+    <label>
+      <input type="radio" name="weekend" value="adventure" />Go on a spontaneous adventure
+    </label>
+    <label>
+      <input type="radio" name="weekend" value="sleep" disabled />Sleep until further notice (currently unavailable 😴)
+    </label>
   </section>
 
   <!-- Fieldsets Section -->
-
   <section class="mt-l">
     <h1>Fieldsets</h1>
 
-    <fieldset bordered class="mt-s">
-      <legend>Bordered vertical fieldset:</legend>
+    <fieldset data-bordered class="mt-s">
+      Fieldset without &lt;legend&gt; tag
+    </fieldset>
+
+    <fieldset data-dotted class="mt-s">
+      <legend>Dotted-bordered fieldset:</legend>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor malesuada eget vitae
+      augue. Cras fermentum imperdiet lorem. Quisque eu mauris laoreet, molestie augue at, gravida dui.
+    </fieldset>
+
+    <fieldset data-dashed class="mt-s">
+      <legend>Dashed-bordered fieldset:</legend>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor malesuada eget vitae
+      augue. Cras fermentum imperdiet lorem. Quisque eu mauris laoreet, molestie augue at, gravida dui.
+    </fieldset>
+
+    <fieldset data-bordered class="mt-s">
+      <legend>Bordered vertical(default) fieldset:</legend>
       <label>
-        <input type="checkbox" name="hindi" checked />
-        check
+        <input type="checkbox" name="vertical" value="a" />A
       </label>
       <label>
-        <input type="checkbox" name="swahili" />
-        check 2
+        <input type="checkbox" name="vertical" value="b" />B
       </label>
     </fieldset>
 
-
-    <fieldset class="mt-s">
+    <fieldset data-horizontal class="mt-s">
       <legend>Not bordered horizontal fieldset:</legend>
-      <input type="checkbox" id="check" checked />
-      <label for="check">check</label>
-      <input type="checkbox" id="check-2" />
-      <label for="check-2">check 2</label>
+      <label>
+        <input type="radio" name="horizontal" value="a" />A
+      </label>
+      <label>
+        <input type="radio" name="horizontal" value="b" />B
+      </label>
     </fieldset>
   </section>
 
   <!-- Blockquote Section -->
-
   <section class="mt-l">
     <h1>Blockquote</h1>
 
@@ -246,11 +246,57 @@
   </section>
 
   <!-- Typography Section -->
-
   <section class="mt-l">
     <h1>Typography</h1>
 
-    <p class="mt-s">
+    <fieldset data-bordered class="mt-s">
+      <legend>Headings:</legend>
+      <h1>H1 tag</h1>
+      <h2>H2 tag</h2>
+      <h3>H3 tag</h3>
+    </fieldset>
+
+    <fieldset data-bordered class="mt-s">
+      <legend>Large paragraph:</legend>
+      <p data-large>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
+        malesuada eget vitae augue. Cras fermentum imperdiet lorem. Quisque eu mauris laoreet, molestie augue
+        at, gravida dui.
+      </p>
+    </fieldset>
+
+    <fieldset data-bordered class="mt-s">
+      <legend>Default paragraph:</legend>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
+        malesuada eget vitae augue. Cras fermentum imperdiet lorem. Quisque eu mauris laoreet, molestie augue
+        at, gravida dui.
+      </p>
+    </fieldset>
+
+    <fieldset data-bordered class="mt-s">
+      <legend>Small paragraph:</legend>
+      <p data-small>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
+        malesuada eget vitae augue. Cras fermentum imperdiet lorem. Quisque eu mauris laoreet, molestie augue
+        at, gravida dui.
+      </p>
+    </fieldset>
+
+    <fieldset data-bordered class="mt-s">
+      <legend>Small text (tag):</legend>
+      <small>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
+        malesuada eget vitae augue. Cras fermentum imperdiet lorem. Quisque eu mauris laoreet, molestie augue
+        at, gravida dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
+        malesuada eget vitae augue. Cras fermentum imperdiet lorem. Quisque eu mauris laoreet, molestie augue
+        at, gravida dui.
+      </small>
+    </fieldset>
+
+    <fieldset data-bordered class="mt-s">
+      <legend>Text-level semantics:</legend>
+
       <strong>strong</strong>
       <b>b</b>
       <em>em</em>
@@ -265,17 +311,7 @@
       <small>Small</small>
       Text <sub>Sub</sub>
       Text <sup>Sup</sup>
-    </p>
-
-    <h1 class="mt-s">H1 tag</h1>
-    <h2>H2 tag</h2>
-    <h3>H3 tag</h3>
-
-    <p class="mt-s">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
-      malesuada eget vitae augue. Cras fermentum imperdiet lorem. Quisque eu mauris laoreet, molestie augue
-      at, gravida dui.
-    </p>
+    </fieldset>
   </section>
 
 </body>
