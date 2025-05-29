@@ -1,12 +1,10 @@
-/*
-  WIDTHS, HEIGHTS
- */
+/* WIDTHS, HEIGHTS */
 
 @import "../utils/sizes";
 
-$all-sizes: map-merge($sizes, $sizes-2);
+$sizes: map-merge($sizes-1, $sizes-2);
 
-@each $key, $value in $all-sizes {
+@each $key, $value in $sizes {
   .w-#{$key} {
     width: var(--spacing-#{$key});
   }
@@ -20,7 +18,7 @@ $all-sizes: map-merge($sizes, $sizes-2);
   }
 }
 
-@each $key, $value in $all-sizes {
+@each $key, $value in $sizes {
   .h-#{$key} {
     height: var(--spacing-#{$key});
   }

@@ -10,7 +10,7 @@
 @import "utils/sizes";
 
 :root {
-  @each $key, $value in $sizes {
+  @each $key, $value in $sizes-1 {
     --spacing-#{$key}: #{$value};
   }
 
@@ -164,6 +164,7 @@ abbr[title] {
 
 small {
   font-size: x-small;
+  display: inline-block;
 }
 
 sub {
@@ -190,21 +191,21 @@ dt {
 }
 
 dd {
-  margin-left: var(--spacing-28px);
-  margin-top: var(--spacing-10px);
+  margin-left: var(--spacing-m);
+  margin-top: var(--spacing-s);
 }
 
 mark {
   background-color: var(--highlight);
-  border-radius: var(--spacing-4px);
-  padding: var(--spacing-px);
+  border-radius: var(--spacing-3xs);
+  padding: var(--spacing-3xs);
   color: var(--black);
 }
 
 kbd {
   color: var(--bg-color);
   background-color: var(--sub-color);
-  border-radius: var(--spacing-2px);
+  border-radius: var(--spacing-3xs);
   padding: 0.2rem 0.3rem;
   margin: 0;
   display: inline-block;
@@ -261,6 +262,7 @@ input[type="submit"] {
         color: var(--bg-color);
       }
     }
+
     &.info {
       @include helpers.outline-property-basis(info);
 
@@ -270,6 +272,7 @@ input[type="submit"] {
         color: var(--bg-color);
       }
     }
+
     &.danger {
       @include helpers.outline-property-basis(error);
 
@@ -284,10 +287,12 @@ input[type="submit"] {
   &.text {
     background: var(--bg-color);
     color: var(--text-color);
+
     &:hover {
       color: var(--text-color);
       background: var(--sub-alt-color);
     }
+
     &:active {
       opacity: 0.8;
       color: var(--text-color);
@@ -302,6 +307,7 @@ input[type="submit"] {
       background: none;
       color: var(--text-color);
     }
+
     &:active {
       color: var(--sub-color);
     }
@@ -310,9 +316,11 @@ input[type="submit"] {
   &.active {
     background: var(--main-color);
     color: var(--bg-color);
+
     &:hover {
       background: var(--text-color);
     }
+
     &:active {
       background: var(--sub-color);
       color: var(--bg-color);
@@ -325,13 +333,14 @@ input[type="submit"] {
 
   &[disabled],
   &.disabled {
-    opacity: 0.33;
+    opacity: 0.3;
     pointer-events: none;
 
     &:hover {
       background: var(--text-color);
       outline: none;
     }
+
     &:active {
       background: var(--sub-color);
       color: var(--bg-color);
@@ -343,29 +352,35 @@ input[type="submit"] {
     background: var(--text-color);
     outline: none;
   }
+
   &:focus-visible {
     box-shadow:
       0 0 0 0.1rem var(--bg-color),
       0 0 0 0.2rem var(--text-color);
     outline: none;
   }
+
   &:active {
     background: var(--sub-color);
     color: var(--bg-color);
   }
-  &[smallest] {
+
+  &[data-smallest] {
     padding: 0.3rem 0.5rem;
     font-size: 0.65rem;
   }
-  &[small] {
+
+  &[data-small] {
     padding: 0.3rem 0.6rem;
     font-size: 0.9rem;
   }
-  &[large] {
+
+  &[data-large] {
     padding: 0.4rem 0.8rem;
     font-size: 1.5rem;
   }
-  &[largest] {
+
+  &[data-largest] {
     padding: 0.6rem 1.2rem;
     font-size: 1.7rem;
   }
@@ -391,9 +406,11 @@ a {
       border-radius: var(--spacing-xs);
     }
   }
+
   &:hover {
     color: var(--text-color);
   }
+
   &:focus-visible {
     outline: none;
     box-shadow:
@@ -409,14 +426,37 @@ fieldset {
   margin: 0;
 }
 
-fieldset[bordered] {
+fieldset[data-bordered] {
   border: 2px solid var(--main-color);
-  border-radius: var(--spacing-6px);
+  border-radius: var(--spacing-xs);
   padding: 10px;
 }
 
-legend {
-  margin-bottom: var(--spacing-8px);
+fieldset[data-dashed] {
+  border: 2px dashed var(--main-color);
+  border-radius: var(--spacing-xs);
+  padding: 10px;
+}
+
+fieldset[data-dotted] {
+  border: 2px dotted var(--main-color);
+  border-radius: var(--spacing-xs);
+  padding: 10px;
+}
+
+fieldset[data-horizontal] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  align-items: flex-start;
+}
+
+p[data-small] {
+  font-size: small;
+}
+
+p[data-large] {
+  font-size: larger;
 }
 
 label {
@@ -429,36 +469,20 @@ label:has([type="checkbox"], [type="radio"]) {
 }
 
 label:has([type="checkbox"]:disabled, [type="radio"]:disabled) {
-  cursor: default;
+  cursor: not-allowed;
   opacity: 0.3;
 }
 
-input[type="checkbox"]:indeterminate,
-input[type="radio"]:indeterminate {
-  opacity: 0.5;
+[disabled] {
+  cursor: not-allowed;
 }
 
 input[type="checkbox"] {
   @include helpers.checkbox-and-radio-style();
-  border-radius: var(--spacing-4px);
+  border-radius: 4px;
 }
 
 input[type="radio"] {
   @include helpers.checkbox-and-radio-style();
   border-radius: 100%;
-}
-
-[type="checkbox"] ~ label,
-[type="radio"] ~ label {
-  margin-bottom: 0;
-  display: inline-block;
-  cursor: pointer;
-  &:disabled {
-    opacity: 0.3;
-  }
-}
-
-[type="checkbox"]:disabled ~ label,
-[type="radio"]:disabled ~ label {
-  opacity: 0.3;
 }

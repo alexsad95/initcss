@@ -1,43 +1,52 @@
-/*
-  BORDER-RADIUS
- */
+/* BORDER-RADIUS */
 
 .br-0 {
   border-radius: 0;
 }
+
 .br-3xs {
   border-radius: var(--spacing-3xs);
 }
+
 .br-2xs {
   border-radius: var(--spacing-2xs);
 }
+
 .br-xs {
   border-radius: var(--spacing-xs);
 }
+
 .br-s {
   border-radius: var(--spacing-s);
 }
+
 .br-m {
   border-radius: var(--spacing-m);
 }
+
 .br-100 {
   border-radius: 100%;
 }
+
 .br-pill {
   border-radius: 9999px;
 }
+
 .br-bottom {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+
 .br-top {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
+
 .br-right {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
+
 .br-left {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;

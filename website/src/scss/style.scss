@@ -1,4 +1,6 @@
-@import "../node_modules/@alexsad95/initcss/scss/init.scss";
+@import "@alexsad95/initcss";
+@import "tippy.js/dist/tippy.css";
+// @import "../../../css/init.css"; // for local development
 
 .tippy-arrow {
   color: var(--text-color);

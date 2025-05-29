@@ -1,6 +1,4 @@
-/*
-  SPACING
- */
+/* SPACING */
 
 @import "../utils/sizes";
 
@@ -9,7 +7,7 @@ $ext-size: (
   auto: auto
 );
 
-$all-sizes: map-merge($sizes, $ext-size);
+$all-sizes: map-merge($sizes-1, $ext-size);
 
 @each $key, $value in $all-sizes {
   .pa-#{$key} {
