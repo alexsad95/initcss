@@ -6,8 +6,8 @@
   <link rel="icon" type="image/svg+xml" href="/initcss/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>InitCSS Example</title>
-  <script type="module" crossorigin src="/initcss/assets/index-DxxzZDe4.js"></script>
-  <link rel="stylesheet" crossorigin href="/initcss/assets/index-k6Piju3V.css">
+  <script type="module" crossorigin src="/initcss/assets/index-CoLZE5V9.js"></script>
+  <link rel="stylesheet" crossorigin href="/initcss/assets/index-BptBUWXA.css">
 </head>
 
 <body>
@@ -64,35 +64,31 @@
   <section class="mt-l">
     <h1>Buttons</h1>
 
-    <hstack spacing="s" class="mt-s">
+    <hstack spacing="s" class="mt-s" data-wrap>
       <span>Filled:</span>
-      <hstack spacing="s">
-        <button class="link">link</button>
-        <button class="text">text</button>
-        <button>default</button>
-        <button class="success">success</button>
-        <button class="info">info</button>
-        <button class="danger">danger</button>
-        <button id="active-button" class="active">active</button>
-        <button disabled>disabled</button>
-      </hstack>
+      <button class="link">link</button>
+      <button class="text">text</button>
+      <button>default</button>
+      <button class="success">success</button>
+      <button class="info">info</button>
+      <button class="danger">danger</button>
+      <button id="active-button" class="active">active</button>
+      <button disabled>disabled</button>
     </hstack>
 
-    <hstack spacing="s" class="mt-s">
+    <hstack spacing="s" class="mt-s" data-wrap>
       <span>Outlined:</span>
-      <hstack spacing="s">
-        <button class="outline">default</button>
-        <button class="outline success">success</button>
-        <button class="outline info">info</button>
-        <button class="outline danger">danger</button>
-        <button id="active-outline-button" class="outline active">
-          active
-        </button>
-        <button disabled class="outline">disabled</button>
-      </hstack>
+      <button class="outline">default</button>
+      <button class="outline success">success</button>
+      <button class="outline info">info</button>
+      <button class="outline danger">danger</button>
+      <button id="active-outline-button" class="outline active">
+        active
+      </button>
+      <button disabled class="outline">disabled</button>
     </hstack>
 
-    <hstack spacing="s" class="mt-s">
+    <hstack spacing="s" class="mt-s" data-wrap>
       <span>Rounded:</span>
       <button class="br-0">button 0</button>
       <button class="br-3xs">button 3xs</button>
@@ -100,7 +96,7 @@
       <button class="br-xs">button xs</button>
     </hstack>
 
-    <hstack spacing="s" class="mt-s">
+    <hstack spacing="s" class="mt-s" data-wrap>
       <span>Sizes:</span>
       <button data-smallest>smallest</button>
       <button data-small>small</button>
@@ -119,6 +115,18 @@
       <input type="email" name="email" placeholder="Email" autocomplete="off">
       <input type="text" name="disabled" placeholder="Disabled" disabled />
       <textarea name="description" placeholder="Description" rows="3"></textarea>
+      <select name="social">
+        <option>Instagram</option>
+        <option>Facebook</option>
+        <option>LinkedIn</option>
+        <option>Twitter</option>
+        <option selected>GitHub</option>
+        <option>Reddit</option>
+      </select>
+      <hstack spacing="s">
+        <label for="range">Range</label>
+        <input id="range" type="range" min="0" max="1" step="0.1">
+      </hstack>
     </vstack>
   </section>
 
