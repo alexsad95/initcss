@@ -6,28 +6,28 @@ $sizes: map-merge($sizes-1, $sizes-2);
 
 @each $key, $value in $sizes {
   .w-#{$key} {
-    width: var(--spacing-#{$key});
+    width: var(--size-#{$key});
   }
 
   .max-w-#{$key} {
-    max-width: var(--spacing-#{$key});
+    max-width: var(--size-#{$key});
   }
 
   .min-w-#{$key} {
-    min-width: var(--spacing-#{$key});
+    min-width: var(--size-#{$key});
   }
 }
 
 @each $key, $value in $sizes {
   .h-#{$key} {
-    height: var(--spacing-#{$key});
+    height: var(--size-#{$key});
   }
 
   .max-h-#{$key} {
-    max-height: var(--spacing-#{$key});
+    max-height: var(--size-#{$key});
   }
 
   .min-h-#{$key} {
-    min-height: var(--spacing-#{$key});
+    min-height: var(--size-#{$key});
   }
 }

@@ -1,10 +1,12 @@
+@use "sass:string";
+
 @mixin checkbox-and-radio-style() {
   -webkit-appearance: none;
   -moz-appearance: none;
   -o-appearance: none;
   appearance: none;
   padding: 4px;
-  margin: var(--spacing-xs);
+  margin: var(--size-xs);
   cursor: pointer;
   vertical-align: middle;
   background: var(--bg-color);
@@ -54,4 +56,14 @@
       opacity: 0.8;
     }
   }
+}
+
+@function arrow-icon-url($color) {
+  $hex: if(string.index($color, "#") == 1, string.slice($color, 2), $color);
+  $encoded-color: "%23" + $hex;
+  $svg: "<svg viewBox='0 0 100 100' width='14' height='14' xmlns='http://www.w3.org/2000/svg'><path d='M10 30 L50 70 L90 30' stroke='" +
+    $encoded-color + "' stroke-width='10' fill='none' stroke-linecap='round'/></svg>";
+  $url: 'url("data:image/svg+xml,' + $svg + '")';
+
+  @return unquote($url);
 }

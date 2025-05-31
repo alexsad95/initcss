@@ -9,30 +9,30 @@
 .tippy-box[data-theme~="custom"] {
   background: var(--text-color);
   color: var(--bg-color);
-  border-radius: var(--spacing-2xs);
+  border-radius: var(--size-2xs);
 }
 
 input[type="color"] {
-  padding: var(--spacing-px);
-  border-radius: var(--spacing-2xs);
-  border: var(--spacing-2px) solid;
+  padding: var(--size-px);
+  border-radius: var(--size-2xs);
+  border: var(--size-2px) solid;
 }
 
 #theme-changing-block {
   position: absolute;
   display: none;
-  top: var(--spacing-l);
+  top: var(--size-l);
   text-align: center;
   z-index: 1;
   width: 320px;
   background: var(--sub-alt-color);
-  padding: var(--spacing-16px);
-  border-radius: var(--spacing-2xs);
-  border: var(--spacing-2px) solid;
+  padding: var(--size-16px);
+  border-radius: var(--size-2xs);
+  border: var(--size-2px) solid;
   &.active {
     display: block;
   }
   & hstack:not(:last-child) {
-    margin-bottom: var(--spacing-10px);
+    margin-bottom: var(--size-10px);
   }
 }

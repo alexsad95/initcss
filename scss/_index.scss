@@ -11,7 +11,7 @@
 
 :root {
   @each $key, $value in $sizes-1 {
-    --spacing-#{$key}: #{$value};
+    --size-#{$key}: #{$value};
   }
 
   @include variables.main;
@@ -34,7 +34,7 @@
 body {
   margin: 0 auto;
   max-width: 969px;
-  padding: var(--spacing-m);
+  padding: var(--size-m);
   font-family: var(--font);
   line-height: 1.4;
   color: var(--text-color);
@@ -45,18 +45,43 @@ body {
   flex: 2 2;
 }
 
-input,
-textarea {
-  outline: none;
-  border: none;
-  border-radius: var(--spacing-2xs);
-  background: var(--sub-alt-color);
+select {
+  cursor: pointer;
+  appearance: none;
+  width: 100%;
   color: var(--text-color);
-  padding: 0.5em;
-  font-size: 1em;
+  border: 2px solid transparent;
+  border-radius: var(--size-xs);
+  background-color: var(--sub-alt-color);
+  background-image: var(--selector-image);
+  background-repeat: no-repeat;
+  background-position: right var(--size-s) center;
+  padding: var(--size-xs);
+  font-size: var(--size-s);
   font-family: var(--font);
   caret-color: var(--main-color);
   line-height: 1.25em;
+  transition: border-color 0.1s ease;
+
+  &:focus {
+    border-color: var(--text-color);
+    outline: none;
+  }
+}
+
+input,
+textarea {
+  border: 2px solid transparent;
+  border-radius: var(--size-xs);
+  background: var(--sub-alt-color);
+  color: var(--text-color);
+  padding: var(--size-xs);
+  font-size: var(--size-s);
+  font-family: var(--font);
+  caret-color: var(--main-color);
+  line-height: 1.25em;
+  transition: border-color 0.1s ease;
+
   &:disabled {
     opacity: 0.3;
   }
@@ -64,18 +89,58 @@ textarea {
 
 input:focus-visible,
 textarea:focus-visible {
-  box-shadow:
-    0 0 0 0.1rem var(--bg-color),
-    0 0 0 0.2rem var(--text-color);
+  border-color: var(--text-color);
+  outline: none;
+}
+
+@mixin range-thumb-style {
+  height: var(--size-s);
+  width: var(--size-m);
+  border-radius: var(--size-xs);
+  background-color: var(--text-color);
+  cursor: pointer;
+  border: none;
+}
+
+input[type="range"] {
+  appearance: none;
+  padding: 0;
+  width: 100%;
+  border-radius: var(--size-xs);
+
+  // remove the standard style in Firefox
+  &::-moz-range-track {
+    background-color: #ccc;
+    border-radius: 2px;
+    height: var(--size-2xs);
+  }
+
+  // remove the focus-wiring in Safari
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    @include range-thumb-style;
+  }
+
+  &::-moz-range-thumb {
+    @include range-thumb-style;
+  }
+
+  &::-ms-thumb {
+    @include range-thumb-style;
+  }
 }
 
 textarea {
   resize: vertical;
   width: 100%;
-  padding: 10px;
+  padding: var(--size-xs);
   line-height: 1.2rem;
-  min-height: 3rem;
-  max-height: 16rem;
+  min-height: var(--size-l);
+  max-height: var(--size-2xl);
 }
 
 :autofill,
@@ -102,13 +167,13 @@ textarea {
 blockquote {
   border-left: 4px solid var(--main-color);
   margin: 0;
-  padding: 0.5rem 1rem;
+  padding: var(--size-xs) var(--size-s);
   font-style: italic;
 }
 
 blockquote > footer {
-  margin-left: var(--spacing-xs);
-  margin-top: var(--spacing-xs);
+  margin-left: var(--size-xs);
+  margin-top: var(--size-xs);
   font-style: normal;
   font-size: 0.8rem;
   color: var(--main-color);
@@ -191,21 +256,21 @@ dt {
 }
 
 dd {
-  margin-left: var(--spacing-m);
-  margin-top: var(--spacing-s);
+  margin-left: var(--size-m);
+  margin-top: var(--size-s);
 }
 
 mark {
   background-color: var(--highlight);
-  border-radius: var(--spacing-3xs);
-  padding: var(--spacing-3xs);
+  border-radius: var(--size-3xs);
+  padding: var(--size-3xs);
   color: var(--black);
 }
 
 kbd {
   color: var(--bg-color);
   background-color: var(--sub-color);
-  border-radius: var(--spacing-3xs);
+  border-radius: var(--size-3xs);
   padding: 0.2rem 0.3rem;
   margin: 0;
   display: inline-block;
@@ -232,7 +297,7 @@ input[type="submit"] {
     color 0.125s,
     opacity 0.125s;
   padding: 0.5em;
-  border-radius: var(--spacing-xs);
+  border-radius: var(--size-xs);
   background: var(--sub-alt-color);
   text-align: center;
   -webkit-user-select: none;
@@ -403,7 +468,7 @@ a {
     text-decoration: none;
     align-items: center;
     &:focus-visible {
-      border-radius: var(--spacing-xs);
+      border-radius: var(--size-xs);
     }
   }
 
@@ -416,7 +481,7 @@ a {
     box-shadow:
       0 0 0 0.1rem var(--bg-color),
       0 0 0 0.2rem var(--text-color);
-    border-radius: calc(var(--spacing-xs) / 2);
+    border-radius: calc(var(--size-xs) / 2);
   }
 }
 
@@ -428,26 +493,26 @@ fieldset {
 
 fieldset[data-bordered] {
   border: 2px solid var(--main-color);
-  border-radius: var(--spacing-xs);
+  border-radius: var(--size-xs);
   padding: 10px;
 }
 
 fieldset[data-dashed] {
   border: 2px dashed var(--main-color);
-  border-radius: var(--spacing-xs);
+  border-radius: var(--size-xs);
   padding: 10px;
 }
 
 fieldset[data-dotted] {
   border: 2px dotted var(--main-color);
-  border-radius: var(--spacing-xs);
+  border-radius: var(--size-xs);
   padding: 10px;
 }
 
 fieldset[data-horizontal] {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacing-xs);
+  gap: var(--size-xs);
   align-items: flex-start;
 }
 

@@ -1,3 +1,5 @@
+@use "helpers";
+
 @mixin main {
   --font: "Roboto Mono", "Roboto Mono", "Vazirmatn", monospace;
   --highlight: #efdb43;
@@ -17,6 +19,7 @@
   --info-extra-color: #0d75ca;
   --error-color: #c43c53;
   --error-extra-color: #a52632;
+  --selector-image: #{helpers.arrow-icon-url("#333538")};
 }
 
 @mixin dark-theme {
@@ -32,4 +35,5 @@
   --info-extra-color: #0d75ca;
   --error-color: #ff4a59;
   --error-extra-color: #c43c53;
+  --selector-image: #{helpers.arrow-icon-url("#d6d2bc")};
 }
