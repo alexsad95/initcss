@@ -152,6 +152,19 @@
     </vstack>
   </section>
 
+  <!-- Blockquote Section -->
+  <section class="mt-l">
+    <h1>Blockquote</h1>
+
+    <blockquote class="mt-s">
+      “Design is a funny word. Some people think design means how it looks.
+      But of course, if you dig deeper, it's really how it works.”
+      <footer>
+        <cite>— Steve Jobs</cite>
+      </footer>
+    </blockquote>
+  </section>
+
   <!-- Links Section -->
   <section class="mt-l">
     <h1>Links</h1>
@@ -203,54 +216,45 @@
   <section class="mt-l">
     <h1>Fieldsets</h1>
 
-    <fieldset data-bordered class="mt-s">
+    <fieldset class="mt-s" data-bordered>
       Fieldset without &lt;legend&gt; tag
     </fieldset>
 
-    <fieldset data-dotted class="mt-s">
-      <legend>Dotted-bordered fieldset:</legend>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor malesuada eget vitae
-      augue. Cras fermentum imperdiet lorem. Quisque eu mauris laoreet, molestie augue at, gravida dui.
-    </fieldset>
+    <hstack class="mt-s" spacing="s" shrink>
+      <fieldset data-dotted>
+        <legend>Dotted-bordered fieldset:</legend>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor malesuada eget vitae
+        augue.
+      </fieldset>
 
-    <fieldset data-dashed class="mt-s">
-      <legend>Dashed-bordered fieldset:</legend>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor malesuada eget vitae
-      augue. Cras fermentum imperdiet lorem. Quisque eu mauris laoreet, molestie augue at, gravida dui.
-    </fieldset>
+      <fieldset data-dashed>
+        <legend>Dashed-bordered fieldset:</legend>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor malesuada eget vitae
+        augue.
+      </fieldset>
+    </hstack>
 
-    <fieldset data-bordered class="mt-s">
-      <legend>Bordered vertical(default) fieldset:</legend>
-      <label>
-        <input type="checkbox" name="vertical" value="a" />A
-      </label>
-      <label>
-        <input type="checkbox" name="vertical" value="b" />B
-      </label>
-    </fieldset>
+    <hstack class="mt-s" spacing="s" shrink>
+      <fieldset data-bordered>
+        <legend>Bordered vertical (default) fieldset:</legend>
+        <label>
+          <input type="checkbox" name="vertical" value="a" />A
+        </label>
+        <label>
+          <input type="checkbox" name="vertical" value="b" />B
+        </label>
+      </fieldset>
 
-    <fieldset data-horizontal class="mt-s">
-      <legend>Not bordered horizontal fieldset:</legend>
-      <label>
-        <input type="radio" name="horizontal" value="a" />A
-      </label>
-      <label>
-        <input type="radio" name="horizontal" value="b" />B
-      </label>
-    </fieldset>
-  </section>
-
-  <!-- Blockquote Section -->
-  <section class="mt-l">
-    <h1>Blockquote</h1>
-
-    <blockquote class="mt-s">
-      “Design is a funny word. Some people think design means how it looks.
-      But of course, if you dig deeper, it's really how it works.”
-      <footer>
-        <cite>— Steve Jobs</cite>
-      </footer>
-    </blockquote>
+      <fieldset data-horizontal>
+        <legend>Not bordered horizontal fieldset:</legend>
+        <label>
+          <input type="radio" name="horizontal" value="a" />A
+        </label>
+        <label>
+          <input type="radio" name="horizontal" value="b" />B
+        </label>
+      </fieldset>
+    </hstack>
   </section>
 
   <!-- Typography Section -->
@@ -291,42 +295,44 @@
       </p>
     </fieldset>
 
-    <fieldset data-bordered class="mt-s">
-      <legend>Small text (tag):</legend>
-      <small>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
-        malesuada eget vitae augue. Cras fermentum imperdiet lorem. Quisque eu mauris laoreet, molestie augue
-        at, gravida dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
-        malesuada eget vitae augue. Cras fermentum imperdiet lorem. Quisque eu mauris laoreet, molestie augue
-        at, gravida dui.
-      </small>
-    </fieldset>
+    <hstack class="mt-s" spacing="s" shrink>
+      <fieldset data-bordered>
+        <legend><code>small</code> tag:</legend>
+        <small>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
+          malesuada eget vitae augue. Cras fermentum imperdiet lorem. Quisque eu mauris laoreet, molestie augue
+          at, gravida dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
+          malesuada eget vitae augue. Cras fermentum imperdiet lorem. Quisque eu mauris laoreet, molestie augue
+          at, gravida dui.
+        </small>
+      </fieldset>
 
-    <fieldset data-bordered class="mt-s">
-      <legend>Text-level semantics:</legend>
+      <fieldset data-bordered>
+        <legend>Text-level semantics:</legend>
 
-      <strong>strong</strong>
-      <b>b</b>
-      <em>em</em>
-      <i>italic</i>
-      <u>underline</u>
-      <s>strikethrough</s>
-      <mark>mark</mark>
-      <br>
-      <var>l x w x h</var>
-      <kbd>CMD + P</kbd>
-      <abbr title="Abbreviation">Abbr</abbr>
-      <small>Small</small>
-      <sub>Sub</sub>
-      <sup>Sup</sup>
-    </fieldset>
+        <strong>strong</strong>
+        <b>b</b>
+        <em>em</em>
+        <i>italic</i>
+        <u>underline</u>
+        <s>strikethrough</s>
+        <mark>mark</mark>
+        <br>
+        <var>l x w x h</var>
+        <kbd>CMD + P</kbd>
+        <abbr title="Abbreviation">Abbr</abbr>
+        <small>Small</small>
+        <sub>Sub</sub>
+        <sup>Sup</sup>
+      </fieldset>
+    </hstack>
   </section>
 
   <!-- Code Section -->
   <section class="mt-l">
     <h1>Code</h1>
 
-    <fieldset data-bordered class="mt-s">
+    <fieldset class="mt-s" data-bordered>
       <legend><code>pre</code> and <code>code</code> tags:</legend>
 
       <p>
@@ -347,20 +353,124 @@
       </div>
     </fieldset>
 
-
-    <fieldset data-bordered class="mt-s">
+    <fieldset class="mt-s" data-bordered>
       <legend><code>samp</code> tag:</legend>
       <p>Program output: <samp>Connected successfully</samp></p>
     </fieldset>
 
-    <fieldset data-bordered class="mt-s">
+    <fieldset class="mt-s" data-bordered>
       <legend><code>kbd</code> tag:</legend>
       <p>Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save the file</p>
     </fieldset>
 
-    <fieldset data-bordered class="mt-s">
+    <fieldset class="mt-s" data-bordered>
       <legend><code>var</code> tag:</legend>
       <p>Let <var>x</var> be the number of users online</p>
+    </fieldset>
+  </section>
+
+  <!-- Images Section -->
+  <section class="mt-l">
+    <h1>Images</h1>
+
+    <fieldset class="mt-s" data-bordered>
+      <legend>Avatars:</legend>
+
+      <vstack spacing="s">
+        <figure class="avatar">
+          <label>Default with name:</label>
+          <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix&flip=true"
+            alt="felix-avatar-1" />
+          <figcaption class="avatar__name">Tom Smith</figcaption>
+        </figure>
+
+        <figure class="avatar" data-soft>
+          <label>Soft rounded:</label>
+          <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
+            alt="felix-avatar-1" />
+        </figure>
+
+        <figure class="avatar" data-square>
+          <label>Square rounded:</label>
+          <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
+            alt="felix-avatar-1" />
+        </figure>
+
+        <figure class="avatar" data-small>
+          <label>Small:</label>
+          <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
+            alt="felix-avatar-2" />
+        </figure>
+
+        <figure class="avatar" data-medium>
+          <label>Medium:</label>
+          <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
+            alt="felix-avatar-3" />
+        </figure>
+
+        <figure class="avatar" data-large>
+          <label>Large:</label>
+          <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
+            alt="felix-avatar-4" />
+        </figure>
+
+        <hstack spacing="s" data-wrap>
+          <div class="small-group">
+            <label>Small group:</label>
+            <ul class="avatar-group" data-small>
+              <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Nolan"
+                  alt="Nolan" /></li>
+              <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Maria"
+                  alt="Maria" /></li>
+              <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Aiden"
+                  alt="Aiden" /></li>
+              <li class="avatar avatar--more"><span>+5</span></li>
+            </ul>
+          </div>
+          <div class="default-group">
+            <label>Default avatar group:</label>
+            <ul class="avatar-group">
+              <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Nolan"
+                  alt="Nolan" /></li>
+              <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Maria"
+                  alt="Maria" /></li>
+              <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Aiden"
+                  alt="Aiden" /></li>
+              <li class="avatar avatar--more"><span>+5</span></li>
+            </ul>
+          </div>
+          <div class="large-group">
+            <label>Large group:</label>
+            <ul class="avatar-group" data-large>
+              <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Nolan"
+                  alt="Nolan" /></li>
+              <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Maria"
+                  alt="Maria" /></li>
+              <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Aiden"
+                  alt="Aiden" /></li>
+              <li class="avatar avatar--more"><span>+5</span></li>
+            </ul>
+          </div>
+        </hstack>
+      </vstack>
+    </fieldset>
+
+    <fieldset class="mt-s" data-bordered>
+      <legend>Images:</legend>
+
+      <figure class="article-image">
+        <img
+          src="https://cdn.prod.website-files.com/64ccc2cbb5ca5d428651752c/6717ba59a5c95604e4d638d7_6717b8680d642f849aac1c28_unique-brutalist-building-habitat-76-moshe-safdie.jpeg"
+          alt="Habitat 67" class="article-image__img" />
+        <figcaption class="article-image__caption">Figure 1: Habitat 67, Montreal (small pic)</figcaption>
+      </figure>
+
+      <figure class="article-image">
+        <img src="https://i.pinimg.com/736x/0d/23/8a/0d238afc2948e8e4b39ebf4e09ab272c.jpg"
+          alt="Bank of London and South America" class="article-image__img" />
+        <figcaption class="article-image__caption">Figure 2: Bank of London and South America, Buenos Aires (large pic)
+        </figcaption>
+      </figure>
     </fieldset>
   </section>
 
