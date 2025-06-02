@@ -60,59 +60,63 @@
 
   <!-- Buttons Section -->
   <section class="mt-l">
-    <h1>Buttons</h1>
+    <vstack spacing="s">
+      <h1>Buttons</h1>
 
-    <hstack spacing="s" class="mt-s" data-wrap>
-      <span>Filled:</span>
-      <button class="link">link</button>
-      <button class="text">text</button>
-      <button>default</button>
-      <button class="success">success</button>
-      <button class="info">info</button>
-      <button class="danger">danger</button>
-      <button id="active-button" class="active">active</button>
-      <button disabled>disabled</button>
-    </hstack>
+      <hstack spacing="s" data-wrap>
+        <span>Filled:</span>
+        <button class="link">link</button>
+        <button class="text">text</button>
+        <button>default</button>
+        <button class="success">success</button>
+        <button class="info">info</button>
+        <button class="danger">danger</button>
+        <button id="active-button" class="active">active</button>
+        <button disabled>disabled</button>
+      </hstack>
 
-    <hstack spacing="s" class="mt-s" data-wrap>
-      <span>Outlined:</span>
-      <button class="outline">default</button>
-      <button class="outline success">success</button>
-      <button class="outline info">info</button>
-      <button class="outline danger">danger</button>
-      <button id="active-outline-button" class="outline active">
-        active
-      </button>
-      <button disabled class="outline">disabled</button>
-    </hstack>
+      <hstack spacing="s" data-wrap>
+        <span>Outlined:</span>
+        <button class="outline">default</button>
+        <button class="outline success">success</button>
+        <button class="outline info">info</button>
+        <button class="outline danger">danger</button>
+        <button id="active-outline-button" class="outline active">
+          active
+        </button>
+        <button disabled class="outline">disabled</button>
+      </hstack>
 
-    <hstack spacing="s" class="mt-s" data-wrap>
-      <span>Rounded:</span>
-      <button class="br-0">button 0</button>
-      <button class="br-3xs">button 3xs</button>
-      <button class="br-2xs">button 2xs</button>
-      <button class="br-xs">button xs</button>
-    </hstack>
+      <hstack spacing="s" data-wrap>
+        <span>Rounded:</span>
+        <button class="br-0">button 0</button>
+        <button class="br-3xs">button 3xs</button>
+        <button class="br-2xs">button 2xs</button>
+        <button class="br-xs">button xs</button>
+      </hstack>
 
-    <hstack spacing="s" class="mt-s" data-wrap>
-      <span>Sizes:</span>
-      <button data-smallest>smallest</button>
-      <button data-small>small</button>
-      <button>default</button>
-      <button data-large>large</button>
-      <button data-largest>largest</button>
-    </hstack>
+      <hstack spacing="s" data-wrap>
+        <span>Sizes:</span>
+        <button data-smallest>smallest</button>
+        <button data-small>small</button>
+        <button>default</button>
+        <button data-large>large</button>
+        <button data-largest>largest</button>
+      </hstack>
+    </vstack>
   </section>
 
   <!-- Inputs Section -->
   <section class="mt-l">
-    <h1>Inputs</h1>
+    <vstack spacing="s">
+      <h1>Inputs</h1>
 
-    <vstack spacing="s" class="mt-s">
       <input type="text" name="name" placeholder="Name" autocomplete="off">
       <input type="email" name="email" placeholder="Email" autocomplete="off">
       <input type="text" name="disabled" placeholder="Disabled" disabled />
+
       <textarea name="description" placeholder="Description" rows="3"></textarea>
+
       <select name="social">
         <option>Instagram</option>
         <option>Facebook</option>
@@ -121,6 +125,7 @@
         <option selected>GitHub</option>
         <option>Reddit</option>
       </select>
+
       <hstack spacing="s">
         <label for="range">Range</label>
         <input id="range" type="range" min="0" max="1" step="0.1">
@@ -137,10 +142,12 @@
         <li>Item 1</li>
         <li>Item 2</li>
       </ul>
+
       <ol>
         <li>First item</li>
         <li>Second item</li>
       </ol>
+
       <dl>
         <dt>CSS (Cascading Style Sheets)</dt>
         <dd>Is a style sheet language used for specifying the presentation and styling of a document written in a
@@ -152,32 +159,36 @@
 
   <!-- Blockquote Section -->
   <section class="mt-l">
-    <h1>Blockquote</h1>
+    <vstack spacing="s">
+      <h1>Blockquote</h1>
 
-    <blockquote class="mt-s">
-      “Design is a funny word. Some people think design means how it looks.
-      But of course, if you dig deeper, it's really how it works.”
-      <footer>
-        <cite>— Steve Jobs</cite>
-      </footer>
-    </blockquote>
+      <blockquote>
+        “Design is a funny word. Some people think design means how it looks.
+        But of course, if you dig deeper, it's really how it works.”
+        <footer>
+          <cite>— Steve Jobs</cite>
+        </footer>
+      </blockquote>
+    </vstack>
   </section>
 
   <!-- Links Section -->
   <section class="mt-l">
-    <h1>Links</h1>
+    <vstack spacing="s">
+      <h1>Links</h1>
 
-    <hstack spacing="s" class="mt-s">
-      <a href="#">simple link</a>
-      <a href="https://github.com/alexsad95/initcss" class="text" target="_blank" rel="noreferrer noopener">
-        <svg class="w-s" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-          <path
-            d="M24 12L18.3431 17.6569L16.9289 16.2426L21.1716 12L16.9289 7.75736L18.3431 6.34315L24 12ZM2.82843 12L7.07107 16.2426L5.65685 17.6569L0 12L5.65685 6.34315L7.07107 7.75736L2.82843 12ZM9.78845 21H7.66009L14.2116 3H16.3399L9.78845 21Z">
-          </path>
-        </svg>
-        with icon
-      </a>
-    </hstack>
+      <hstack spacing="s">
+        <a href="#">simple link</a>
+        <a href="https://github.com/alexsad95/initcss" class="text" target="_blank" rel="noreferrer noopener">
+          <svg class="w-s" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M24 12L18.3431 17.6569L16.9289 16.2426L21.1716 12L16.9289 7.75736L18.3431 6.34315L24 12ZM2.82843 12L7.07107 16.2426L5.65685 17.6569L0 12L5.65685 6.34315L7.07107 7.75736L2.82843 12ZM9.78845 21H7.66009L14.2116 3H16.3399L9.78845 21Z">
+            </path>
+          </svg>
+          with icon
+        </a>
+      </hstack>
+    </vstack>
   </section>
 
   <!-- Dividers Section -->
@@ -188,6 +199,7 @@
     <div class="divider-with-text">or</div>
     <div class="divider-dotted"></div>
     <div class="divider-thick"></div>
+
     <div style="display: flex; align-items: center;">
       <span>Left</span>
       <div class="v-divider"></div>
@@ -202,9 +214,11 @@
     <label>
       <input type="checkbox" name="desires" value="coffe" checked />Coffee in the morning — yes!
     </label>
+
     <label>
       <input type="checkbox" name="desires" value="friday" />Friday every day — absolutely!
     </label>
+
     <label>
       <input type="checkbox" name="desires" value="work" disabled />Working after 6 PM — no way!
     </label>
@@ -217,9 +231,11 @@
     <label>
       <input type="radio" name="weekend" value="stayhome" />Stay home, do nothing, recharge
     </label>
+
     <label>
       <input type="radio" name="weekend" value="adventure" />Go on a spontaneous adventure
     </label>
+
     <label>
       <input type="radio" name="weekend" value="sleep" disabled />Sleep until further notice (currently unavailable 😴)
     </label>
@@ -227,47 +243,50 @@
 
   <!-- Fieldsets Section -->
   <section class="mt-l">
-    <h1>Fieldsets</h1>
+    <vstack spacing="s">
+      <h1>Fieldsets</h1>
 
-    <fieldset class="mt-s" data-bordered>
-      Fieldset without &lt;legend&gt; tag
-    </fieldset>
-
-    <hstack class="mt-s" spacing="s" shrink>
-      <fieldset data-dotted>
-        <legend>Dotted-bordered fieldset:</legend>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor malesuada eget vitae
-        augue.
-      </fieldset>
-
-      <fieldset data-dashed>
-        <legend>Dashed-bordered fieldset:</legend>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor malesuada eget vitae
-        augue.
-      </fieldset>
-    </hstack>
-
-    <hstack class="mt-s" spacing="s" shrink>
       <fieldset data-bordered>
-        <legend>Bordered vertical (default) fieldset:</legend>
-        <label>
-          <input type="checkbox" name="vertical" value="a" />A
-        </label>
-        <label>
-          <input type="checkbox" name="vertical" value="b" />B
-        </label>
+        Fieldset without &lt;legend&gt; tag
       </fieldset>
 
-      <fieldset data-horizontal>
-        <legend>Not bordered horizontal fieldset:</legend>
-        <label>
-          <input type="radio" name="horizontal" value="a" />A
-        </label>
-        <label>
-          <input type="radio" name="horizontal" value="b" />B
-        </label>
-      </fieldset>
-    </hstack>
+      <hstack spacing="s" shrink>
+        <fieldset data-dotted>
+          <legend>Dotted-bordered fieldset:</legend>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor malesuada eget
+          vitae
+          augue.
+        </fieldset>
+        <fieldset data-dashed>
+          <legend>Dashed-bordered fieldset:</legend>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor malesuada eget
+          vitae
+          augue.
+        </fieldset>
+      </hstack>
+
+      <hstack spacing="s" shrink>
+        <fieldset data-bordered>
+          <legend>Bordered vertical (default) fieldset:</legend>
+          <label>
+            <input type="checkbox" name="vertical" value="a" />A
+          </label>
+          <label>
+            <input type="checkbox" name="vertical" value="b" />B
+          </label>
+        </fieldset>
+
+        <fieldset data-horizontal>
+          <legend>Not bordered horizontal fieldset:</legend>
+          <label>
+            <input type="radio" name="horizontal" value="a" />A
+          </label>
+          <label>
+            <input type="radio" name="horizontal" value="b" />B
+          </label>
+        </fieldset>
+      </hstack>
+    </vstack>
   </section>
 
   <!-- Typography Section -->
@@ -276,6 +295,7 @@
 
     <fieldset data-bordered class="mt-s">
       <legend>Headings:</legend>
+
       <h1>H1 tag</h1>
       <h2>H2 tag</h2>
       <h3>H3 tag</h3>
@@ -283,6 +303,7 @@
 
     <fieldset data-bordered class="mt-s">
       <legend>Large paragraph:</legend>
+
       <p data-large>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
         malesuada eget vitae augue.
@@ -291,6 +312,7 @@
 
     <fieldset data-bordered class="mt-s">
       <legend>Default paragraph:</legend>
+
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
         malesuada eget vitae augue.
@@ -299,6 +321,7 @@
 
     <fieldset data-bordered class="mt-s">
       <legend>Small paragraph:</legend>
+
       <p data-small>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
         malesuada eget vitae augue. Cras fermentum imperdiet lorem. Quisque eu mauris laoreet, molestie augue
@@ -309,6 +332,7 @@
     <hstack class="mt-s" spacing="s" shrink>
       <fieldset data-bordered>
         <legend><code>small</code> tag:</legend>
+
         <small>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
           malesuada eget vitae augue. Cras fermentum imperdiet lorem. Quisque eu mauris laoreet, molestie augue
@@ -363,33 +387,40 @@
 
     <fieldset class="mt-s" data-bordered>
       <legend><code>samp</code> tag:</legend>
+
       <p>Program output: <samp>Connected successfully</samp></p>
     </fieldset>
 
     <fieldset class="mt-s" data-bordered>
       <legend><code>kbd</code> tag:</legend>
+
       <p>Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save the file</p>
     </fieldset>
 
     <fieldset class="mt-s" data-bordered>
       <legend><code>var</code> tag:</legend>
+
       <p>Let <var>x</var> be the number of users online</p>
     </fieldset>
   </section>
 
-  <!-- Images Section -->
+  <!-- Avatars Section -->
   <section class="mt-l">
-    <h1>Images</h1>
+    <h1>Avatars</h1>
 
-    <fieldset class="mt-s" data-bordered>
-      <legend>Avatars:</legend>
+    <vstack spacing="s" class="mt-s">
+      <figure class="avatar">
+        <label>With name:</label>
+        <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix&flip=true"
+          alt="felix-avatar-1" />
+        <figcaption class="avatar__name">Tom Smith</figcaption>
+      </figure>
 
-      <vstack spacing="s">
+      <hstack spacing="s" data-wrap shrink>
         <figure class="avatar">
-          <label>Default with name:</label>
+          <label>Default rounded:</label>
           <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix&flip=true"
             alt="felix-avatar-1" />
-          <figcaption class="avatar__name">Tom Smith</figcaption>
         </figure>
 
         <figure class="avatar" data-soft>
@@ -403,11 +434,19 @@
           <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
             alt="felix-avatar-1" />
         </figure>
+      </hstack>
 
+      <hstack spacing="s" data-wrap shrink>
         <figure class="avatar" data-small>
           <label>Small:</label>
           <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
             alt="felix-avatar-2" />
+        </figure>
+
+        <figure class="avatar">
+          <label>Default:</label>
+          <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
+            alt="felix-avatar-3" />
         </figure>
 
         <figure class="avatar" data-medium>
@@ -421,50 +460,55 @@
           <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
             alt="felix-avatar-4" />
         </figure>
+      </hstack>
 
-        <hstack spacing="s" data-wrap>
-          <div class="small-group">
-            <label>Small group:</label>
-            <ul class="avatar-group" data-small>
-              <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Nolan"
-                  alt="Nolan" /></li>
-              <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Maria"
-                  alt="Maria" /></li>
-              <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Aiden"
-                  alt="Aiden" /></li>
-              <li class="avatar avatar--more"><span>+5</span></li>
-            </ul>
-          </div>
-          <div class="default-group">
-            <label>Default avatar group:</label>
-            <ul class="avatar-group">
-              <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Nolan"
-                  alt="Nolan" /></li>
-              <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Maria"
-                  alt="Maria" /></li>
-              <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Aiden"
-                  alt="Aiden" /></li>
-              <li class="avatar avatar--more"><span>+5</span></li>
-            </ul>
-          </div>
-          <div class="large-group">
-            <label>Large group:</label>
-            <ul class="avatar-group" data-large>
-              <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Nolan"
-                  alt="Nolan" /></li>
-              <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Maria"
-                  alt="Maria" /></li>
-              <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Aiden"
-                  alt="Aiden" /></li>
-              <li class="avatar avatar--more"><span>+5</span></li>
-            </ul>
-          </div>
-        </hstack>
-      </vstack>
-    </fieldset>
+      <hstack spacing="s" data-wrap shrink>
+        <vstack spacing="xs">
+          <label>Small group:</label>
+          <ul class="avatar-group" data-small>
+            <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Nolan"
+                alt="Nolan" /></li>
+            <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Maria"
+                alt="Maria" /></li>
+            <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Aiden"
+                alt="Aiden" /></li>
+            <li class="avatar avatar--more"><span>+5</span></li>
+          </ul>
+        </vstack>
 
-    <fieldset class="mt-s" data-bordered>
-      <legend>Images:</legend>
+        <vstack spacing="xs">
+          <label>Default avatar group:</label>
+          <ul class="avatar-group">
+            <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Nolan"
+                alt="Nolan" /></li>
+            <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Maria"
+                alt="Maria" /></li>
+            <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Aiden"
+                alt="Aiden" /></li>
+            <li class="avatar avatar--more"><span>+5</span></li>
+          </ul>
+        </vstack>
+
+        <vstack spacing="xs">
+          <label>Large group:</label>
+          <ul class="avatar-group" data-large>
+            <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Nolan"
+                alt="Nolan" /></li>
+            <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Maria"
+                alt="Maria" /></li>
+            <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Aiden"
+                alt="Aiden" /></li>
+            <li class="avatar avatar--more"><span>+5</span></li>
+          </ul>
+        </vstack>
+      </hstack>
+    </vstack>
+  </section>
+
+  <!-- Images Section -->
+  <section class="mt-l">
+    <vstack spacing="s">
+      <h1>Images</h1>
 
       <figure class="article-image">
         <img
@@ -479,7 +523,7 @@
         <figcaption class="article-image__caption">Figure 2: Bank of London and South America, Buenos Aires (large pic)
         </figcaption>
       </figure>
-    </fieldset>
+    </vstack>
   </section>
 
   <script type="module" src="./main.ts"></script>
