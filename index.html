@@ -12,7 +12,7 @@
 
 <body>
   <!-- Theme Button -->
-  <hstack align-x="right" class="mb-m">
+  <hstack align-x="right">
     <button id="theme-button" class="mr-s py-2xs px-xs br-2xs">
       <svg class="w-s" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
         <path
@@ -182,6 +182,21 @@
     </hstack>
   </section>
 
+  <!-- Dividers Section -->
+  <section class="mt-l">
+    <h1>Dividers</h1>
+
+    <div class="divider"></div>
+    <div class="divider-with-text">or</div>
+    <div class="divider-dotted"></div>
+    <div class="divider-thick"></div>
+    <div style="display: flex; align-items: center;">
+      <span>Left</span>
+      <div class="v-divider"></div>
+      <span>Right</span>
+    </div>
+  </section>
+
   <!-- Checkboxes Section -->
   <section class="mt-l">
     <h1>Checkboxes</h1>
@@ -272,8 +287,7 @@
       <legend>Large paragraph:</legend>
       <p data-large>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
-        malesuada eget vitae augue. Cras fermentum imperdiet lorem. Quisque eu mauris laoreet, molestie augue
-        at, gravida dui.
+        malesuada eget vitae augue.
       </p>
     </fieldset>
 
@@ -281,8 +295,7 @@
       <legend>Default paragraph:</legend>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
-        malesuada eget vitae augue. Cras fermentum imperdiet lorem. Quisque eu mauris laoreet, molestie augue
-        at, gravida dui.
+        malesuada eget vitae augue.
       </p>
     </fieldset>
 
@@ -301,9 +314,7 @@
         <small>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
           malesuada eget vitae augue. Cras fermentum imperdiet lorem. Quisque eu mauris laoreet, molestie augue
-          at, gravida dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
-          malesuada eget vitae augue. Cras fermentum imperdiet lorem. Quisque eu mauris laoreet, molestie augue
-          at, gravida dui.
+          at, gravida dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </small>
       </fieldset>
 
@@ -317,7 +328,6 @@
         <u>underline</u>
         <s>strikethrough</s>
         <mark>mark</mark>
-        <br>
         <var>l x w x h</var>
         <kbd>CMD + P</kbd>
         <abbr title="Abbreviation">Abbr</abbr>
