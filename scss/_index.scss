@@ -720,3 +720,54 @@ input[type="radio"] {
   --avatar-size: var(--size-l);
   font-size: 1.25rem;
 }
+
+.divider {
+  border: none;
+  height: 1px;
+  background: var(--sub-color);
+  margin: 1rem 0;
+}
+
+.divider-thick {
+  border: none;
+  height: 4px;
+  background: var(--sub-color);
+  margin: 2rem 0;
+  border-radius: 2px;
+}
+
+.divider-dotted {
+  border: none;
+  border-top: 1px dotted var(--sub-color);
+  margin: 1.5rem 0;
+}
+
+.v-divider {
+  width: 1px;
+  height: 1.5em;
+  background: var(--sub-color);
+  margin: 0 1rem;
+}
+
+.divider-with-text {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--sub-color);
+  margin: 1rem 0;
+}
+
+.divider-with-text::before,
+.divider-with-text::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid var(--sub-color);
+}
+
+.divider-with-text::before {
+  margin-right: 0.5em;
+}
+
+.divider-with-text::after {
+  margin-left: 0.5em;
+}
