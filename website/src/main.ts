@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   checkThemeForIcons();
+  setupCopyButtons();
 
   // Indeterminated checkbox
   // (indeterminateCheckbox as HTMLInputElement).indeterminate = true;
@@ -47,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
   toggleThemeButton.addEventListener('click', toggleTheme);
   activeOutlineButton.addEventListener('click', () => toggleActiveButton(activeOutlineButton));
   activeButton.addEventListener('click', () => toggleActiveButton(activeButton));
-  // themeChangeButton.addEventListener('click', () => activateThemeChanger());
 
   tippy(toggleThemeButton, {
     ...defaultTippyOptions,
@@ -112,6 +112,23 @@ function checkThemeForIcons(): void {
 
   themeLightSvg.style.display = isLightTheme ? 'block' : 'none';
   themeDarkSvg.style.display = isLightTheme ? 'none' : 'block';
+}
+
+function setupCopyButtons(): void {
+  const buttons = document.querySelectorAll<HTMLButtonElement>('.code-block__copy-btn');
+
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const codeElement = btn.closest('.code-block')?.querySelector('code');
+      if (!codeElement) return;
+
+      const code = codeElement.textContent || '';
+      navigator.clipboard.writeText(code).then(() => {
+        btn.textContent = 'Copied!';
+        setTimeout(() => (btn.textContent = 'Copy'), 1000);
+      });
+    });
+  });
 }
 
 /**
