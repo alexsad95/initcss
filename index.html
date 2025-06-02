@@ -6,7 +6,7 @@
   <link rel="icon" type="image/svg+xml" href="/initcss/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>InitCSS Example</title>
-  <script type="module" crossorigin src="/initcss/assets/index-DmN0QTEz.js"></script>
+  <script type="module" crossorigin src="/initcss/assets/index-bJ4IwocB.js"></script>
   <link rel="stylesheet" crossorigin href="/initcss/assets/index-B8gSKQ-A.css">
 </head>
 
@@ -317,8 +317,50 @@
       <kbd>CMD + P</kbd>
       <abbr title="Abbreviation">Abbr</abbr>
       <small>Small</small>
-      Text <sub>Sub</sub>
-      Text <sup>Sup</sup>
+      <sub>Sub</sub>
+      <sup>Sup</sup>
+    </fieldset>
+  </section>
+
+  <!-- Code Section -->
+  <section class="mt-l">
+    <h1>Code</h1>
+
+    <fieldset data-bordered class="mt-s">
+      <legend><code>pre</code> and <code>code</code> tags:</legend>
+
+      <p>
+        Use the <code>fetch()</code> function to make HTTP requests in JavaScript.
+      </p>
+
+      <div class="code-block">
+        <div class="code-block__header">
+          <span class="code-block__lang">JS</span>
+          <button class="code-block__copy-btn">Copy</button>
+        </div>
+        <pre><code>function fetchData() {
+  fetch('/api/data')
+    .then(response => response.json())
+    .then(data => console.log(data));
+}
+</code></pre>
+      </div>
+    </fieldset>
+
+
+    <fieldset data-bordered class="mt-s">
+      <legend><code>samp</code> tag:</legend>
+      <p>Program output: <samp>Connected successfully</samp></p>
+    </fieldset>
+
+    <fieldset data-bordered class="mt-s">
+      <legend><code>kbd</code> tag:</legend>
+      <p>Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save the file</p>
+    </fieldset>
+
+    <fieldset data-bordered class="mt-s">
+      <legend><code>var</code> tag:</legend>
+      <p>Let <var>x</var> be the number of users online</p>
     </fieldset>
   </section>
 
