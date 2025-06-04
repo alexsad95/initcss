@@ -3,6 +3,7 @@
 @import "../utils/sizes";
 
 $sizes: map-merge($sizes-1, $sizes-2);
+$sizes: map-merge($sizes, $ext-size);
 
 @each $key, $value in $sizes {
   .w-#{$key} {
