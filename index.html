@@ -66,7 +66,8 @@
       <h1>Buttons</h1>
 
       <hstack spacing="s" data-wrap>
-        <span>Filled:</span>
+        <label data-underline>Filled:</label>
+
         <button class="link">link</button>
         <button class="text">text</button>
         <button>default</button>
@@ -78,7 +79,8 @@
       </hstack>
 
       <hstack spacing="s" data-wrap>
-        <span>Outlined:</span>
+        <label data-underline>Outlined:</label>
+
         <button class="outline">default</button>
         <button class="outline success">success</button>
         <button class="outline info">info</button>
@@ -90,7 +92,8 @@
       </hstack>
 
       <hstack spacing="s" data-wrap>
-        <span>Rounded:</span>
+        <label data-underline>Rounded:</label>
+
         <button class="br-0">button 0</button>
         <button class="br-3xs">button 3xs</button>
         <button class="br-2xs">button 2xs</button>
@@ -98,7 +101,8 @@
       </hstack>
 
       <hstack spacing="s" data-wrap>
-        <span>Sizes:</span>
+        <label data-underline>Sizes:</label>
+
         <button data-smallest>smallest</button>
         <button data-small>small</button>
         <button>default</button>
@@ -129,7 +133,7 @@
       </select>
 
       <hstack spacing="s">
-        <label for="range">Range</label>
+        <label for="range" data-underline>Range</label>
         <input id="range" type="range" min="0" max="1" step="0.1">
       </hstack>
     </vstack>
@@ -193,6 +197,21 @@
     </vstack>
   </section>
 
+  <!-- Details Section -->
+  <section class="mt-l">
+    <vstack spacing="s">
+      <h1>Details</h1>
+
+      <details>
+        <summary>More Info</summary>
+        <div class="divider-medium ma-0"></div>
+        <div class="details-content">
+          <p>This is the hidden content revealed when you expand the details.</p>
+        </div>
+      </details>
+    </vstack>
+  </section>
+
   <!-- Dividers Section -->
   <section class="mt-l">
     <h1>Dividers</h1>
@@ -200,47 +219,232 @@
     <div class="divider"></div>
     <div class="divider-with-text">or</div>
     <div class="divider-dotted"></div>
+    <div class="divider-medium"></div>
     <div class="divider-thick"></div>
 
-    <div style="display: flex; align-items: center;">
+    <hstack align-items="center">
       <span>Left</span>
       <div class="v-divider"></div>
       <span>Right</span>
-    </div>
+    </hstack>
+  </section>
+
+  <!-- Tables Section -->
+  <section class="mt-l">
+    <vstack spacing="s">
+      <h1>Tables</h1>
+
+      <label data-underline>Default table:</label>
+
+      <table>
+        <caption>Status of the club members 2021</caption>
+        <thead>
+          <tr>
+            <th scope="col" rowspan="2">Name</th>
+            <th scope="col" rowspan="2">ID</th>
+            <th scope="col" colspan="2">Membership Dates</th>
+            <th scope="col" rowspan="2">Balance</th>
+          </tr>
+          <tr>
+            <th scope="col">Joined</th>
+            <th scope="col">Canceled</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Margaret Nguyen</th>
+            <td>427311</td>
+            <td><time datetime="2010-06-03">June 3, 2010</time></td>
+            <td>n/a</td>
+            <td>0.00</td>
+          </tr>
+          <tr>
+            <th scope="row">Edvard Galinski</th>
+            <td>533175</td>
+            <td><time datetime="2011-01-13">January 13, 2011</time></td>
+            <td><time datetime="2017-04-08">April 8, 2017</time></td>
+            <td>37.00</td>
+          </tr>
+          <tr>
+            <th scope="row">Hoshi Nakamura</th>
+            <td>601942</td>
+            <td><time datetime="2012-07-23">July 23, 2012</time></td>
+            <td>n/a</td>
+            <td>15.00</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th scope="row" colspan="4">Total balance</th>
+            <td>52.00</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <label data-underline>Hoverable with horizontal dividers:</label>
+
+      <table class="mt-s" data-horizontal-dividers data-hoverable>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Level</th>
+        </tr>
+        <tr>
+          <td>Rick</td>
+          <td>Sanchez</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Morty</td>
+          <td>Smith</td>
+          <td>6</td>
+        </tr>
+      </table>
+
+      <label data-underline>Vertical zebra stripes:</label>
+
+      <table class="mt-s" data-vertical-zebra>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Age</th>
+          <th>Level</th>
+        </tr>
+        <tr>
+          <td>Rick</td>
+          <td>Sanchez</td>
+          <td>70</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Morty</td>
+          <td>Smith</td>
+          <td>14</td>
+          <td>6</td>
+        </tr>
+      </table>
+
+      <label data-underline>Horizontal zebra stripes:</label>
+
+      <table class="mt-s" data-horizontal-zebra>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Level</th>
+        </tr>
+        <tr>
+          <td>Rick</td>
+          <td>Sanchez</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Beth</td>
+          <td>Smith</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>Jerry</td>
+          <td>Smith</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>Morty</td>
+          <td>Smith</td>
+          <td>6</td>
+        </tr>
+      </table>
+
+      <label data-underline>Colgroup:</label>
+
+      <table class="mt-s">
+        <colgroup>
+          <col span="2">
+        </colgroup>
+        <tr>
+          <th>MON</th>
+          <th>TUE</th>
+          <th>WED</th>
+          <th>THU</th>
+          <th>FRI</th>
+          <th>SAT</th>
+          <th>SUN</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>9</td>
+          <td>10</td>
+          <td>11</td>
+          <td>12</td>
+          <td>13</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>16</td>
+          <td>17</td>
+          <td>18</td>
+          <td>19</td>
+          <td>20</td>
+          <td>21</td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td>23</td>
+          <td>24</td>
+          <td>25</td>
+          <td>26</td>
+          <td>27</td>
+          <td>28</td>
+        </tr>
+      </table>
   </section>
 
   <!-- Checkboxes Section -->
   <section class="mt-l">
     <h1>Checkboxes</h1>
 
-    <label>
-      <input type="checkbox" name="desires" value="coffe" checked />Coffee in the morning — yes!
-    </label>
+    <div class="mt-s">
+      <label>
+        <input type="checkbox" name="desires" value="coffe" checked />Coffee in the morning — yes!
+      </label>
 
-    <label>
-      <input type="checkbox" name="desires" value="friday" />Friday every day — absolutely!
-    </label>
+      <label>
+        <input type="checkbox" name="desires" value="friday" />Friday every day — absolutely!
+      </label>
 
-    <label>
-      <input type="checkbox" name="desires" value="work" disabled />Working after 6 PM — no way!
-    </label>
+      <label>
+        <input type="checkbox" name="desires" value="work" disabled />Working after 6 PM — no way!
+      </label>
+    </div>
   </section>
 
   <!-- Radios Section -->
   <section class="mt-l">
     <h1>Radios</h1>
 
-    <label>
-      <input type="radio" name="weekend" value="stayhome" />Stay home, do nothing, recharge
-    </label>
+    <div class="mt-s">
+      <label>
+        <input type="radio" name="weekend" value="stayhome" />Stay home, do nothing, recharge
+      </label>
 
-    <label>
-      <input type="radio" name="weekend" value="adventure" />Go on a spontaneous adventure
-    </label>
+      <label>
+        <input type="radio" name="weekend" value="adventure" />Go on a spontaneous adventure
+      </label>
 
-    <label>
-      <input type="radio" name="weekend" value="sleep" disabled />Sleep until further notice (currently unavailable 😴)
-    </label>
+      <label>
+        <input type="radio" name="weekend" value="sleep" disabled />Sleep until further notice (currently unavailable
+        😴)
+      </label>
+    </div>
   </section>
 
   <!-- Fieldsets Section -->
@@ -259,6 +463,7 @@
           vitae
           augue.
         </fieldset>
+
         <fieldset data-dashed>
           <legend>Dashed-bordered fieldset:</legend>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor malesuada eget
@@ -279,7 +484,7 @@
         </fieldset>
 
         <fieldset data-horizontal>
-          <legend>Not bordered horizontal fieldset:</legend>
+          <legend data-underline>Not bordered horizontal fieldset:</legend>
           <label>
             <input type="radio" name="horizontal" value="a" />A
           </label>
@@ -293,126 +498,122 @@
 
   <!-- Typography Section -->
   <section class="mt-l">
-    <h1>Typography</h1>
+    <vstack spacing="s">
+      <h1>Typography</h1>
 
-    <fieldset data-bordered class="mt-s">
-      <legend>Headings:</legend>
-
-      <h1>H1 tag</h1>
-      <h2>H2 tag</h2>
-      <h3>H3 tag</h3>
-    </fieldset>
-
-    <fieldset data-bordered class="mt-s">
-      <legend>Large paragraph:</legend>
-
-      <p data-large>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
-        malesuada eget vitae augue.
-      </p>
-    </fieldset>
-
-    <fieldset data-bordered class="mt-s">
-      <legend>Default paragraph:</legend>
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
-        malesuada eget vitae augue.
-      </p>
-    </fieldset>
-
-    <fieldset data-bordered class="mt-s">
-      <legend>Small paragraph:</legend>
-
-      <p data-small>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
-        malesuada eget vitae augue. Cras fermentum imperdiet lorem. Quisque eu mauris laoreet, molestie augue
-        at, gravida dui.
-      </p>
-    </fieldset>
-
-    <hstack class="mt-s" spacing="s" shrink>
       <fieldset data-bordered>
-        <legend><code>small</code> tag:</legend>
+        <legend>Headings:</legend>
 
-        <small>
+        <h1>H1 tag</h1>
+        <h2>H2 tag</h2>
+        <h3>H3 tag</h3>
+      </fieldset>
+
+      <fieldset data-bordered>
+        <legend>Large paragraph:</legend>
+        <p data-large>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
+          malesuada eget vitae augue.
+        </p>
+      </fieldset>
+
+      <fieldset data-bordered>
+        <legend>Default paragraph:</legend>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
+          malesuada eget vitae augue.
+        </p>
+      </fieldset>
+
+      <fieldset data-bordered>
+        <legend>Small paragraph:</legend>
+        <p data-small>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
           malesuada eget vitae augue. Cras fermentum imperdiet lorem. Quisque eu mauris laoreet, molestie augue
-          at, gravida dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </small>
+          at, gravida dui.
+        </p>
       </fieldset>
 
-      <fieldset data-bordered>
-        <legend>Text-level semantics:</legend>
+      <hstack spacing="s" shrink>
+        <fieldset data-bordered>
+          <legend><code>small</code> tag:</legend>
+          <small>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
+            malesuada eget vitae augue. Cras fermentum imperdiet lorem. Quisque eu mauris laoreet, molestie augue
+            at, gravida dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </small>
+        </fieldset>
 
-        <strong>strong</strong>
-        <b>b</b>
-        <em>em</em>
-        <i>italic</i>
-        <u>underline</u>
-        <s>strikethrough</s>
-        <mark>mark</mark>
-        <var>l x w x h</var>
-        <kbd>CMD + P</kbd>
-        <abbr title="Abbreviation">Abbr</abbr>
-        <small>Small</small>
-        <sub>Sub</sub>
-        <sup>Sup</sup>
-      </fieldset>
-    </hstack>
+        <fieldset data-bordered>
+          <legend>Text-level semantics:</legend>
+
+          <strong>strong</strong>
+          <b>b</b>
+          <em>em</em>
+          <i>italic</i>
+          <u>underline</u>
+          <s>strikethrough</s>
+          <mark>mark</mark>
+          <var>l x w x h</var>
+          <kbd>CMD + P</kbd>
+          <abbr title="Abbreviation">Abbr</abbr>
+          <small>Small</small>
+          <sub>Sub</sub>
+          <sup>Sup</sup>
+        </fieldset>
+      </hstack>
+    </vstack>
   </section>
 
   <!-- Code Section -->
   <section class="mt-l">
-    <h1>Code</h1>
+    <vstack spacing="s">
+      <h1>Code</h1>
 
-    <fieldset class="mt-s" data-bordered>
-      <legend><code>pre</code> and <code>code</code> tags:</legend>
+      <fieldset data-bordered>
+        <legend><code>pre</code> and <code>code</code> tags:</legend>
 
-      <p>
-        Use the <code>fetch()</code> function to make HTTP requests in JavaScript.
-      </p>
+        <p>
+          Use the <code>fetch()</code> function to make HTTP requests in JavaScript.
+        </p>
 
-      <div class="code-block">
-        <div class="code-block__header">
-          <span class="code-block__lang">JS</span>
-          <button class="code-block__copy-btn">Copy</button>
-        </div>
-        <pre><code>function fetchData() {
+        <div class="code-block">
+          <div class="code-block__header">
+            <span class="code-block__lang">JS</span>
+            <button class="code-block__copy-btn">Copy</button>
+          </div>
+          <pre><code>function fetchData() {
   fetch('/api/data')
-    .then(response => response.json())
-    .then(data => console.log(data));
-}
-</code></pre>
-      </div>
-    </fieldset>
+  .then(response => response.json())
+  .then(data => console.log(data));
+}</code></pre>
+        </div>
+      </fieldset>
 
-    <fieldset class="mt-s" data-bordered>
-      <legend><code>samp</code> tag:</legend>
+      <fieldset data-bordered>
+        <legend><code>samp</code> tag:</legend>
+        <p>Program output: <samp>Connected successfully</samp></p>
+      </fieldset>
 
-      <p>Program output: <samp>Connected successfully</samp></p>
-    </fieldset>
+      <fieldset data-bordered>
+        <legend><code>kbd</code> tag:</legend>
+        <p>Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save the file</p>
+      </fieldset>
 
-    <fieldset class="mt-s" data-bordered>
-      <legend><code>kbd</code> tag:</legend>
-
-      <p>Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save the file</p>
-    </fieldset>
-
-    <fieldset class="mt-s" data-bordered>
-      <legend><code>var</code> tag:</legend>
-
-      <p>Let <var>x</var> be the number of users online</p>
-    </fieldset>
+      <fieldset data-bordered>
+        <legend><code>var</code> tag:</legend>
+        <p>Let <var>x</var> be the number of users online</p>
+      </fieldset>
+    </vstack>
   </section>
 
   <!-- Avatars Section -->
   <section class="mt-l">
-    <h1>Avatars</h1>
+    <vstack spacing="s">
+      <h1>Avatars</h1>
 
-    <vstack spacing="s" class="mt-s">
       <figure class="avatar">
-        <label>With name:</label>
+        <label data-underline>With name:</label>
         <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix&flip=true"
           alt="felix-avatar-1" />
         <figcaption class="avatar__name">Tom Smith</figcaption>
@@ -420,19 +621,19 @@
 
       <hstack spacing="s" data-wrap shrink>
         <figure class="avatar">
-          <label>Default rounded:</label>
+          <label data-underline>Default rounded:</label>
           <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix&flip=true"
             alt="felix-avatar-1" />
         </figure>
 
         <figure class="avatar" data-soft>
-          <label>Soft rounded:</label>
+          <label data-underline>Soft rounded:</label>
           <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
             alt="felix-avatar-1" />
         </figure>
 
         <figure class="avatar" data-square>
-          <label>Square rounded:</label>
+          <label data-underline>Square rounded:</label>
           <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
             alt="felix-avatar-1" />
         </figure>
@@ -440,25 +641,25 @@
 
       <hstack spacing="s" data-wrap shrink>
         <figure class="avatar" data-small>
-          <label>Small:</label>
+          <label data-underline>Small:</label>
           <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
             alt="felix-avatar-2" />
         </figure>
 
         <figure class="avatar">
-          <label>Default:</label>
+          <label data-underline>Default:</label>
           <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
             alt="felix-avatar-3" />
         </figure>
 
         <figure class="avatar" data-medium>
-          <label>Medium:</label>
+          <label data-underline>Medium:</label>
           <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
             alt="felix-avatar-3" />
         </figure>
 
         <figure class="avatar" data-large>
-          <label>Large:</label>
+          <label data-underline>Large:</label>
           <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
             alt="felix-avatar-4" />
         </figure>
@@ -466,7 +667,7 @@
 
       <hstack spacing="s" data-wrap shrink>
         <vstack spacing="xs">
-          <label>Small group:</label>
+          <label data-underline>Small group:</label>
           <ul class="avatar-group" data-small>
             <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Nolan"
                 alt="Nolan" /></li>
@@ -479,7 +680,7 @@
         </vstack>
 
         <vstack spacing="xs">
-          <label>Default avatar group:</label>
+          <label data-underline>Default avatar group:</label>
           <ul class="avatar-group">
             <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Nolan"
                 alt="Nolan" /></li>
@@ -492,7 +693,7 @@
         </vstack>
 
         <vstack spacing="xs">
-          <label>Large group:</label>
+          <label data-underline>Large group:</label>
           <ul class="avatar-group" data-large>
             <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Nolan"
                 alt="Nolan" /></li>
