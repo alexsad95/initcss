@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@alexsad95/initcss':
-        specifier: ^0.2.10
-        version: 0.2.10
+        specifier: ^0.3.0
+        version: 0.3.0
     devDependencies:
       '@ianvs/prettier-plugin-sort-imports':
         specifier: ^4.2.1
@@ -36,8 +36,8 @@ importers:
 
 packages:
 
-  '@alexsad95/initcss@0.2.10':
-    resolution: {integrity: sha512-+ueyuFAtSQmvJ30vLjj4tvizw6B1z3rgn3gDLv5Y4qS9mZERh0Cgye5sFT8CdOCThuvCp3aTLnlShkDrb1uwqw==}
+  '@alexsad95/initcss@0.3.0':
+    resolution: {integrity: sha512-vhHZ3/u2MzHGjSfLF4ahbyQpotONZIMkK46tFzHmlBnzNH2/LUCE4btg6gJ9EFB6jump0lLT8eh4Nqna+aAioQ==}
     engines: {node: '>=20', pnpm: '>=9'}
 
   '@ampproject/remapping@2.3.0':
@@ -659,7 +659,7 @@ packages:
 
 snapshots:
 
-  '@alexsad95/initcss@0.2.10': {}
+  '@alexsad95/initcss@0.3.0': {}
 
   '@ampproject/remapping@2.3.0':
     dependencies:
