@@ -1,0 +1,168 @@
+@use "../utils/helpers";
+
+button,
+.button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  text-align: center;
+  color: var(--text-color);
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    opacity 0.2s;
+  padding: 0.5em;
+  border-radius: var(--size-xs);
+  background: var(--sub-alt-color);
+  text-align: center;
+  -webkit-user-select: none;
+  user-select: none;
+  align-content: center;
+  height: -moz-min-content;
+  height: min-content;
+  line-height: 1.25;
+  appearance: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1em;
+  display: inline-flex;
+  gap: 0.5em;
+  align-items: baseline;
+  justify-content: center;
+
+  &.outline {
+    @include helpers.outline-property-basis(text);
+
+    &.success {
+      @include helpers.outline-property-basis(success);
+
+      &:hover {
+        border: 2px solid var(--success-color);
+        background: var(--success-color);
+        color: var(--bg-color);
+      }
+    }
+
+    &.info {
+      @include helpers.outline-property-basis(info);
+
+      &:hover {
+        border: 2px solid var(--info-color);
+        background: var(--info-color);
+        color: var(--bg-color);
+      }
+    }
+
+    &.danger {
+      @include helpers.outline-property-basis(error);
+
+      &:hover {
+        border: 2px solid var(--error-color);
+        background: var(--error-color);
+        color: var(--bg-color);
+      }
+    }
+  }
+
+  &.text {
+    background: var(--bg-color);
+    color: var(--text-color);
+
+    &:hover {
+      color: var(--text-color);
+      background: var(--sub-alt-color);
+    }
+
+    &:active {
+      opacity: 0.8;
+      color: var(--text-color);
+    }
+  }
+
+  &.link {
+    background: none;
+    color: var(--sub-color);
+
+    &:hover {
+      background: none;
+      color: var(--text-color);
+    }
+
+    &:active {
+      color: var(--sub-color);
+    }
+  }
+
+  &.active {
+    background: var(--main-color);
+    color: var(--bg-color);
+
+    &:hover {
+      background: var(--text-color);
+    }
+
+    &:active {
+      background: var(--sub-color);
+      color: var(--bg-color);
+    }
+  }
+
+  @include helpers.button-style(success);
+  @include helpers.button-style(info);
+  @include helpers.button-style(error);
+
+  &[disabled],
+  &.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+
+    &:hover {
+      background: var(--text-color);
+      outline: none;
+    }
+
+    &:active {
+      background: var(--sub-color);
+      color: var(--bg-color);
+    }
+  }
+
+  &:hover {
+    color: var(--bg-color);
+    background: var(--text-color);
+    outline: none;
+  }
+
+  &:focus-visible {
+    box-shadow:
+      0 0 0 0.1rem var(--bg-color),
+      0 0 0 0.2rem var(--text-color);
+    outline: none;
+  }
+
+  &:active {
+    background: var(--sub-color);
+    color: var(--bg-color);
+  }
+
+  &[data-smallest] {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.65rem;
+  }
+
+  &[data-small] {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  &[data-large] {
+    padding: 0.4rem 0.8rem;
+    font-size: 1.5rem;
+  }
+
+  &[data-largest] {
+    padding: 0.6rem 1.2rem;
+    font-size: 1.7rem;
+  }
+}

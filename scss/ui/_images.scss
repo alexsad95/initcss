@@ -1,0 +1,19 @@
+.article-image {
+  margin: 1rem 0;
+  text-align: center;
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--size-xs);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  &__caption {
+    display: block;
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: var(--sub-color);
+    font-style: italic;
+  }
+}

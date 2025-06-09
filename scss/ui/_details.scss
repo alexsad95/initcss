@@ -1,0 +1,40 @@
+details {
+  border: 2px solid var(--text-color);
+  border-radius: var(--size-xs);
+  background: var(--bg-color);
+  transition: all 0.2s ease-in-out;
+}
+
+summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 24px;
+  margin: 10px;
+  font-weight: 600;
+}
+
+summary::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-image: var(--selector-image);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  transition: transform 0.2s ease;
+}
+
+details[open] summary::before {
+  transform: translateY(-50%) rotate(0deg);
+}
+
+.details-content {
+  padding: 1rem;
+  color: var(--text-color);
+}

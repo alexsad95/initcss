@@ -6,62 +6,62 @@ $all-sizes: map-merge($sizes-1, $ext-size);
 
 @each $key, $value in $all-sizes {
   .pa-#{$key} {
-    padding: #{$value} !important;
+    padding: #{$value};
   }
 
   .pl-#{$key} {
-    padding-left: #{$value} !important;
+    padding-left: #{$value};
   }
 
   .pr-#{$key} {
-    padding-right: #{$value} !important;
+    padding-right: #{$value};
   }
 
   .pb-#{$key} {
-    padding-bottom: #{$value} !important;
+    padding-bottom: #{$value};
   }
 
   .pt-#{$key} {
-    padding-top: #{$value} !important;
+    padding-top: #{$value};
   }
 
   .py-#{$key} {
-    padding-top: #{$value} !important;
-    padding-bottom: #{$value} !important;
+    padding-top: #{$value};
+    padding-bottom: #{$value};
   }
 
   .px-#{$key} {
-    padding-left: #{$value} !important;
-    padding-right: #{$value} !important;
+    padding-left: #{$value};
+    padding-right: #{$value};
   }
 
   .ma-#{$key} {
-    margin: #{$value} !important;
+    margin: #{$value};
   }
 
   .ml-#{$key} {
-    margin-left: #{$value} !important;
+    margin-left: #{$value};
   }
 
   .mr-#{$key} {
-    margin-right: #{$value} !important;
+    margin-right: #{$value};
   }
 
   .mb-#{$key} {
-    margin-bottom: #{$value} !important;
+    margin-bottom: #{$value};
   }
 
   .mt-#{$key} {
-    margin-top: #{$value} !important;
+    margin-top: #{$value};
   }
 
   .my-#{$key} {
-    margin-top: #{$value} !important;
-    margin-bottom: #{$value} !important;
+    margin-top: #{$value};
+    margin-bottom: #{$value};
   }
 
   .mx-#{$key} {
-    margin-left: #{$value} !important;
-    margin-right: #{$value} !important;
+    margin-left: #{$value};
+    margin-right: #{$value};
   }
 }

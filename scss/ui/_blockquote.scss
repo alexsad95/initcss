@@ -1,0 +1,19 @@
+blockquote {
+  border-left: 4px solid var(--main-color);
+  margin: 0;
+  padding: var(--size-xs) var(--size-s);
+  font-style: italic;
+}
+
+blockquote > footer {
+  margin-left: var(--size-xs);
+  margin-top: var(--size-xs);
+  font-style: normal;
+  font-size: 0.8rem;
+  color: var(--main-color);
+  border: 0;
+}
+
+blockquote cite {
+  font-style: normal;
+}

@@ -5,65 +5,52 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>InitCSS Example</title>
+  <title>InitCSS</title>
 </head>
 
 <body>
-  <!-- Theme Button -->
-  <hstack align-x="right">
-    <button id="theme-button" class="mr-s py-2xs px-xs br-2xs">
-      <svg class="w-s" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-        <path
-          d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z">
-        </path>
-      </svg>
-      <svg class="w-s" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display: none">
-        <path
-          d="M10 7C10 10.866 13.134 14 17 14C18.9584 14 20.729 13.1957 21.9995 11.8995C22 11.933 22 11.9665 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C12.0335 2 12.067 2 12.1005 2.00049C10.8043 3.27098 10 5.04157 10 7ZM4 12C4 16.4183 7.58172 20 12 20C15.0583 20 17.7158 18.2839 19.062 15.7621C18.3945 15.9187 17.7035 16 17 16C12.0294 16 8 11.9706 8 7C8 6.29648 8.08133 5.60547 8.2379 4.938C5.71611 6.28423 4 8.9417 4 12Z">
-        </path>
-      </svg>
-    </button>
+  <!-- Header With Buttons -->
+  <header>
+    <hstack align-x="right">
+      <button id="theme-button" class="mr-s py-2xs px-xs br-2xs">
+        <svg class="w-s" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z">
+          </path>
+        </svg>
+        <svg class="w-s" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+          style="display: none">
+          <path
+            d="M10 7C10 10.866 13.134 14 17 14C18.9584 14 20.729 13.1957 21.9995 11.8995C22 11.933 22 11.9665 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C12.0335 2 12.067 2 12.1005 2.00049C10.8043 3.27098 10 5.04157 10 7ZM4 12C4 16.4183 7.58172 20 12 20C15.0583 20 17.7158 18.2839 19.062 15.7621C18.3945 15.9187 17.7035 16 17 16C12.0294 16 8 11.9706 8 7C8 6.29648 8.08133 5.60547 8.2379 4.938C5.71611 6.28423 4 8.9417 4 12Z">
+          </path>
+        </svg>
+      </button>
 
-    <!-- Theme Changing Button -->
-    <!--
-    <button id="theme-changing" class="py-2xs px-xs br-2xs">
-      <svg class="w-s" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-        <path
-          d="M12 2C17.5222 2 22 5.97778 22 10.8889C22 13.9556 19.5111 16.4444 16.4444 16.4444H14.4778C13.5556 16.4444 12.8111 17.1889 12.8111 18.1111C12.8111 18.5333 12.9778 18.9222 13.2333 19.2111C13.5 19.5111 13.6667 19.9 13.6667 20.3333C13.6667 21.2556 12.9 22 12 22C6.47778 22 2 17.5222 2 12C2 6.47778 6.47778 2 12 2ZM10.8111 18.1111C10.8111 16.0843 12.451 14.4444 14.4778 14.4444H16.4444C18.4065 14.4444 20 12.851 20 10.8889C20 7.1392 16.4677 4 12 4C7.58235 4 4 7.58235 4 12C4 16.19 7.2226 19.6285 11.324 19.9718C10.9948 19.4168 10.8111 18.7761 10.8111 18.1111ZM7.5 12C6.67157 12 6 11.3284 6 10.5C6 9.67157 6.67157 9 7.5 9C8.32843 9 9 9.67157 9 10.5C9 11.3284 8.32843 12 7.5 12ZM16.5 12C15.6716 12 15 11.3284 15 10.5C15 9.67157 15.6716 9 16.5 9C17.3284 9 18 9.67157 18 10.5C18 11.3284 17.3284 12 16.5 12ZM12 9C11.1716 9 10.5 8.32843 10.5 7.5C10.5 6.67157 11.1716 6 12 6C12.8284 6 13.5 6.67157 13.5 7.5C13.5 8.32843 12.8284 9 12 9Z">
-        </path>
-      </svg>
-    </button>
-    <div id="theme-changing-block">
-      <hstack spacing="s">
-        <input type="color" id="bg" value="#e66465" class="w-32px" />
-        <label for="bg">background color</label>
-      </hstack>
-      <hstack spacing="s">
-        <input type="color" id="text" value="#f6b73c" class="w-32px" />
-        <label for="text">text color</label>
-      </hstack>
-      <hstack spacing="s">
-        <input type="color" id="sub" value="#ffe7b8" class="w-32px" />
-        <label for="sub">sub color</label>
-      </hstack>
-      <hstack spacing="s">
-        <input type="color" id="sub-alt" value="#3e382d" class="w-32px" />
-        <label for="sub-alt">sub-alt color</label>
-      </hstack>
-      <hstack spacing="s">
-        <input type="color" id="main" value="#c5f73b" class="w-32px" />
-        <label for="main">main color</label>
-      </hstack>
-    </div>
-    -->
-  </hstack>
+      <a id="github-link-button" class="button mr-s py-2xs px-xs br-2xs" href="https://github.com/alexsad95/initcss"
+        target="_blank" rel="noreferrer noopener">
+        <svg class="w-s" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2" />
+        </svg>
+      </a>
+    </hstack>
+  </header>
+
+  <!-- Title -->
+  <div class="my-xl">
+    <div class="divider-dotted mb-l"></div>
+    <h1 data-highlight>InitCSS</h1> <br>
+    <h1 data-highlight>Minimal CSS Framework</h1>
+    <h2 class="mt-s">A minimal, customizable CSS utility framework for fast and clean UI development</h2>
+    <div class="divider-dotted mt-l"></div>
+  </div>
 
   <!-- Buttons Section -->
   <section class="mt-l">
     <vstack spacing="s">
       <h1>Buttons</h1>
 
-      <hstack spacing="s" data-wrap>
+      <hstack spacing="s" align-y="center" data-wrap>
         <label data-underline>Filled:</label>
 
         <button class="link">link</button>
@@ -76,7 +63,7 @@
         <button disabled>disabled</button>
       </hstack>
 
-      <hstack spacing="s" data-wrap>
+      <hstack spacing="s" align-y="center" data-wrap>
         <label data-underline>Outlined:</label>
 
         <button class="outline">default</button>
@@ -89,7 +76,7 @@
         <button disabled class="outline">disabled</button>
       </hstack>
 
-      <hstack spacing="s" data-wrap>
+      <hstack spacing="s" align-y="center" data-wrap>
         <label data-underline>Rounded:</label>
 
         <button class="br-0">button 0</button>
@@ -98,7 +85,7 @@
         <button class="br-xs">button xs</button>
       </hstack>
 
-      <hstack spacing="s" data-wrap>
+      <hstack spacing="s" align-y="center" data-wrap>
         <label data-underline>Sizes:</label>
 
         <button data-smallest>smallest</button>
@@ -115,12 +102,14 @@
     <vstack spacing="s">
       <h1>Inputs</h1>
 
-      <input type="text" name="name" placeholder="Name" autocomplete="off">
-      <input type="email" name="email" placeholder="Email" autocomplete="off">
+      <label data-underline>Default inputs:</label>
+      <input type="text" name="Login" placeholder="Login" autocomplete="off">
+      <input type="password" name="password" autocomplete="current-password" class="form-input" placeholder="Password"
+        required />
       <input type="text" name="disabled" placeholder="Disabled" disabled />
-
       <textarea name="description" placeholder="Description" rows="3"></textarea>
 
+      <label data-underline>Selector:</label>
       <select name="social">
         <option>Instagram</option>
         <option>Facebook</option>
@@ -131,9 +120,36 @@
       </select>
 
       <hstack spacing="s">
-        <label for="range" data-underline>Range</label>
+        <label for="range" data-underline>Range:</label>
         <input id="range" type="range" min="0" max="1" step="0.1">
       </hstack>
+
+      <label data-underline>Checkboxes:</label>
+      <div>
+        <label>
+          <input type="checkbox" name="desires" value="coffe" checked />Coffee in the morning — yes!
+        </label>
+        <label>
+          <input type="checkbox" name="desires" value="friday" />Friday every day — absolutely!
+        </label>
+        <label>
+          <input type="checkbox" name="desires" value="work" disabled />Working after 6 PM — no way!
+        </label>
+      </div>
+
+      <label data-underline>Radios:</label>
+      <div>
+        <label>
+          <input type="radio" name="weekend" value="stayhome" />Stay home, do nothing, recharge
+        </label>
+        <label>
+          <input type="radio" name="weekend" value="adventure" />Go on a spontaneous adventure
+        </label>
+        <label>
+          <input type="radio" name="weekend" value="sleep" disabled />Sleep until further notice (currently unavailable
+          😴)
+        </label>
+      </div>
     </vstack>
   </section>
 
@@ -181,9 +197,9 @@
     <vstack spacing="s">
       <h1>Links</h1>
 
-      <hstack spacing="s">
+      <hstack spacing="m" align-y="center">
         <a href="#">simple link</a>
-        <a href="https://github.com/alexsad95/initcss" class="text" target="_blank" rel="noreferrer noopener">
+        <a href="#" class="text">
           <svg class="w-s" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
             <path
               d="M24 12L18.3431 17.6569L16.9289 16.2426L21.1716 12L16.9289 7.75736L18.3431 6.34315L24 12ZM2.82843 12L7.07107 16.2426L5.65685 17.6569L0 12L5.65685 6.34315L7.07107 7.75736L2.82843 12ZM9.78845 21H7.66009L14.2116 3H16.3399L9.78845 21Z">
@@ -191,6 +207,7 @@
           </svg>
           with icon
         </a>
+        <a href="#" class="button">Like Button</a>
       </hstack>
     </vstack>
   </section>
@@ -217,6 +234,7 @@
     <div class="divider"></div>
     <div class="divider-with-text">or</div>
     <div class="divider-dotted"></div>
+    <div class="divider-dashed"></div>
     <div class="divider-medium"></div>
     <div class="divider-thick"></div>
 
@@ -406,45 +424,6 @@
       </table>
   </section>
 
-  <!-- Checkboxes Section -->
-  <section class="mt-l">
-    <h1>Checkboxes</h1>
-
-    <div class="mt-s">
-      <label>
-        <input type="checkbox" name="desires" value="coffe" checked />Coffee in the morning — yes!
-      </label>
-
-      <label>
-        <input type="checkbox" name="desires" value="friday" />Friday every day — absolutely!
-      </label>
-
-      <label>
-        <input type="checkbox" name="desires" value="work" disabled />Working after 6 PM — no way!
-      </label>
-    </div>
-  </section>
-
-  <!-- Radios Section -->
-  <section class="mt-l">
-    <h1>Radios</h1>
-
-    <div class="mt-s">
-      <label>
-        <input type="radio" name="weekend" value="stayhome" />Stay home, do nothing, recharge
-      </label>
-
-      <label>
-        <input type="radio" name="weekend" value="adventure" />Go on a spontaneous adventure
-      </label>
-
-      <label>
-        <input type="radio" name="weekend" value="sleep" disabled />Sleep until further notice (currently unavailable
-        😴)
-      </label>
-    </div>
-  </section>
-
   <!-- Fieldsets Section -->
   <section class="mt-l">
     <vstack spacing="s">
@@ -500,11 +479,22 @@
       <h1>Typography</h1>
 
       <fieldset data-bordered>
-        <legend>Headings:</legend>
+        <hstack spacing="s" shrink>
+          <div class="first-col">
+            <legend>Headings:</legend>
 
-        <h1>H1 tag</h1>
-        <h2>H2 tag</h2>
-        <h3>H3 tag</h3>
+            <h1>H1 tag</h1>
+            <h2>H2 tag</h2>
+            <h3>H3 tag</h3>
+          </div>
+          <div class="second-col">
+            <legend>Another titles:</legend>
+
+            <h1 data-highlight>Highlighted Text</h1>
+            <h1 data-primary>MEGA PRIMARY TEXT</h1>
+          </div>
+
+        </hstack>
       </fieldset>
 
       <fieldset data-bordered>
@@ -721,7 +711,8 @@
       <figure class="article-image">
         <img src="https://i.pinimg.com/736x/0d/23/8a/0d238afc2948e8e4b39ebf4e09ab272c.jpg"
           alt="Bank of London and South America" class="article-image__img" />
-        <figcaption class="article-image__caption">Figure 2: Bank of London and South America, Buenos Aires (large pic)
+        <figcaption class="article-image__caption">Figure 2: Bank of London and South America, Buenos Aires (large
+          pic)
         </figcaption>
       </figure>
     </vstack>
