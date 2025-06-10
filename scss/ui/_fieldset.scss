@@ -4,11 +4,11 @@ fieldset {
   margin: 0;
   border-radius: var(--size-xs);
   padding: 10px;
-}
 
-fieldset[data-horizontal] {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--size-xs);
-  align-items: flex-start;
+  &[data-horizontal] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--size-xs);
+    align-items: flex-start;
+  }
 }

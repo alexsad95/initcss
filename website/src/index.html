@@ -109,15 +109,17 @@
       <input type="text" name="disabled" placeholder="Disabled" disabled />
       <textarea name="description" placeholder="Description" rows="3"></textarea>
 
-      <label data-underline>Selector:</label>
-      <select name="social">
-        <option>Instagram</option>
-        <option>Facebook</option>
-        <option>LinkedIn</option>
-        <option>Twitter</option>
-        <option selected>GitHub</option>
-        <option>Reddit</option>
-      </select>
+      <hstack spacing="s" align-y="center">
+        <label data-underline>Selector:</label>
+        <select name="social">
+          <option>Instagram</option>
+          <option>Facebook</option>
+          <option>LinkedIn</option>
+          <option>Twitter</option>
+          <option selected>GitHub</option>
+          <option>Reddit</option>
+        </select>
+      </hstack>
 
       <hstack spacing="s">
         <label for="range" data-underline>Range:</label>
@@ -374,7 +376,8 @@
 
       <table class="mt-s">
         <colgroup>
-          <col span="2">
+          <col span="5">
+          <col span="2" class="highlight-col">
         </colgroup>
         <tr>
           <th>MON</th>

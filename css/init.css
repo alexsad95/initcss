@@ -900,42 +900,48 @@ table {
   border-spacing: 0;
   border: 2px solid var(--text-color);
 }
-table colgroup col {
-  background: var(--sub-alt-color);
+table td,
+table th {
+  border: 1px solid var(--sub-color);
+  padding: 0.6rem;
 }
 table caption {
   padding: 0.6rem;
 }
-table td, table th {
-  border: 1px solid var(--sub-color);
-  padding: 0.6rem;
+table colgroup col.highlight-col {
+  background: var(--sub-alt-color);
 }
-table th {
-  padding: 0.6rem;
-}
-
 table[data-horizontal-dividers] {
   border: none;
 }
-table[data-horizontal-dividers] td {
-  border: none;
-  border-bottom: 1px solid var(--sub-color);
-}
+table[data-horizontal-dividers] td,
 table[data-horizontal-dividers] th {
   border: none;
   border-bottom: 1px solid var(--sub-color);
 }
-
 table[data-hoverable] tr:hover {
   background: var(--sub-alt-color);
 }
-
-table[data-vertical-zebra] td:nth-child(even), table[data-vertical-zebra] th:nth-child(even) {
+table[data-vertical-zebra] td:nth-child(even),
+table[data-vertical-zebra] th:nth-child(even) {
+  background: var(--sub-alt-color);
+}
+table[data-horizontal-zebra] tr:nth-child(even) {
   background: var(--sub-alt-color);
 }
 
-table[data-horizontal-zebra] tr:nth-child(even) {
-  background: var(--sub-alt-color);
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  border-radius: var(--size-xs);
+  padding: 10px;
+}
+fieldset[data-horizontal] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--size-xs);
+  align-items: flex-start;
 }
 
 h1 {
