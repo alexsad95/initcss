@@ -1,28 +1,24 @@
-/* INIT FILE */
+@forward "base/root";
+@forward "base/main";
+@forward "base/layout";
 
-@use "utils/helpers";
+@forward "ui/labels";
+@forward "ui/buttons";
+@forward "ui/inputs";
+@forward "ui/lists";
+@forward "ui/blockquote";
+@forward "ui/links";
+@forward "ui/details";
+@forward "ui/dividers";
+@forward "ui/tables";
+@forward "ui/fieldset";
+@forward "ui/typography";
+@forward "ui/code";
+@forward "ui/avatars";
+@forward "ui/images";
 
-@use "base/root";
-@use "base/main";
-@use "base/layout";
-
-@use "ui/labels";
-@use "ui/buttons";
-@use "ui/inputs";
-@use "ui/lists";
-@use "ui/blockquote";
-@use "ui/links";
-@use "ui/details";
-@use "ui/dividers";
-@use "ui/tables";
-@use "ui/fieldset";
-@use "ui/typography";
-@use "ui/code";
-@use "ui/avatars";
-@use "ui/images";
-
-@use "atomic/positioning";
-@use "atomic/coordinates";
-@use "atomic/border-radius";
-@use "atomic/spacing";
-@use "atomic/sizes";
+@forward "atomic/positioning";
+@forward "atomic/coordinates";
+@forward "atomic/border-radius";
+@forward "atomic/spacing";
+@forward "atomic/sizes";

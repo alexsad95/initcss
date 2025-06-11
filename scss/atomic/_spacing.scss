@@ -5,62 +5,62 @@
 $all-sizes: map-merge($sizes-1, $ext-size);
 
 @each $key, $value in $all-sizes {
-  .pa-#{$key} {
+  .ic-pa-#{$key} {
     padding: #{$value};
   }
 
-  .pl-#{$key} {
+  .ic-pl-#{$key} {
     padding-left: #{$value};
   }
 
-  .pr-#{$key} {
+  .ic-pr-#{$key} {
     padding-right: #{$value};
   }
 
-  .pb-#{$key} {
+  .ic-pb-#{$key} {
     padding-bottom: #{$value};
   }
 
-  .pt-#{$key} {
+  .ic-pt-#{$key} {
     padding-top: #{$value};
   }
 
-  .py-#{$key} {
+  .ic-py-#{$key} {
     padding-top: #{$value};
     padding-bottom: #{$value};
   }
 
-  .px-#{$key} {
+  .ic-px-#{$key} {
     padding-left: #{$value};
     padding-right: #{$value};
   }
 
-  .ma-#{$key} {
+  .ic-ma-#{$key} {
     margin: #{$value};
   }
 
-  .ml-#{$key} {
+  .ic-ml-#{$key} {
     margin-left: #{$value};
   }
 
-  .mr-#{$key} {
+  .ic-mr-#{$key} {
     margin-right: #{$value};
   }
 
-  .mb-#{$key} {
+  .ic-mb-#{$key} {
     margin-bottom: #{$value};
   }
 
-  .mt-#{$key} {
+  .ic-mt-#{$key} {
     margin-top: #{$value};
   }
 
-  .my-#{$key} {
+  .ic-my-#{$key} {
     margin-top: #{$value};
     margin-bottom: #{$value};
   }
 
-  .mx-#{$key} {
+  .ic-mx-#{$key} {
     margin-left: #{$value};
     margin-right: #{$value};
   }

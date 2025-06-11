@@ -1,13 +1,13 @@
 label {
   width: fit-content;
   display: block;
-}
 
-label:has([type="checkbox"], [type="radio"]) {
-  cursor: pointer;
-}
+  &:has([type="checkbox"], [type="radio"]) {
+    cursor: pointer;
+  }
 
-label:has([type="checkbox"]:disabled, [type="radio"]:disabled) {
-  cursor: not-allowed;
-  opacity: 0.3;
+  &:has([type="checkbox"]:disabled, [type="radio"]:disabled) {
+    cursor: not-allowed;
+    opacity: 0.3;
+  }
 }

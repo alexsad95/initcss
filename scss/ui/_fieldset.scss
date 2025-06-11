@@ -5,7 +5,7 @@ fieldset {
   border-radius: var(--size-xs);
   padding: 10px;
 
-  &[data-horizontal] {
+  &.ic-horizontal {
     display: flex;
     flex-wrap: wrap;
     gap: var(--size-xs);

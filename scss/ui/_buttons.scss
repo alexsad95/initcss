@@ -1,7 +1,7 @@
 @use "../utils/helpers";
 
 button,
-.button,
+.ic-button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -31,10 +31,10 @@ input[type="submit"] {
   align-items: baseline;
   justify-content: center;
 
-  &.outline {
+  &.ic-outline {
     @include helpers.outline-property-basis(text);
 
-    &.success {
+    &.ic-success {
       @include helpers.outline-property-basis(success);
 
       &:hover {
@@ -44,7 +44,7 @@ input[type="submit"] {
       }
     }
 
-    &.info {
+    &.ic-info {
       @include helpers.outline-property-basis(info);
 
       &:hover {
@@ -54,7 +54,7 @@ input[type="submit"] {
       }
     }
 
-    &.danger {
+    &.ic-danger {
       @include helpers.outline-property-basis(error);
 
       &:hover {
@@ -65,7 +65,7 @@ input[type="submit"] {
     }
   }
 
-  &.text {
+  &.ic-text {
     background: var(--bg-color);
     color: var(--text-color);
 
@@ -80,7 +80,7 @@ input[type="submit"] {
     }
   }
 
-  &.link {
+  &.ic-link {
     background: none;
     color: var(--sub-color);
 
@@ -94,7 +94,7 @@ input[type="submit"] {
     }
   }
 
-  &.active {
+  &.ic-active {
     background: var(--main-color);
     color: var(--bg-color);
 
@@ -113,7 +113,7 @@ input[type="submit"] {
   @include helpers.button-style(error);
 
   &[disabled],
-  &.disabled {
+  &.ic-disabled {
     opacity: 0.3;
     pointer-events: none;
 
@@ -146,22 +146,22 @@ input[type="submit"] {
     color: var(--bg-color);
   }
 
-  &[data-smallest] {
+  &.ic-smallest {
     padding: 0.3rem 0.5rem;
     font-size: 0.65rem;
   }
 
-  &[data-small] {
+  &.ic-small {
     padding: 0.3rem 0.6rem;
     font-size: 0.9rem;
   }
 
-  &[data-large] {
+  &.ic-large {
     padding: 0.4rem 0.8rem;
     font-size: 1.5rem;
   }
 
-  &[data-largest] {
+  &.ic-largest {
     padding: 0.6rem 1.2rem;
     font-size: 1.7rem;
   }

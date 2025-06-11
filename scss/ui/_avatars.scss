@@ -1,4 +1,4 @@
-.avatar {
+.ic-avatar {
   --avatar-size: 3rem;
   --avatar-radius: 50%;
   display: inline-flex;
@@ -6,23 +6,23 @@
   gap: 1rem;
   margin: 0px;
 
-  &[data-small] {
+  &.ic-small {
     --avatar-size: var(--size-m);
   }
 
-  &[data-medium] {
+  &.ic-medium {
     --avatar-size: var(--size-l);
   }
 
-  &[data-large] {
+  &.ic-large {
     --avatar-size: var(--size-xl);
   }
 
-  &[data-square] {
+  &.ic-square {
     --avatar-radius: 0;
   }
 
-  &[data-soft] {
+  &.ic-soft {
     --avatar-radius: 0.5rem;
   }
 
@@ -34,12 +34,6 @@
     object-fit: cover;
     border: 2px solid var(--text-color);
     transition: transform 0.2s ease;
-  }
-
-  &__name {
-    font-size: calc(var(--avatar-size) * 0.35);
-    color: var(--text-color);
-    font-weight: 500;
   }
 
   &-group {
@@ -81,12 +75,12 @@
     color: var(--text-color);
   }
 
-  &-group[data-small] & {
+  &-group.ic-small & {
     --avatar-size: var(--size-m);
     font-size: 0.75rem;
   }
 
-  &-group[data-large] & {
+  &-group.ic-large & {
     --avatar-size: var(--size-l);
     font-size: 1.25rem;
   }

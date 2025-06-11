@@ -1,34 +1,34 @@
 /* WIDTHS, HEIGHTS */
 
-@import "../utils/sizes";
+@use "../utils/sizes" as *;
 
 $sizes: map-merge($sizes-1, $sizes-2);
 $sizes: map-merge($sizes, $ext-size);
 
 @each $key, $value in $sizes {
-  .w-#{$key} {
+  .ic-w-#{$key} {
     width: var(--size-#{$key});
   }
 
-  .max-w-#{$key} {
+  .ic-max-w-#{$key} {
     max-width: var(--size-#{$key});
   }
 
-  .min-w-#{$key} {
+  .ic-min-w-#{$key} {
     min-width: var(--size-#{$key});
   }
 }
 
 @each $key, $value in $sizes {
-  .h-#{$key} {
+  .ic-h-#{$key} {
     height: var(--size-#{$key});
   }
 
-  .max-h-#{$key} {
+  .ic-max-h-#{$key} {
     max-height: var(--size-#{$key});
   }
 
-  .min-h-#{$key} {
+  .ic-min-h-#{$key} {
     min-height: var(--size-#{$key});
   }
 }

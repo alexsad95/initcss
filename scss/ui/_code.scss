@@ -23,38 +23,38 @@ code {
   padding: 0.2rem 0.4rem;
 }
 
-.code-block {
+.ic-code-block {
   background: var(--sub-alt-color);
   border-radius: var(--size-xs);
   position: relative;
-}
 
-.code-block__header {
-  display: flex;
-  justify-content: flex-end;
-  padding: 0.25rem 0.5rem;
-  background: var(--sub-alt-color);
-  font-size: 0.75rem;
-  font-family: monospace;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-}
+  &__header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.25rem 0.5rem;
+    background: var(--sub-alt-color);
+    font-size: 0.75rem;
+    font-family: monospace;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+  }
 
-.code-block__lang {
-  display: inline;
-  padding-top: 0.35rem;
-}
+  &__lang {
+    display: inline;
+    padding-top: 0.35rem;
+  }
 
-.code-block__copy-btn {
-  display: none;
-}
+  &__copy-btn {
+    display: none;
+  }
 
-.code-block:hover .code-block__lang {
-  display: none;
-}
+  &:hover &__lang {
+    display: none;
+  }
 
-.code-block:hover .code-block__copy-btn {
-  display: inline;
+  &:hover &__copy-btn {
+    display: inline;
+  }
 }

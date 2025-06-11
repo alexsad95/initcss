@@ -41,19 +41,19 @@ body {
   cursor: not-allowed;
 }
 
-[data-bordered] {
+.ic-bordered {
   border: 2px solid var(--main-color);
 }
 
-[data-dashed] {
+.ic-dashed {
   border: 2px dashed var(--main-color);
 }
 
-[data-dotted] {
+.ic-dotted {
   border: 2px dotted var(--main-color);
 }
 
-[data-underline] {
+.ic-underline {
   text-decoration: underline;
   text-underline-offset: 4px;
   text-decoration-thickness: 2px;

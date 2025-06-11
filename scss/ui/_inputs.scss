@@ -1,4 +1,41 @@
-@use "../utils/helpers";
+@mixin range-thumb-style {
+  height: var(--size-s);
+  width: var(--size-m);
+  border-radius: var(--size-xs);
+  background-color: var(--text-color);
+  cursor: pointer;
+  border: none;
+}
+
+@mixin checkbox-and-radio-style {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  padding: 4px;
+  margin: var(--size-xs);
+  cursor: pointer;
+  vertical-align: middle;
+  background: var(--bg-color);
+  box-shadow: 0 0 0 0.11rem var(--main-color);
+  border: 4px solid var(--bg-color);
+
+  &:checked {
+    background: var(--main-color);
+    height: 0.8rem;
+    width: 0.75rem;
+  }
+
+  &:indeterminate {
+    opacity: 0.5;
+  }
+
+  &:disabled,
+  &:disabled ~ label {
+    cursor: not-allowed;
+    opacity: 0.3;
+  }
+}
 
 input,
 textarea {
@@ -10,7 +47,7 @@ textarea {
   font-size: var(--size-s);
   font-family: var(--font);
   caret-color: var(--main-color);
-  line-height: 1.25em;
+  line-height: 1.2rem;
   transition: border-color 0.2s ease;
 
   &:disabled {
@@ -22,15 +59,6 @@ input:focus-visible,
 textarea:focus-visible {
   border-color: var(--text-color);
   outline: none;
-}
-
-@mixin range-thumb-style {
-  height: var(--size-s);
-  width: var(--size-m);
-  border-radius: var(--size-xs);
-  background-color: var(--text-color);
-  cursor: pointer;
-  border: none;
 }
 
 input[type="range"] {
@@ -66,12 +94,12 @@ input[type="range"] {
 }
 
 input[type="checkbox"] {
-  @include helpers.checkbox-and-radio-style();
+  @include checkbox-and-radio-style;
   border-radius: 4px;
 }
 
 input[type="radio"] {
-  @include helpers.checkbox-and-radio-style();
+  @include checkbox-and-radio-style;
   border-radius: 100%;
 }
 
@@ -99,7 +127,7 @@ select {
   font-size: var(--size-s);
   font-family: var(--font);
   caret-color: var(--main-color);
-  line-height: 1.25em;
+  line-height: 1.2rem;
   transition: border-color 0.2s ease;
 
   &:focus {

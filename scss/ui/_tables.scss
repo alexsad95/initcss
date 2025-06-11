@@ -13,11 +13,11 @@ table {
     padding: 0.6rem;
   }
 
-  colgroup col.highlight-col {
+  colgroup col.ic-highlight-col {
     background: var(--sub-alt-color);
   }
 
-  &[data-horizontal-dividers] {
+  &.ic-horizontal-dividers {
     border: none;
 
     td,
@@ -27,20 +27,20 @@ table {
     }
   }
 
-  &[data-hoverable] {
+  &.ic-hoverable {
     tr:hover {
       background: var(--sub-alt-color);
     }
   }
 
-  &[data-vertical-zebra] {
+  &.ic-vertical-zebra {
     td:nth-child(even),
     th:nth-child(even) {
       background: var(--sub-alt-color);
     }
   }
 
-  &[data-horizontal-zebra] {
+  &.ic-horizontal-zebra {
     tr:nth-child(even) {
       background: var(--sub-alt-color);
     }

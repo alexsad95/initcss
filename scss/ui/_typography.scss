@@ -1,6 +1,23 @@
 h1 {
   font-size: 1.8rem;
-  margin: 0;
+
+  &.ic-highlight-text {
+    background: var(--text-color);
+    color: var(--bg-color);
+    font-size: 3rem;
+    display: inline;
+    padding: 0 0.2rem;
+    margin-left: -0.2rem;
+    margin-right: -0.2rem;
+  }
+
+  &.ic-primary-text {
+    word-break: normal;
+    font-size: 4rem;
+    line-height: 1;
+    margin: 0 0 0.5rem;
+    text-wrap: balance;
+  }
 }
 
 h1,
@@ -9,17 +26,8 @@ h3,
 h4,
 h5,
 h6,
+strong,
 p {
-  margin: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-strong {
   margin: 0;
 }
 
@@ -35,49 +43,33 @@ th {
   font-weight: 600;
 }
 
-h1[data-highlight] {
-  background: var(--text-color);
-  color: var(--bg-color);
-  font-size: 3rem;
-  display: inline;
-  padding: 0 0.2em;
-  margin-left: -0.2em;
-  margin-right: -0.2em;
-}
-
-h1[data-primary] {
-  word-break: normal;
-  font-size: 4rem;
-  line-height: 1;
-  margin: 0 0 0.5rem;
-  text-wrap: balance;
-}
-
 abbr[title] {
   border-bottom: 1px dotted;
   text-decoration: none;
   cursor: help;
 }
 
+sub,
+sup,
 small {
   font-size: x-small;
+}
+
+small {
   display: inline-block;
 }
 
-sub {
-  font-size: x-small;
-}
-
-sup {
-  font-size: x-small;
-}
-
-var {
+var,
+p.ic-small {
   font-size: small;
 }
 
+dt,
+p.ic-large {
+  font-size: larger;
+}
+
 dt {
-  font-size: large;
   font-weight: 600;
 }
 
@@ -102,12 +94,4 @@ kbd {
   display: inline-block;
   font-size: 0.7rem;
   line-height: 0.7rem;
-}
-
-p[data-small] {
-  font-size: small;
-}
-
-p[data-large] {
-  font-size: larger;
 }

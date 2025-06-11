@@ -6,58 +6,58 @@
   margin: 1rem 0;
 }
 
-.divider {
+.ic-divider {
   @include divider-style();
-}
 
-.divider-medium {
-  @include divider-style();
-  height: 2px;
-}
+  &-medium {
+    @include divider-style();
+    height: 2px;
+  }
 
-.divider-thick {
-  @include divider-style();
-  height: 4px;
-}
+  &-thick {
+    @include divider-style();
+    height: 4px;
+  }
 
-.divider-dotted {
-  border: none;
-  border-top: 1px dotted var(--sub-color);
-  margin: 1.5rem 0;
-}
+  &-dotted {
+    border: none;
+    border-top: 1px dotted var(--sub-color);
+    margin: 1.5rem 0;
+  }
 
-.divider-dashed {
-  border: none;
-  border-top: 1px dashed var(--sub-color);
-  margin: 1.5rem 0;
-}
+  &-dashed {
+    border: none;
+    border-top: 1px dashed var(--sub-color);
+    margin: 1.5rem 0;
+  }
 
-.v-divider {
-  width: 1px;
-  height: 1.5em;
-  background: var(--sub-color);
-  margin: 0 1rem;
-}
+  &-vertical {
+    width: 1px;
+    height: 1.5em;
+    background: var(--sub-color);
+    margin: 0 1rem;
+  }
 
-.divider-with-text {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  color: var(--sub-color);
-  margin: 1rem 0;
-}
+  &-text {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--sub-color);
+    margin: 1rem 0;
+  }
 
-.divider-with-text::before,
-.divider-with-text::after {
-  content: "";
-  flex: 1;
-  border-bottom: 1px solid var(--sub-color);
-}
+  &-text::before,
+  &-text::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid var(--sub-color);
+  }
 
-.divider-with-text::before {
-  margin-right: 0.5em;
-}
+  &-text::before {
+    margin-right: 0.5em;
+  }
 
-.divider-with-text::after {
-  margin-left: 0.5em;
+  &-text::after {
+    margin-left: 0.5em;
+  }
 }
