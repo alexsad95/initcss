@@ -51,7 +51,7 @@
       <h1>Buttons</h1>
 
       <hstack spacing="s" align-y="center" data-wrap>
-        <label data-underline>Filled:</label>
+        <h4 data-underline>Filled:</h4>
 
         <button class="link">link</button>
         <button class="text">text</button>
@@ -64,7 +64,7 @@
       </hstack>
 
       <hstack spacing="s" align-y="center" data-wrap>
-        <label data-underline>Outlined:</label>
+        <h4 data-underline>Outlined:</h4>
 
         <button class="outline">default</button>
         <button class="outline success">success</button>
@@ -77,7 +77,7 @@
       </hstack>
 
       <hstack spacing="s" align-y="center" data-wrap>
-        <label data-underline>Rounded:</label>
+        <h4 data-underline>Rounded:</h4>
 
         <button class="br-0">button 0</button>
         <button class="br-3xs">button 3xs</button>
@@ -86,7 +86,7 @@
       </hstack>
 
       <hstack spacing="s" align-y="center" data-wrap>
-        <label data-underline>Sizes:</label>
+        <h4 data-underline>Sizes:</h4>
 
         <button data-smallest>smallest</button>
         <button data-small>small</button>
@@ -102,15 +102,14 @@
     <vstack spacing="s">
       <h1>Inputs</h1>
 
-      <label data-underline>Default inputs:</label>
-      <input type="text" name="Login" placeholder="Login" autocomplete="off">
-      <input type="password" name="password" autocomplete="current-password" class="form-input" placeholder="Password"
-        required />
+      <h4 data-underline>Default inputs:</h4>
+      <input type="text" name="Login" placeholder="Login">
+      <input type="password" name="password" class="form-input" placeholder="Password" required />
       <input type="text" name="disabled" placeholder="Disabled" disabled />
       <textarea name="description" placeholder="Description" rows="3"></textarea>
 
       <hstack spacing="s" align-y="center">
-        <label data-underline>Selector:</label>
+        <h4 data-underline>Selector:</h4>
         <select name="social">
           <option>Instagram</option>
           <option>Facebook</option>
@@ -122,11 +121,11 @@
       </hstack>
 
       <hstack spacing="s">
-        <label for="range" data-underline>Range:</label>
+        <h4 data-underline>Range:</h4>
         <input id="range" type="range" min="0" max="1" step="0.1">
       </hstack>
 
-      <label data-underline>Checkboxes:</label>
+      <h4 data-underline>Checkboxes:</h4>
       <div>
         <label>
           <input type="checkbox" name="desires" value="coffe" checked />Coffee in the morning — yes!
@@ -139,7 +138,7 @@
         </label>
       </div>
 
-      <label data-underline>Radios:</label>
+      <h4 data-underline>Radios:</h4>
       <div>
         <label>
           <input type="radio" name="weekend" value="stayhome" />Stay home, do nothing, recharge
@@ -252,8 +251,7 @@
     <vstack spacing="s">
       <h1>Tables</h1>
 
-      <label data-underline>Default table:</label>
-
+      <h4 data-underline>Default table:</h4>
       <table>
         <caption>Status of the club members 2021</caption>
         <thead>
@@ -299,8 +297,7 @@
         </tfoot>
       </table>
 
-      <label data-underline>Hoverable with horizontal dividers:</label>
-
+      <h4 data-underline>Hoverable with horizontal dividers:</h4>
       <table class="mt-s" data-horizontal-dividers data-hoverable>
         <tr>
           <th>Firstname</th>
@@ -319,8 +316,7 @@
         </tr>
       </table>
 
-      <label data-underline>Vertical zebra stripes:</label>
-
+      <h4 data-underline>Vertical zebra stripes:</h4>
       <table class="mt-s" data-vertical-zebra>
         <tr>
           <th>Firstname</th>
@@ -342,8 +338,7 @@
         </tr>
       </table>
 
-      <label data-underline>Horizontal zebra stripes:</label>
-
+      <h4 data-underline>Horizontal zebra stripes:</h4>
       <table class="mt-s" data-horizontal-zebra>
         <tr>
           <th>Firstname</th>
@@ -372,8 +367,7 @@
         </tr>
       </table>
 
-      <label data-underline>Colgroup:</label>
-
+      <h4 data-underline>Colgroup:</h4>
       <table class="mt-s">
         <colgroup>
           <col span="5">
@@ -485,14 +479,16 @@
         <hstack spacing="s" shrink>
           <div class="first-col">
             <legend>Headings:</legend>
-
             <h1>H1 tag</h1>
             <h2>H2 tag</h2>
             <h3>H3 tag</h3>
+            <h4>H4 tag</h4>
+            <h5>H5 tag</h5>
+            <h6>H6 tag</h6>
           </div>
+
           <div class="second-col">
             <legend>Another titles:</legend>
-
             <h1 data-highlight>Highlighted Text</h1>
             <h1 data-primary>MEGA PRIMARY TEXT</h1>
           </div>
@@ -537,7 +533,6 @@
 
         <fieldset data-bordered>
           <legend>Text-level semantics:</legend>
-
           <strong>strong</strong>
           <b>b</b>
           <em>em</em>
@@ -603,28 +598,30 @@
     <vstack spacing="s">
       <h1>Avatars</h1>
 
-      <figure class="avatar">
-        <label data-underline>With name:</label>
-        <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix&flip=true"
-          alt="felix-avatar-1" />
-        <figcaption class="avatar__name">Tom Smith</figcaption>
-      </figure>
+      <hstack spacing="s" align-y="center">
+        <h4 data-underline>With name:</h4>
+        <figure class="avatar">
+          <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix&flip=true"
+            alt="felix-avatar-1" />
+          <figcaption>Tom Smith</figcaption>
+        </figure>
+      </hstack>
 
       <hstack spacing="s" data-wrap shrink>
+        <h4 data-underline>Default rounded:</h4>
         <figure class="avatar">
-          <label data-underline>Default rounded:</label>
           <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix&flip=true"
             alt="felix-avatar-1" />
         </figure>
 
+        <h4 data-underline>Soft rounded:</h4>
         <figure class="avatar" data-soft>
-          <label data-underline>Soft rounded:</label>
           <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
             alt="felix-avatar-1" />
         </figure>
 
+        <h4 data-underline>Square rounded:</h4>
         <figure class="avatar" data-square>
-          <label data-underline>Square rounded:</label>
           <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
             alt="felix-avatar-1" />
         </figure>
@@ -632,25 +629,25 @@
 
       <hstack spacing="s" data-wrap shrink>
         <figure class="avatar" data-small>
-          <label data-underline>Small:</label>
+          <h4 data-underline>Small:</h4>
           <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
             alt="felix-avatar-2" />
         </figure>
 
         <figure class="avatar">
-          <label data-underline>Default:</label>
+          <h4 data-underline>Default:</h4>
           <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
             alt="felix-avatar-3" />
         </figure>
 
         <figure class="avatar" data-medium>
-          <label data-underline>Medium:</label>
+          <h4 data-underline>Medium:</h4>
           <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
             alt="felix-avatar-3" />
         </figure>
 
         <figure class="avatar" data-large>
-          <label data-underline>Large:</label>
+          <h4 data-underline>Large:</h4>
           <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
             alt="felix-avatar-4" />
         </figure>
@@ -658,7 +655,7 @@
 
       <hstack spacing="s" data-wrap shrink>
         <vstack spacing="xs">
-          <label data-underline>Small group:</label>
+          <h4 data-underline>Small group:</h4>
           <ul class="avatar-group" data-small>
             <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Nolan"
                 alt="Nolan" /></li>
@@ -671,7 +668,7 @@
         </vstack>
 
         <vstack spacing="xs">
-          <label data-underline>Default avatar group:</label>
+          <h4 data-underline>Default avatar group:</h4>
           <ul class="avatar-group">
             <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Nolan"
                 alt="Nolan" /></li>
@@ -684,7 +681,7 @@
         </vstack>
 
         <vstack spacing="xs">
-          <label data-underline>Large group:</label>
+          <h4 data-underline>Large group:</h4>
           <ul class="avatar-group" data-large>
             <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Nolan"
                 alt="Nolan" /></li>
