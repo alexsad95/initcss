@@ -62,6 +62,7 @@ textarea:focus-visible {
 }
 
 input[type="range"] {
+  cursor: pointer;
   appearance: none;
   padding: 0;
   width: 100%;
