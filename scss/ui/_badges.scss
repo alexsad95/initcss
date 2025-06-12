@@ -1,0 +1,83 @@
+$danger: #ff4a59;
+$primary: #2196f3;
+$warning: #d2a61c;
+$success: #05aa6d;
+
+$ic-colors: (
+  primary: $primary,
+  danger: $danger,
+  warning: $warning,
+  success: $success
+);
+
+@mixin ic-badge-variant($name, $color) {
+  &.ic-#{$name} {
+    --ic-badge-color: #{$color};
+    --ic-badge-bg: #{mix(white, $color, 80%)};
+
+    .ic-badge-count {
+      border: none;
+    }
+  }
+}
+
+.ic-badge {
+  --primary: var(--info-color);
+  --ic-badge-bg: var(--text-color);
+  --ic-badge-color: var(--bg-color);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.875rem;
+  border-radius: var(--size-xs);
+  background: var(--ic-badge-bg);
+  color: var(--ic-badge-color);
+  padding: 0.5rem;
+  font-size: 1rem;
+  height: 32px;
+
+  &.ic-smallest {
+    font-size: 0.6rem;
+    height: 18px;
+  }
+
+  &.ic-small {
+    font-size: 0.8rem;
+    height: 24px;
+  }
+
+  &.ic-large {
+    font-size: 1rem;
+    height: 40px;
+  }
+
+  @each $name, $color in $ic-colors {
+    @include ic-badge-variant($name, $color);
+  }
+
+  .ic-icon {
+    line-height: 1;
+  }
+
+  .ic-badge-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    background: var(--ic-badge-color);
+    color: var(--ic-badge-bg);
+    border-radius: 9999px;
+    border: 1px solid var(--sub-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.5rem;
+    height: 1.5rem;
+    padding: 0 0.4rem;
+    font-size: 0.75rem;
+    line-height: 1;
+    white-space: nowrap;
+  }
+}
