@@ -6,6 +6,43 @@
 $sizes: map-merge($sizes-1, $sizes-2);
 $sizes: map-merge($sizes, $ext-size);
 
+// light colors
+$light-bg-color: #efead0;
+$light-main-color: #5f605e;
+$light-caret-color: #5f605e;
+$light-sub-color: #8f8e84;
+$light-sub-alt-color: #dbd6c4;
+$light-text-color: #333538;
+$light-success-color: #05aa6d;
+$light-success-extra-color: #{mix(black, $light-success-color, 20%)};
+$light-info-color: #2196f3;
+$light-info-extra-color: #{mix(black, $light-info-color, 20%)};
+$light-danger-color: #c43c53;
+$light-danger-extra-color: #{mix(black, $light-danger-color, 20%)};
+$light-warning-color: #d2ad3e;
+$light-warning-extra-color: #{mix(black, $light-warning-color, 20%)};
+$light-highlight: #efdb43;
+$light-black: #000000;
+
+// dark colors
+$dark-bg-color: #2f3338;
+$dark-main-color: #d6d2bc;
+$dark-caret-color: #d6d2bc;
+$dark-sub-alt-color: #3a3c3d;
+$dark-sub-color: #8f8e84;
+$dark-text-color: #d6d2bc;
+$dark-success-color: #05aa6d;
+$dark-success-extra-color: #{mix(black, $dark-success-color, 20%)};
+$dark-info-color: #2196f3;
+$dark-info-extra-color: #{mix(black, $dark-info-color, 20%)};
+$dark-danger-color: #ff4a59;
+$dark-danger-extra-color: #{mix(black, $dark-danger-color, 20%)};
+$dark-warning-color: #feb53f;
+$dark-warning-extra-color: #{mix(black, $dark-warning-color, 20%)};
+$dark-highlight: #efdb43;
+$dark-black: #000000;
+$dark-selector-image: #{helpers.arrow-icon-url("#d6d2bc")};
+
 @mixin main {
   --font: "Roboto Mono", "Roboto Mono", "Vazirmatn", monospace;
 }
@@ -17,37 +54,41 @@ $sizes: map-merge($sizes, $ext-size);
 }
 
 @mixin light-theme {
-  --bg-color: #efead0;
-  --main-color: #5f605e;
-  --caret-color: #5f605e;
-  --sub-color: #8f8e84;
-  --sub-alt-color: #dbd6c4;
-  --text-color: #333538;
-  --success-color: #05aa6d;
-  --success-extra-color: #028f5b;
-  --info-color: #2196f3;
-  --info-extra-color: #0d75ca;
-  --error-color: #c43c53;
-  --error-extra-color: #a52632;
+  --bg-color: #{$light-bg-color};
+  --main-color: #{$light-main-color};
+  --caret-color: #{$light-caret-color};
+  --sub-color: #{$light-sub-color};
+  --sub-alt-color: #{$light-sub-alt-color};
+  --text-color: #{$light-text-color};
+  --success-color: #{$light-success-color};
+  --success-extra-color: #{$light-success-extra-color};
+  --info-color: #{$light-info-color};
+  --info-extra-color: #{$light-info-extra-color};
+  --danger-color: #{$light-danger-color};
+  --danger-extra-color: #{$light-danger-extra-color};
+  --warning-color: #{$light-warning-color};
+  --warning-extra-color: #{$light-warning-extra-color};
+  --highlight: #{$light-highlight};
+  --black: #{$light-black};
   --selector-image: #{helpers.arrow-icon-url("#333538")};
-  --highlight: #efdb43;
-  --black: #000000;
 }
 
 @mixin dark-theme {
-  --bg-color: #2f3338;
-  --main-color: #d6d2bc;
-  --caret-color: #d6d2bc;
-  --sub-alt-color: #3a3c3d;
-  --sub-color: #8f8e84;
-  --text-color: #d6d2bc;
-  --success-color: #05aa6d;
-  --success-extra-color: #028f5b;
-  --info-color: #2196f3;
-  --info-extra-color: #0d75ca;
-  --error-color: #ff4a59;
-  --error-extra-color: #c43c53;
+  --bg-color: #{$dark-bg-color};
+  --main-color: #{$dark-main-color};
+  --caret-color: #{$dark-caret-color};
+  --sub-alt-color: #{$dark-sub-alt-color};
+  --sub-color: #{$dark-sub-color};
+  --text-color: #{$dark-text-color};
+  --success-color: #{$dark-success-color};
+  --success-extra-color: #{$dark-success-extra-color};
+  --info-color: #{$dark-info-color};
+  --info-extra-color: #{$dark-info-extra-color};
+  --danger-color: #{$dark-danger-color};
+  --danger-extra-color: #{$dark-danger-extra-color};
+  --warning-color: #{$dark-warning-color};
+  --warning-extra-color: #{$dark-warning-extra-color};
+  --highlight: #{$dark-highlight};
+  --black: #{$dark-black};
   --selector-image: #{helpers.arrow-icon-url("#d6d2bc")};
-  --highlight: #efdb43;
-  --black: #000000;
 }

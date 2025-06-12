@@ -58,6 +58,7 @@
         <button>Default</button>
         <button class="ic-success">Success</button>
         <button class="ic-info">Info</button>
+        <button class="ic-warning">Warning</button>
         <button class="ic-danger">Danger</button>
         <button id="active-button" class="ic-active">Active</button>
         <button disabled>Disabled</button>
@@ -69,6 +70,7 @@
         <button class="ic-outline">Default</button>
         <button class="ic-outline ic-success">Success</button>
         <button class="ic-outline ic-info">Info</button>
+        <button class="ic-outline ic-warning">Warning</button>
         <button class="ic-outline ic-danger">Danger</button>
         <button id="active-outline-button" class="ic-outline ic-active">
           Active
@@ -105,7 +107,8 @@
       <hstack class="ic-space-s ic-align-y-center ic-wrap">
         <h4 class="ic-underline">Tags:</h4>
 
-        <span class="ic-badge ic-small" style="--ic-badge-bg: #ECECEC; --ic-badge-color: #E59B40; font-weight: 600;">
+        <span class="ic-badge ic-small"
+          style="--ic-badge-bg: var(--sub-alt-color); --ic-badge-color: var(--warning-color); font-weight: 600;">
           <i class="ic-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 24 24">
               <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -115,7 +118,8 @@
           <span class="ic-badge-text">HIGH</span>
         </span>
 
-        <span class="ic-badge ic-small" style="--ic-badge-bg: #ECECEC; --ic-badge-color: #0139E5; font-weight: 600;">
+        <span class="ic-badge ic-small"
+          style="--ic-badge-bg: var(--sub-alt-color); --ic-badge-color: var(--info-color); font-weight: 600;">
           <i class="ic-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 16 16">
               <path fill="currentColor" d="M8 4a4 4 0 1 1 0 8a4 4 0 0 1 0-8" />
@@ -124,7 +128,8 @@
           <span class="ic-badge-text">RUNNING</span>
         </span>
 
-        <span class="ic-badge ic-small" style="--ic-badge-bg: #ECECEC; --ic-badge-color: #33974C; font-weight: 600;">
+        <span class="ic-badge ic-small"
+          style="--ic-badge-bg: var(--sub-alt-color); --ic-badge-color: var(--success-color); font-weight: 600;">
           <i class="ic-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 1024 1024">
               <path fill="currentColor"
@@ -134,7 +139,8 @@
           <span class="ic-badge-text">POSITIVE</span>
         </span>
 
-        <span class="ic-badge ic-small" style="--ic-badge-bg: #ECECEC; --ic-badge-color: #329B50; font-weight: 600;">
+        <span class="ic-badge ic-small"
+          style="--ic-badge-bg: var(--sub-alt-color); --ic-badge-color: var(--success-color); font-weight: 600;">
           <i class="ic-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 24 24">
               <path fill="currentColor"
@@ -148,7 +154,7 @@
       <hstack class="ic-space-s ic-align-y-center ic-wrap">
         <h4 class="ic-underline">With icons:</h4>
 
-        <span class="ic-badge" style="--ic-badge-bg: #ECECEC; --ic-badge-color: #E3552E;">
+        <span class="ic-badge" style="--ic-badge-bg: var(--sub-alt-color); --ic-badge-color: #E3552E;">
           <i class="ic-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24">
               <path fill="currentColor"
@@ -157,7 +163,7 @@
           </i>
         </span>
 
-        <span class="ic-badge" style="--ic-badge-bg: #ECECEC;">
+        <span class="ic-badge" style="--ic-badge-bg: var(--sub-alt-color);">
           <i class="ic-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 128 128">
               <path fill="none"
@@ -168,7 +174,7 @@
           </i>
         </span>
 
-        <span class="ic-badge" style="--ic-badge-bg: #ECECEC; --ic-badge-color: #00BCD4;">
+        <span class="ic-badge" style="--ic-badge-bg: var(--sub-alt-color); --ic-badge-color: #00BCD4;">
           <i class="ic-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 15 15">
               <g fill="none" stroke="currentColor" stroke-width="1">
@@ -183,7 +189,7 @@
           </i>
         </span>
 
-        <span class="ic-badge" style="--ic-badge-bg: #ECECEC; --ic-badge-color: #5D5D5D;">
+        <span class="ic-badge" style="--ic-badge-bg: var(--sub-alt-color); --ic-badge-color: var(--text-color);">
           <i class="ic-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 15 15">
               <path fill="currentColor" fill-rule="evenodd"

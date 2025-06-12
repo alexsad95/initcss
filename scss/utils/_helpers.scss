@@ -11,7 +11,7 @@
 @mixin button-style($type-of-button) {
   $button-class: $type-of-button;
 
-  @if ($type-of-button == "error") {
+  @if ($type-of-button == "danger") {
     $button-class: "danger";
   }
 

@@ -1,7 +1,9 @@
-$danger: #ff4a59;
-$primary: #2196f3;
-$warning: #d2a61c;
-$success: #05aa6d;
+@use "../utils/variables" as *;
+
+$danger: $dark-danger-color;
+$primary: $dark-info-color;
+$success: $dark-success-color;
+$warning: $dark-warning-color;
 
 $ic-colors: (
   primary: $primary,
@@ -23,8 +25,8 @@ $ic-colors: (
 
 .ic-badge {
   --primary: var(--info-color);
-  --ic-badge-bg: var(--text-color);
-  --ic-badge-color: var(--bg-color);
+  --ic-badge-bg: var(--sub-alt-color);
+  --ic-badge-color: var(--text-color);
   position: relative;
   display: inline-flex;
   align-items: center;
