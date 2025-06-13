@@ -1,0 +1,97 @@
+h1 {
+  font-size: 1.8rem;
+
+  &.ic-highlight-text {
+    background: var(--text-color);
+    color: var(--bg-color);
+    font-size: 3rem;
+    display: inline;
+    padding: 0 0.2rem;
+    margin-left: -0.2rem;
+    margin-right: -0.2rem;
+  }
+
+  &.ic-primary-text {
+    word-break: normal;
+    font-size: 4rem;
+    line-height: 1;
+    margin: 0 0 0.5rem;
+    text-wrap: balance;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong,
+th {
+  font-weight: 600;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+  text-decoration: none;
+  cursor: help;
+}
+
+sub,
+sup,
+small {
+  font-size: x-small;
+}
+
+small {
+  display: inline-block;
+}
+
+var,
+p.ic-small {
+  font-size: small;
+}
+
+dt,
+p.ic-large {
+  font-size: larger;
+}
+
+dt {
+  font-weight: 600;
+}
+
+dd {
+  margin-left: var(--size-m);
+  margin-top: var(--size-s);
+}
+
+mark {
+  background-color: var(--highlight);
+  border-radius: var(--size-2xs);
+  padding: var(--size-3xs);
+  color: var(--black);
+}
+
+kbd {
+  color: var(--bg-color);
+  background-color: var(--sub-color);
+  border-radius: var(--size-2xs);
+  padding: 0.2rem 0.3rem;
+  margin: 0;
+  display: inline-block;
+  font-size: 0.7rem;
+  line-height: 0.7rem;
+}

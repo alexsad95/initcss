@@ -68,7 +68,7 @@ function toggleActiveButton(activeButtonEl: HTMLElement | null): void {
     return;
   }
 
-  activeButtonEl.classList.toggle('active');
+  activeButtonEl.classList.toggle('ic-active');
   const isActive = activeButtonEl.innerText === 'active';
   activeButtonEl.innerText = isActive ? 'not active' : 'active';
 }
@@ -115,11 +115,11 @@ function checkThemeForIcons(): void {
 }
 
 function setupCopyButtons(): void {
-  const buttons = document.querySelectorAll<HTMLButtonElement>('.code-block__copy-btn');
+  const buttons = document.querySelectorAll<HTMLButtonElement>('.ic-code-block__copy-btn');
 
   buttons.forEach((btn) => {
     btn.addEventListener('click', () => {
-      const codeElement = btn.closest('.code-block')?.querySelector('code');
+      const codeElement = btn.closest('.ic-code-block')?.querySelector('code');
       if (!codeElement) return;
 
       const code = codeElement.textContent || '';

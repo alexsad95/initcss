@@ -1,0 +1,33 @@
+a {
+  display: inline-block;
+  color: var(--sub-color);
+  transition:
+    color 0.2s,
+    opacity 0.2s,
+    background 0.2s;
+
+  &.ic-text,
+  &.ic-button {
+    height: min-content;
+    line-height: 1.25;
+    display: inline-flex;
+    gap: 0.5em;
+    text-decoration: none;
+    align-items: center;
+    &:focus-visible {
+      border-radius: var(--size-xs);
+    }
+  }
+
+  &:hover {
+    color: var(--text-color);
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow:
+      0 0 0 0.1rem var(--bg-color),
+      0 0 0 0.2rem var(--text-color);
+    border-radius: calc(var(--size-xs) / 2);
+  }
+}

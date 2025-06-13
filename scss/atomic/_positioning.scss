@@ -1,17 +1,21 @@
 /* POSITIONING */
 
-.static {
+.ic-static {
   position: static;
 }
 
-.relative {
+.ic-relative {
   position: relative;
 }
 
-.absolute {
+.ic-absolute {
   position: absolute;
 }
 
-.fixed {
+.ic-fixed {
   position: fixed;
+}
+
+.ic-shrink {
+  flex: 2 2;
 }

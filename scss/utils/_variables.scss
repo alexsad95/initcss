@@ -1,9 +1,19 @@
+/* VARIABLES MIXINS */
+
 @use "helpers";
+@use "sizes" as *;
+
+$sizes: map-merge($sizes-1, $sizes-2);
+$sizes: map-merge($sizes, $ext-size);
 
 @mixin main {
   --font: "Roboto Mono", "Roboto Mono", "Vazirmatn", monospace;
-  --highlight: #efdb43;
-  --black: #000000;
+}
+
+@mixin sizes {
+  @each $key, $value in $sizes {
+    --size-#{$key}: #{$value};
+  }
 }
 
 @mixin light-theme {
@@ -20,6 +30,8 @@
   --error-color: #c43c53;
   --error-extra-color: #a52632;
   --selector-image: #{helpers.arrow-icon-url("#333538")};
+  --highlight: #efdb43;
+  --black: #000000;
 }
 
 @mixin dark-theme {
@@ -36,4 +48,6 @@
   --error-color: #ff4a59;
   --error-extra-color: #c43c53;
   --selector-image: #{helpers.arrow-icon-url("#d6d2bc")};
+  --highlight: #efdb43;
+  --black: #000000;
 }

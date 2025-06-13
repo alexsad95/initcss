@@ -1,0 +1,61 @@
+/* MAIN STYLES */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 969px;
+  padding: var(--size-m);
+  font-family: var(--font);
+  line-height: 1.4;
+  color: var(--text-color);
+  background: var(--bg-color);
+}
+
+::-moz-selection {
+  background: var(--text-color);
+  color: var(--sub-alt-color);
+}
+
+::selection {
+  background-color: var(--main-color);
+  color: var(--sub-alt-color);
+}
+
+:autofill,
+:-webkit-autofill,
+:-webkit-autofill:hover,
+:-webkit-autofill:focus,
+:-webkit-autofill:active {
+  -webkit-text-fill-color: var(--text-color);
+  -webkit-box-shadow: 0 0 0 1000px var(--sub-alt-color) inset !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+
+[disabled] {
+  cursor: not-allowed;
+}
+
+.ic-bordered {
+  border: 2px solid var(--main-color);
+}
+
+.ic-dashed {
+  border: 2px dashed var(--main-color);
+}
+
+.ic-dotted {
+  border: 2px dotted var(--main-color);
+}
+
+.ic-underline {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--sub-color);
+}

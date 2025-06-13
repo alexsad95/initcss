@@ -1,34 +1,6 @@
+/* UTILITY MIXINS */
+
 @use "sass:string";
-
-@mixin checkbox-and-radio-style() {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -o-appearance: none;
-  appearance: none;
-  padding: 4px;
-  margin: var(--size-xs);
-  cursor: pointer;
-  vertical-align: middle;
-  background: var(--bg-color);
-  box-shadow: 0 0 0 0.11rem var(--main-color);
-  border: 4px solid var(--bg-color);
-
-  &:checked {
-    background: var(--main-color);
-    height: 0.8rem;
-    width: 0.75rem;
-  }
-
-  &:indeterminate {
-    opacity: 0.5;
-  }
-
-  &:disabled,
-  &:disabled ~ label {
-    cursor: not-allowed;
-    opacity: 0.3;
-  }
-}
 
 @mixin outline-property-basis($type-of-var) {
   border: 2px solid var(--#{$type-of-var}-color);
@@ -43,7 +15,7 @@
     $button-class: "danger";
   }
 
-  &.#{$button-class} {
+  &.ic-#{$button-class} {
     background: var(--#{$type-of-button}-color);
     color: var(--bg-color);
 

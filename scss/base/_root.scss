@@ -1,0 +1,16 @@
+/* ROOT VARIABLES */
+
+@use "../utils/variables";
+
+:root {
+  @include variables.sizes;
+  @include variables.main;
+
+  .dark {
+    @include variables.dark-theme;
+  }
+
+  .light {
+    @include variables.light-theme;
+  }
+}

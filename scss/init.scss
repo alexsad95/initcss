@@ -1,1 +1,24 @@
-@use "index";
+@forward "base/root";
+@forward "base/main";
+@forward "base/layout";
+
+@forward "ui/labels";
+@forward "ui/buttons";
+@forward "ui/inputs";
+@forward "ui/lists";
+@forward "ui/blockquote";
+@forward "ui/links";
+@forward "ui/details";
+@forward "ui/dividers";
+@forward "ui/tables";
+@forward "ui/fieldset";
+@forward "ui/typography";
+@forward "ui/code";
+@forward "ui/avatars";
+@forward "ui/images";
+
+@forward "atomic/positioning";
+@forward "atomic/coordinates";
+@forward "atomic/border-radius";
+@forward "atomic/spacing";
+@forward "atomic/sizes";
