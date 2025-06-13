@@ -31,14 +31,16 @@
   --sub-color: #8f8e84;
   --text-color: #d6d2bc;
   --success-color: #05aa6d;
-  --success-extra-color: #028f5b;
+  --success-extra-color: #048857;
   --info-color: #2196f3;
-  --info-extra-color: #0d75ca;
-  --error-color: #ff4a59;
-  --error-extra-color: #c43c53;
-  --selector-image: url("data:image/svg+xml,<svg viewBox='0 0 100 100' width='14' height='14' xmlns='http://www.w3.org/2000/svg'><path d='M10 30 L50 70 L90 30' stroke='%23d6d2bc' stroke-width='10' fill='none' stroke-linecap='round'/></svg>");
+  --info-extra-color: #1a78c2;
+  --danger-color: #ff4a59;
+  --danger-extra-color: #cc3b47;
+  --warning-color: #feb53f;
+  --warning-extra-color: #cb9132;
   --highlight: #efdb43;
   --black: #000000;
+  --selector-image: url("data:image/svg+xml,<svg viewBox='0 0 100 100' width='14' height='14' xmlns='http://www.w3.org/2000/svg'><path d='M10 30 L50 70 L90 30' stroke='%23d6d2bc' stroke-width='10' fill='none' stroke-linecap='round'/></svg>");
 }
 :root .light {
   --bg-color: #efead0;
@@ -48,14 +50,16 @@
   --sub-alt-color: #dbd6c4;
   --text-color: #333538;
   --success-color: #05aa6d;
-  --success-extra-color: #028f5b;
+  --success-extra-color: #048857;
   --info-color: #2196f3;
-  --info-extra-color: #0d75ca;
-  --error-color: #c43c53;
-  --error-extra-color: #a52632;
-  --selector-image: url("data:image/svg+xml,<svg viewBox='0 0 100 100' width='14' height='14' xmlns='http://www.w3.org/2000/svg'><path d='M10 30 L50 70 L90 30' stroke='%23333538' stroke-width='10' fill='none' stroke-linecap='round'/></svg>");
+  --info-extra-color: #1a78c2;
+  --danger-color: #c43c53;
+  --danger-extra-color: #9d3042;
+  --warning-color: #d2ad3e;
+  --warning-extra-color: #a88a32;
   --highlight: #efdb43;
   --black: #000000;
+  --selector-image: url("data:image/svg+xml,<svg viewBox='0 0 100 100' width='14' height='14' xmlns='http://www.w3.org/2000/svg'><path d='M10 30 L50 70 L90 30' stroke='%23333538' stroke-width='10' fill='none' stroke-linecap='round'/></svg>");
 }
 
 /* MAIN STYLES */
@@ -237,22 +241,22 @@ input[type=submit] {
   color: var(--text-color);
   cursor: pointer;
   transition: background 0.2s, color 0.2s, opacity 0.2s;
-  padding: 0.5em;
+  padding: 0.5rem;
+  font-size: 1rem;
   border-radius: var(--size-xs);
   background: var(--sub-alt-color);
   text-align: center;
-  -webkit-user-select: none;
-  user-select: none;
   align-content: center;
-  height: -moz-min-content;
+  user-select: none;
+  -webkit-user-select: none;
   height: min-content;
+  height: -moz-min-content;
   line-height: 1.25;
   appearance: none;
   border: none;
   font-family: inherit;
-  font-size: 1em;
   display: inline-flex;
-  gap: 0.5em;
+  gap: 0.5rem;
   align-items: baseline;
   justify-content: center;
 }
@@ -306,17 +310,35 @@ button.ic-outline.ic-danger,
 input[type=button].ic-outline.ic-danger,
 input[type=reset].ic-outline.ic-danger,
 input[type=submit].ic-outline.ic-danger {
-  border: 2px solid var(--error-color);
+  border: 2px solid var(--danger-color);
   background: var(--bg-color);
-  color: var(--error-color);
+  color: var(--danger-color);
 }
 button.ic-outline.ic-danger:hover,
 .ic-button.ic-outline.ic-danger:hover,
 input[type=button].ic-outline.ic-danger:hover,
 input[type=reset].ic-outline.ic-danger:hover,
 input[type=submit].ic-outline.ic-danger:hover {
-  border: 2px solid var(--error-color);
-  background: var(--error-color);
+  border: 2px solid var(--danger-color);
+  background: var(--danger-color);
+  color: var(--bg-color);
+}
+button.ic-outline.ic-warning,
+.ic-button.ic-outline.ic-warning,
+input[type=button].ic-outline.ic-warning,
+input[type=reset].ic-outline.ic-warning,
+input[type=submit].ic-outline.ic-warning {
+  border: 2px solid var(--warning-color);
+  background: var(--bg-color);
+  color: var(--warning-color);
+}
+button.ic-outline.ic-warning:hover,
+.ic-button.ic-outline.ic-warning:hover,
+input[type=button].ic-outline.ic-warning:hover,
+input[type=reset].ic-outline.ic-warning:hover,
+input[type=submit].ic-outline.ic-warning:hover {
+  border: 2px solid var(--warning-color);
+  background: var(--warning-color);
   color: var(--bg-color);
 }
 button.ic-text,
@@ -440,7 +462,7 @@ button.ic-danger,
 input[type=button].ic-danger,
 input[type=reset].ic-danger,
 input[type=submit].ic-danger {
-  background: var(--error-color);
+  background: var(--danger-color);
   color: var(--bg-color);
 }
 button.ic-danger:hover,
@@ -448,14 +470,37 @@ button.ic-danger:hover,
 input[type=button].ic-danger:hover,
 input[type=reset].ic-danger:hover,
 input[type=submit].ic-danger:hover {
-  background: var(--error-extra-color);
+  background: var(--danger-extra-color);
 }
 button.ic-danger:active,
 .ic-button.ic-danger:active,
 input[type=button].ic-danger:active,
 input[type=reset].ic-danger:active,
 input[type=submit].ic-danger:active {
-  background: var(--error-extra-color);
+  background: var(--danger-extra-color);
+  opacity: 0.8;
+}
+button.ic-warning,
+.ic-button.ic-warning,
+input[type=button].ic-warning,
+input[type=reset].ic-warning,
+input[type=submit].ic-warning {
+  background: var(--warning-color);
+  color: var(--bg-color);
+}
+button.ic-warning:hover,
+.ic-button.ic-warning:hover,
+input[type=button].ic-warning:hover,
+input[type=reset].ic-warning:hover,
+input[type=submit].ic-warning:hover {
+  background: var(--warning-extra-color);
+}
+button.ic-warning:active,
+.ic-button.ic-warning:active,
+input[type=button].ic-warning:active,
+input[type=reset].ic-warning:active,
+input[type=submit].ic-warning:active {
+  background: var(--warning-extra-color);
   opacity: 0.8;
 }
 button[disabled], button.ic-disabled,
@@ -577,6 +622,7 @@ textarea:focus-visible {
 }
 
 input[type=range] {
+  cursor: pointer;
   appearance: none;
   padding: 0;
   width: 100%;
@@ -751,6 +797,86 @@ a:focus-visible {
   outline: none;
   box-shadow: 0 0 0 0.1rem var(--bg-color), 0 0 0 0.2rem var(--text-color);
   border-radius: calc(var(--size-xs) / 2);
+}
+
+.ic-badge {
+  --primary: var(--info-color);
+  --ic-badge-bg: var(--sub-alt-color);
+  --ic-badge-color: var(--text-color);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.875rem;
+  border-radius: var(--size-xs);
+  background: var(--ic-badge-bg);
+  color: var(--ic-badge-color);
+  padding: 0.5rem;
+  font-size: 1rem;
+  height: 32px;
+}
+.ic-badge.ic-smallest {
+  font-size: 0.6rem;
+  height: 18px;
+}
+.ic-badge.ic-small {
+  font-size: 0.8rem;
+  height: 24px;
+}
+.ic-badge.ic-large {
+  font-size: 1rem;
+  height: 40px;
+}
+.ic-badge.ic-primary {
+  --ic-badge-color: #2196f3;
+  --ic-badge-bg: #d3eafd;
+}
+.ic-badge.ic-primary .ic-badge-count {
+  border: none;
+}
+.ic-badge.ic-danger {
+  --ic-badge-color: #ff4a59;
+  --ic-badge-bg: #ffdbde;
+}
+.ic-badge.ic-danger .ic-badge-count {
+  border: none;
+}
+.ic-badge.ic-warning {
+  --ic-badge-color: #feb53f;
+  --ic-badge-bg: #fff0d9;
+}
+.ic-badge.ic-warning .ic-badge-count {
+  border: none;
+}
+.ic-badge.ic-success {
+  --ic-badge-color: #05aa6d;
+  --ic-badge-bg: #cdeee2;
+}
+.ic-badge.ic-success .ic-badge-count {
+  border: none;
+}
+.ic-badge .ic-icon {
+  line-height: 1;
+}
+.ic-badge .ic-badge-count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  background: var(--ic-badge-color);
+  color: var(--ic-badge-bg);
+  border-radius: 9999px;
+  border: 1px solid var(--sub-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  padding: 0 0.4rem;
+  font-size: 0.75rem;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 details {
