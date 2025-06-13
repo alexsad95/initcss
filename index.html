@@ -6,7 +6,7 @@
   <link rel="icon" type="image/svg+xml" href="/initcss/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>InitCSS</title>
-  <script type="module" crossorigin src="/initcss/assets/index-DGUid6Ry.js"></script>
+  <script type="module" crossorigin src="/initcss/assets/index-2B6r-RMW.js"></script>
   <link rel="stylesheet" crossorigin href="/initcss/assets/index-DBTFXbWu.css">
 </head>
 
@@ -55,46 +55,267 @@
       <hstack class="ic-space-s ic-align-y-center ic-wrap">
         <h4 class="ic-underline">Filled:</h4>
 
-        <button class="ic-link">link</button>
-        <button class="ic-text">text</button>
-        <button>default</button>
-        <button class="ic-success">success</button>
-        <button class="ic-info">info</button>
-        <button class="ic-danger">danger</button>
-        <button id="active-button" class="ic-active">active</button>
-        <button disabled>disabled</button>
+        <button class="ic-link">Link</button>
+        <button class="ic-text">Text</button>
+        <button>Default</button>
+        <button class="ic-success">Success</button>
+        <button class="ic-info">Info</button>
+        <button class="ic-warning">Warning</button>
+        <button class="ic-danger">Danger</button>
+        <button id="active-button" class="ic-active">Active</button>
+        <button disabled>Disabled</button>
       </hstack>
 
       <hstack class="ic-space-s ic-align-y-center ic-wrap">
         <h4 class="ic-underline">Outlined:</h4>
 
-        <button class="ic-outline">default</button>
-        <button class="ic-outline ic-success">success</button>
-        <button class="ic-outline ic-info">info</button>
-        <button class="ic-outline ic-danger">danger</button>
+        <button class="ic-outline">Default</button>
+        <button class="ic-outline ic-success">Success</button>
+        <button class="ic-outline ic-info">Info</button>
+        <button class="ic-outline ic-warning">Warning</button>
+        <button class="ic-outline ic-danger">Danger</button>
         <button id="active-outline-button" class="ic-outline ic-active">
-          active
+          Active
         </button>
-        <button disabled class="ic-outline">disabled</button>
+        <button disabled class="ic-outline">Disabled</button>
       </hstack>
 
       <hstack class="ic-space-s ic-align-y-center ic-wrap">
         <h4 class="ic-underline">Rounded:</h4>
 
-        <button class="ic-br-0">button 0</button>
-        <button class="ic-br-3xs">button 3xs</button>
-        <button class="ic-br-2xs">button 2xs</button>
-        <button class="ic-br-xs">button xs</button>
+        <button class="ic-br-0">Button 0</button>
+        <button class="ic-br-3xs">Button 3xs</button>
+        <button class="ic-br-2xs">Button 2xs</button>
+        <button class="ic-br-xs">Button xs</button>
       </hstack>
 
       <hstack class="ic-space-s ic-align-y-center ic-wrap">
         <h4 class="ic-underline">Sizes:</h4>
 
-        <button class="ic-smallest">smallest</button>
-        <button class="ic-small">small</button>
-        <button>default</button>
-        <button class="ic-large">large</button>
-        <button class="ic-largest">largest</button>
+        <button class="ic-smallest">Smallest</button>
+        <button class="ic-small">Small</button>
+        <button>Default</button>
+        <button class="ic-large">Large</button>
+        <button class="ic-largest">Largest</button>
+      </hstack>
+    </vstack>
+  </section>
+
+  <!-- Badges Section -->
+  <section class="ic-mt-l">
+    <vstack class="ic-space-s">
+      <h1>Badges</h1>
+
+      <hstack class="ic-space-s ic-align-y-center ic-wrap">
+        <h4 class="ic-underline">Tags:</h4>
+
+        <span class="ic-badge ic-small"
+          style="--ic-badge-bg: var(--sub-alt-color); --ic-badge-color: var(--warning-color); font-weight: 600;">
+          <i class="ic-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 24 24">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="m6.5 17.5l11-11m0 0h-9m9 0v9" />
+            </svg>
+          </i>
+          <span class="ic-badge-text">HIGH</span>
+        </span>
+
+        <span class="ic-badge ic-small"
+          style="--ic-badge-bg: var(--sub-alt-color); --ic-badge-color: var(--info-color); font-weight: 600;">
+          <i class="ic-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 16 16">
+              <path fill="currentColor" d="M8 4a4 4 0 1 1 0 8a4 4 0 0 1 0-8" />
+            </svg>
+          </i>
+          <span class="ic-badge-text">RUNNING</span>
+        </span>
+
+        <span class="ic-badge ic-small"
+          style="--ic-badge-bg: var(--sub-alt-color); --ic-badge-color: var(--success-color); font-weight: 600;">
+          <i class="ic-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 1024 1024">
+              <path fill="currentColor"
+                d="M288 421a48 48 0 1 0 96 0a48 48 0 1 0-96 0m352 0a48 48 0 1 0 96 0a48 48 0 1 0-96 0M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64m263 711c-34.2 34.2-74 61-118.3 79.8C611 874.2 562.3 884 512 884s-99-9.8-144.8-29.2A370.4 370.4 0 0 1 248.9 775c-34.2-34.2-61-74-79.8-118.3C149.8 611 140 562.3 140 512s9.8-99 29.2-144.8A370.4 370.4 0 0 1 249 248.9c34.2-34.2 74-61 118.3-79.8C413 149.8 461.7 140 512 140s99 9.8 144.8 29.2A370.4 370.4 0 0 1 775.1 249c34.2 34.2 61 74 79.8 118.3C874.2 413 884 461.7 884 512s-9.8 99-29.2 144.8A368.9 368.9 0 0 1 775 775M664 533h-48.1c-4.2 0-7.8 3.2-8.1 7.4C604 589.9 562.5 629 512 629s-92.1-39.1-95.8-88.6c-.3-4.2-3.9-7.4-8.1-7.4H360a8 8 0 0 0-8 8.4c4.4 84.3 74.5 151.6 160 151.6s155.6-67.3 160-151.6a8 8 0 0 0-8-8.4" />
+            </svg>
+          </i>
+          <span class="ic-badge-text">POSITIVE</span>
+        </span>
+
+        <span class="ic-badge ic-small"
+          style="--ic-badge-bg: var(--sub-alt-color); --ic-badge-color: var(--success-color); font-weight: 600;">
+          <i class="ic-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 24 24">
+              <path fill="currentColor"
+                d="m9.55 15.15l8.475-8.475q.3-.3.7-.3t.7.3t.3.713t-.3.712l-9.175 9.2q-.3.3-.7.3t-.7-.3L4.55 13q-.3-.3-.288-.712t.313-.713t.713-.3t.712.3z" />
+            </svg>
+          </i>
+          <span class="ic-badge-text">DONE</span>
+        </span>
+      </hstack>
+
+      <hstack class="ic-space-s ic-align-y-center ic-wrap">
+        <h4 class="ic-underline">With icons:</h4>
+
+        <span class="ic-badge" style="--ic-badge-bg: var(--sub-alt-color); --ic-badge-color: #E3552E;">
+          <i class="ic-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24">
+              <path fill="currentColor"
+                d="M19.8 3.77a6.25 6.25 0 0 0-8.63-1.913L6.11 5.081a6.25 6.25 0 0 0-1.973 8.532a6.25 6.25 0 0 0 8.693 8.53l5.06-3.224a6.25 6.25 0 0 0 1.974-8.532A6.25 6.25 0 0 0 19.8 3.77m-1.352 5.004A6.26 6.26 0 0 0 15.65 7.5a1 1 0 0 0-1.525-1.003L9.066 9.72a1 1 0 1 0 1.075 1.686l2.109-1.343a4.25 4.25 0 1 1 4.567 7.17l-5.06 3.223a4.25 4.25 0 0 1-6.203-5.23A6.25 6.25 0 0 0 8.35 16.5a1 1 0 0 0 1.525 1.003l5.06-3.224a1 1 0 0 0-1.074-1.687l-2.109 1.344a4.25 4.25 0 0 1-4.567-7.17l5.06-3.223a4.25 4.25 0 0 1 6.203 5.23" />
+            </svg>
+          </i>
+        </span>
+
+        <span class="ic-badge" style="--ic-badge-bg: var(--sub-alt-color);">
+          <i class="ic-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 128 128">
+              <path fill="none"
+                d="m0 8.934l49.854.158l14.167 24.47l14.432-24.47L128 8.935l-63.834 110.14zm126.98.637l-24.36.02l-38.476 66.053L25.691 9.592L.942 9.572l63.211 107.89zm-25.149-.008l-22.745.168l-15.053 24.647L49.216 9.73l-22.794-.168l37.731 64.476zm-75.834-.17l23.002.009m-23.002-.01l23.002.01" />
+              <path fill="#35495e" d="m25.997 9.393l23.002.009L64.035 34.36L79.018 9.404L102 9.398L64.15 75.053z" />
+              <path fill="#41b883" d="m.91 9.569l25.067-.172l38.15 65.659L101.98 9.401l25.11.026l-62.966 108.06z" />
+            </svg>
+          </i>
+        </span>
+
+        <span class="ic-badge" style="--ic-badge-bg: var(--sub-alt-color); --ic-badge-color: #00BCD4;">
+          <i class="ic-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 15 15">
+              <g fill="none" stroke="currentColor" stroke-width="1">
+                <path d="M14.5 7.584c0 1.657-3.134 3-7 3s-7-1.343-7-3s3.134-3 7-3s7 1.343 7 3Z" />
+                <path
+                  d="M4.166 13.739c1.457.79 4.13-1.327 5.972-4.726c1.841-3.4 2.153-6.795.696-7.584c-1.457-.79-4.13 1.327-5.972 4.726c-1.841 3.4-2.153 6.795-.696 7.584Z" />
+                <path
+                  d="M10.834 13.739c-1.457.79-4.13-1.327-5.972-4.726c-1.841-3.4-2.153-6.795-.696-7.584c1.457-.79 4.13 1.327 5.972 4.726c1.841 3.4 2.153 6.795.696 7.584Z" />
+                <path d="M6.5 7.584a1 1 0 1 0 2 0a1 1 0 0 0-2 0Z" />
+              </g>
+            </svg>
+          </i>
+        </span>
+
+        <span class="ic-badge" style="--ic-badge-bg: var(--sub-alt-color); --ic-badge-color: var(--text-color);">
+          <i class="ic-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 15 15">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M8 3h7v7h-1V4.707l-6 6l-3-3l-4.146 4.147l-.708-.708L5 6.293l3 3L13.293 4H8z" clip-rule="evenodd" />
+            </svg>
+          </i>
+        </span>
+      </hstack>
+
+      <hstack class="ic-space-s ic-align-y-center ic-wrap">
+        <h4 class="ic-underline">Variants:</h4>
+
+        <span class="ic-badge ic-primary">
+          <span class="ic-badge-text">Primary</span>
+        </span>
+
+        <span class="ic-badge ic-danger">
+          <span class="ic-badge-text">Danger</span>
+        </span>
+
+        <span class="ic-badge ic-warning">
+          <span class="ic-badge-text">Warning</span>
+        </span>
+
+        <span class="ic-badge ic-success">
+          <span class="ic-badge-text">Success</span>
+        </span>
+
+        <span class="ic-badge">
+          <span class="ic-badge-text">Default</span>
+        </span>
+      </hstack>
+
+      <hstack class="ic-space-s ic-align-y-center ic-wrap">
+        <h4 class="ic-underline">With count:</h4>
+
+        <span class="ic-badge ic-primary">
+          <i class="ic-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 12 12">
+              <path fill="currentColor"
+                d="M6 1a4 4 0 0 0-4 4v1.382l-.947 1.894A.5.5 0 0 0 1.5 9h9a.5.5 0 0 0 .447-.724L10 6.382V5a4 4 0 0 0-4-4m0 10.5A2 2 0 0 1 4.063 10h3.874A2 2 0 0 1 6 11.5" />
+            </svg>
+          </i>
+          <span class="ic-badge-count">3</span>
+        </span>
+
+        <span class="ic-badge ic-danger">
+          <i class="ic-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 36 36">
+              <path fill="currentColor" d="M32.33 6a2 2 0 0 0-.41 0h-28a2 2 0 0 0-.53.08l14.45 14.39Z"
+                class="clr-i-solid clr-i-solid-path-1" />
+              <path fill="currentColor"
+                d="m33.81 7.39l-14.56 14.5a2 2 0 0 1-2.82 0L2 7.5a2 2 0 0 0-.07.5v20a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V8a2 2 0 0 0-.12-.61M5.3 28H3.91v-1.43l7.27-7.21l1.41 1.41Zm26.61 0h-1.4l-7.29-7.23l1.41-1.41l7.27 7.21Z"
+                class="clr-i-solid clr-i-solid-path-2" />
+              <path fill="none" d="M0 0h36v36H0z" />
+            </svg>
+          </i>
+          <span class="ic-badge-text">Inbox</span>
+          <span class="ic-badge-count">5</span>
+        </span>
+
+        <span class="ic-badge">
+          <span class="ic-badge-text">Default</span>
+          <span class="ic-badge-count">125</span>
+        </span>
+      </hstack>
+
+      <hstack class="ic-space-s ic-align-y-center ic-wrap">
+        <h4 class="ic-underline">Custom colors:</h4>
+
+        <span class="ic-badge" style="--ic-badge-bg: #E8F0E9; --ic-badge-color: #266D1F">
+          <i class="ic-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" viewBox="0 0 1024 1024">
+              <path fill="currentColor"
+                d="M512 64a448 448 0 1 1 0 896a448 448 0 0 1 0-896m-55.808 536.384l-99.52-99.584a38.4 38.4 0 1 0-54.336 54.336l126.72 126.72a38.27 38.27 0 0 0 54.336 0l262.4-262.464a38.4 38.4 0 1 0-54.272-54.336z" />
+            </svg>
+          </i>
+          <span class="ic-badge-text">Successful</span>
+        </span>
+
+        <span class="ic-badge" style="--ic-badge-bg: #F5E7E8; --ic-badge-color: #9D1C1D">
+          <i class="ic-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" viewBox="0 0 24 24">
+              <g fill="none">
+                <path
+                  d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                <path fill="currentColor"
+                  d="m13.299 3.148l8.634 14.954a1.5 1.5 0 0 1-1.299 2.25H3.366a1.5 1.5 0 0 1-1.299-2.25l8.634-14.954c.577-1 2.02-1 2.598 0M12 15a1 1 0 1 0 0 2a1 1 0 0 0 0-2m0-7a1 1 0 0 0-.993.883L11 9v4a1 1 0 0 0 1.993.117L13 13V9a1 1 0 0 0-1-1" />
+              </g>
+            </svg>
+          </i>
+          <span class="ic-badge-text">Failed</span>
+        </span>
+
+        <span class="ic-badge" style="--ic-badge-bg: #D2A61C; --ic-badge-color: #FFFFFF">
+          <span class="ic-badge-text">Hot</span>
+          <i class="ic-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" viewBox="0 0 20 20">
+              <path fill="currentColor" fill-rule="evenodd"
+                d="M12.395 2.553a1 1 0 0 0-1.45-.385c-.345.23-.614.558-.822.88c-.214.33-.403.713-.57 1.116c-.334.804-.614 1.768-.84 2.734a31 31 0 0 0-.613 3.58a2.64 2.64 0 0 1-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 0 0 5.05 6.05A6.98 6.98 0 0 0 3 11a7 7 0 1 0 11.95-4.95c-.592-.591-.98-.985-1.348-1.467c-.363-.476-.724-1.063-1.207-2.03M12.12 15.12A3 3 0 0 1 7 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5c.5 1 .786 1.293 1.371 1.879A3 3 0 0 1 13 13a3 3 0 0 1-.879 2.121"
+                clip-rule="evenodd" />
+            </svg>
+          </i>
+        </span>
+      </hstack>
+
+      <hstack class="ic-space-s ic-align-y-center ic-wrap">
+        <h4 class="ic-underline">Sizes:</h4>
+
+        <span class="ic-badge ic-smallest">
+          <span class="ic-badge-text">Smallest</span>
+        </span>
+
+        <span class="ic-badge ic-small">
+          <span class="ic-badge-text">Small</span>
+        </span>
+
+        <span class="ic-badge">
+          <span class="ic-badge-text">Default</span>
+        </span>
+
+        <span class="ic-badge ic-large">
+          <span class="ic-badge-text">Large</span>
+        </span>
       </hstack>
     </vstack>
   </section>
@@ -156,6 +377,26 @@
     </vstack>
   </section>
 
+  <!-- Links Section -->
+  <section class="ic-mt-l">
+    <vstack class="ic-space-s">
+      <h1>Links</h1>
+
+      <hstack class="ic-space-m ic-align-y-center">
+        <a href="#">simple link</a>
+        <a href="#" class="ic-text">
+          <svg class="ic-w-s" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M24 12L18.3431 17.6569L16.9289 16.2426L21.1716 12L16.9289 7.75736L18.3431 6.34315L24 12ZM2.82843 12L7.07107 16.2426L5.65685 17.6569L0 12L5.65685 6.34315L7.07107 7.75736L2.82843 12ZM9.78845 21H7.66009L14.2116 3H16.3399L9.78845 21Z">
+            </path>
+          </svg>
+          with icon
+        </a>
+        <a href="#" class="ic-button">Like Button</a>
+      </hstack>
+    </vstack>
+  </section>
+
   <!-- Lists Section -->
   <section class="ic-mt-l">
     <vstack class="ic-space-s">
@@ -192,26 +433,6 @@
           <cite>— Steve Jobs</cite>
         </footer>
       </blockquote>
-    </vstack>
-  </section>
-
-  <!-- Links Section -->
-  <section class="ic-mt-l">
-    <vstack class="ic-space-s">
-      <h1>Links</h1>
-
-      <hstack class="ic-space-m ic-align-y-center">
-        <a href="#">simple link</a>
-        <a href="#" class="ic-text">
-          <svg class="ic-w-s" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M24 12L18.3431 17.6569L16.9289 16.2426L21.1716 12L16.9289 7.75736L18.3431 6.34315L24 12ZM2.82843 12L7.07107 16.2426L5.65685 17.6569L0 12L5.65685 6.34315L7.07107 7.75736L2.82843 12ZM9.78845 21H7.66009L14.2116 3H16.3399L9.78845 21Z">
-            </path>
-          </svg>
-          with icon
-        </a>
-        <a href="#" class="ic-button">Like Button</a>
-      </hstack>
     </vstack>
   </section>
 
@@ -610,7 +831,7 @@
       <hstack class="ic-space-s ic-wrap">
         <h4 class="ic-underline">Default rounded:</h4>
         <figure class="ic-avatar">
-          <img class="ic-avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix&flip=true"
+          <img class="ic-avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
             alt="felix-avatar-1" />
         </figure>
 
