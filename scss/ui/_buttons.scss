@@ -12,55 +12,37 @@ input[type="submit"] {
     background 0.2s,
     color 0.2s,
     opacity 0.2s;
-  padding: 0.5em;
+  padding: 0.5rem;
+  font-size: 1rem;
   border-radius: var(--size-xs);
   background: var(--sub-alt-color);
   text-align: center;
-  -webkit-user-select: none;
-  user-select: none;
   align-content: center;
-  height: -moz-min-content;
+  user-select: none;
+  -webkit-user-select: none;
   height: min-content;
+  height: -moz-min-content;
   line-height: 1.25;
   appearance: none;
   border: none;
   font-family: inherit;
-  font-size: 1em;
   display: inline-flex;
-  gap: 0.5em;
+  gap: 0.5rem;
   align-items: baseline;
   justify-content: center;
 
   &.ic-outline {
     @include helpers.outline-property-basis(text);
 
-    &.ic-success {
-      @include helpers.outline-property-basis(success);
+    @each $variant in success, info, danger, warning {
+      &.ic-#{$variant} {
+        @include helpers.outline-property-basis($variant);
 
-      &:hover {
-        border: 2px solid var(--success-color);
-        background: var(--success-color);
-        color: var(--bg-color);
-      }
-    }
-
-    &.ic-info {
-      @include helpers.outline-property-basis(info);
-
-      &:hover {
-        border: 2px solid var(--info-color);
-        background: var(--info-color);
-        color: var(--bg-color);
-      }
-    }
-
-    &.ic-danger {
-      @include helpers.outline-property-basis(error);
-
-      &:hover {
-        border: 2px solid var(--error-color);
-        background: var(--error-color);
-        color: var(--bg-color);
+        &:hover {
+          border: 2px solid var(--#{$variant}-color);
+          background: var(--#{$variant}-color);
+          color: var(--bg-color);
+        }
       }
     }
   }
@@ -110,7 +92,8 @@ input[type="submit"] {
 
   @include helpers.button-style(success);
   @include helpers.button-style(info);
-  @include helpers.button-style(error);
+  @include helpers.button-style(danger);
+  @include helpers.button-style(warning);
 
   &[disabled],
   &.ic-disabled {

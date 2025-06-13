@@ -69,8 +69,8 @@ function toggleActiveButton(activeButtonEl: HTMLElement | null): void {
   }
 
   activeButtonEl.classList.toggle('ic-active');
-  const isActive = activeButtonEl.innerText === 'active';
-  activeButtonEl.innerText = isActive ? 'not active' : 'active';
+  const isActive = activeButtonEl.innerText === 'Active';
+  activeButtonEl.innerText = isActive ? 'Not active' : 'Active';
 }
 
 /**
