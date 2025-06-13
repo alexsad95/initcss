@@ -5,143 +5,160 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/initcss/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>InitCSS Example</title>
-  <script type="module" crossorigin src="/initcss/assets/index-BuGG5AF6.js"></script>
+  <title>InitCSS</title>
+  <script type="module" crossorigin src="/initcss/assets/index-DGUid6Ry.js"></script>
   <link rel="stylesheet" crossorigin href="/initcss/assets/index-DBTFXbWu.css">
 </head>
 
 <body>
-  <!-- Theme Button -->
-  <hstack align-x="right">
-    <button id="theme-button" class="mr-s py-2xs px-xs br-2xs">
-      <svg class="w-s" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-        <path
-          d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z">
-        </path>
-      </svg>
-      <svg class="w-s" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display: none">
-        <path
-          d="M10 7C10 10.866 13.134 14 17 14C18.9584 14 20.729 13.1957 21.9995 11.8995C22 11.933 22 11.9665 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C12.0335 2 12.067 2 12.1005 2.00049C10.8043 3.27098 10 5.04157 10 7ZM4 12C4 16.4183 7.58172 20 12 20C15.0583 20 17.7158 18.2839 19.062 15.7621C18.3945 15.9187 17.7035 16 17 16C12.0294 16 8 11.9706 8 7C8 6.29648 8.08133 5.60547 8.2379 4.938C5.71611 6.28423 4 8.9417 4 12Z">
-        </path>
-      </svg>
-    </button>
+  <!-- Header With Buttons -->
+  <header>
+    <hstack class="ic-align-x-right">
+      <button id="theme-button" class="ic-mr-s ic-py-2xs ic-px-xs ic-br-2xs">
+        <svg class="ic-w-s" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z">
+          </path>
+        </svg>
+        <svg class="ic-w-s" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+          style="display: none">
+          <path
+            d="M10 7C10 10.866 13.134 14 17 14C18.9584 14 20.729 13.1957 21.9995 11.8995C22 11.933 22 11.9665 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C12.0335 2 12.067 2 12.1005 2.00049C10.8043 3.27098 10 5.04157 10 7ZM4 12C4 16.4183 7.58172 20 12 20C15.0583 20 17.7158 18.2839 19.062 15.7621C18.3945 15.9187 17.7035 16 17 16C12.0294 16 8 11.9706 8 7C8 6.29648 8.08133 5.60547 8.2379 4.938C5.71611 6.28423 4 8.9417 4 12Z">
+          </path>
+        </svg>
+      </button>
 
-    <!-- Theme Changing Button -->
-    <!--
-    <button id="theme-changing" class="py-2xs px-xs br-2xs">
-      <svg class="w-s" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-        <path
-          d="M12 2C17.5222 2 22 5.97778 22 10.8889C22 13.9556 19.5111 16.4444 16.4444 16.4444H14.4778C13.5556 16.4444 12.8111 17.1889 12.8111 18.1111C12.8111 18.5333 12.9778 18.9222 13.2333 19.2111C13.5 19.5111 13.6667 19.9 13.6667 20.3333C13.6667 21.2556 12.9 22 12 22C6.47778 22 2 17.5222 2 12C2 6.47778 6.47778 2 12 2ZM10.8111 18.1111C10.8111 16.0843 12.451 14.4444 14.4778 14.4444H16.4444C18.4065 14.4444 20 12.851 20 10.8889C20 7.1392 16.4677 4 12 4C7.58235 4 4 7.58235 4 12C4 16.19 7.2226 19.6285 11.324 19.9718C10.9948 19.4168 10.8111 18.7761 10.8111 18.1111ZM7.5 12C6.67157 12 6 11.3284 6 10.5C6 9.67157 6.67157 9 7.5 9C8.32843 9 9 9.67157 9 10.5C9 11.3284 8.32843 12 7.5 12ZM16.5 12C15.6716 12 15 11.3284 15 10.5C15 9.67157 15.6716 9 16.5 9C17.3284 9 18 9.67157 18 10.5C18 11.3284 17.3284 12 16.5 12ZM12 9C11.1716 9 10.5 8.32843 10.5 7.5C10.5 6.67157 11.1716 6 12 6C12.8284 6 13.5 6.67157 13.5 7.5C13.5 8.32843 12.8284 9 12 9Z">
-        </path>
-      </svg>
-    </button>
-    <div id="theme-changing-block">
-      <hstack spacing="s">
-        <input type="color" id="bg" value="#e66465" class="w-32px" />
-        <label for="bg">background color</label>
-      </hstack>
-      <hstack spacing="s">
-        <input type="color" id="text" value="#f6b73c" class="w-32px" />
-        <label for="text">text color</label>
-      </hstack>
-      <hstack spacing="s">
-        <input type="color" id="sub" value="#ffe7b8" class="w-32px" />
-        <label for="sub">sub color</label>
-      </hstack>
-      <hstack spacing="s">
-        <input type="color" id="sub-alt" value="#3e382d" class="w-32px" />
-        <label for="sub-alt">sub-alt color</label>
-      </hstack>
-      <hstack spacing="s">
-        <input type="color" id="main" value="#c5f73b" class="w-32px" />
-        <label for="main">main color</label>
-      </hstack>
-    </div>
-    -->
-  </hstack>
+      <a id="github-link-button" class="ic-button ic-mr-s ic-py-2xs ic-px-xs ic-br-2xs"
+        href="https://github.com/alexsad95/initcss" target="_blank" rel="noreferrer noopener">
+        <svg class="ic-w-s" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path fill="currentColor"
+            d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2" />
+        </svg>
+      </a>
+    </hstack>
+  </header>
+
+  <!-- Title -->
+  <div class="ic-my-xl">
+    <div class="ic-divider-dotted ic-mb-l"></div>
+    <h1 class="ic-highlight-text">InitCSS</h1> <br>
+    <h1 class="ic-highlight-text">Minimal CSS Framework</h1>
+    <h2 class="ic-mt-s">A minimal, customizable CSS utility framework for fast and clean UI development</h2>
+    <div class="ic-divider-dotted ic-mt-l"></div>
+  </div>
 
   <!-- Buttons Section -->
-  <section class="mt-l">
-    <vstack spacing="s">
+  <section class="ic-mt-l">
+    <vstack class="ic-space-s">
       <h1>Buttons</h1>
 
-      <hstack spacing="s" data-wrap>
-        <label data-underline>Filled:</label>
+      <hstack class="ic-space-s ic-align-y-center ic-wrap">
+        <h4 class="ic-underline">Filled:</h4>
 
-        <button class="link">link</button>
-        <button class="text">text</button>
+        <button class="ic-link">link</button>
+        <button class="ic-text">text</button>
         <button>default</button>
-        <button class="success">success</button>
-        <button class="info">info</button>
-        <button class="danger">danger</button>
-        <button id="active-button" class="active">active</button>
+        <button class="ic-success">success</button>
+        <button class="ic-info">info</button>
+        <button class="ic-danger">danger</button>
+        <button id="active-button" class="ic-active">active</button>
         <button disabled>disabled</button>
       </hstack>
 
-      <hstack spacing="s" data-wrap>
-        <label data-underline>Outlined:</label>
+      <hstack class="ic-space-s ic-align-y-center ic-wrap">
+        <h4 class="ic-underline">Outlined:</h4>
 
-        <button class="outline">default</button>
-        <button class="outline success">success</button>
-        <button class="outline info">info</button>
-        <button class="outline danger">danger</button>
-        <button id="active-outline-button" class="outline active">
+        <button class="ic-outline">default</button>
+        <button class="ic-outline ic-success">success</button>
+        <button class="ic-outline ic-info">info</button>
+        <button class="ic-outline ic-danger">danger</button>
+        <button id="active-outline-button" class="ic-outline ic-active">
           active
         </button>
-        <button disabled class="outline">disabled</button>
+        <button disabled class="ic-outline">disabled</button>
       </hstack>
 
-      <hstack spacing="s" data-wrap>
-        <label data-underline>Rounded:</label>
+      <hstack class="ic-space-s ic-align-y-center ic-wrap">
+        <h4 class="ic-underline">Rounded:</h4>
 
-        <button class="br-0">button 0</button>
-        <button class="br-3xs">button 3xs</button>
-        <button class="br-2xs">button 2xs</button>
-        <button class="br-xs">button xs</button>
+        <button class="ic-br-0">button 0</button>
+        <button class="ic-br-3xs">button 3xs</button>
+        <button class="ic-br-2xs">button 2xs</button>
+        <button class="ic-br-xs">button xs</button>
       </hstack>
 
-      <hstack spacing="s" data-wrap>
-        <label data-underline>Sizes:</label>
+      <hstack class="ic-space-s ic-align-y-center ic-wrap">
+        <h4 class="ic-underline">Sizes:</h4>
 
-        <button data-smallest>smallest</button>
-        <button data-small>small</button>
+        <button class="ic-smallest">smallest</button>
+        <button class="ic-small">small</button>
         <button>default</button>
-        <button data-large>large</button>
-        <button data-largest>largest</button>
+        <button class="ic-large">large</button>
+        <button class="ic-largest">largest</button>
       </hstack>
     </vstack>
   </section>
 
   <!-- Inputs Section -->
-  <section class="mt-l">
-    <vstack spacing="s">
+  <section class="ic-mt-l">
+    <vstack class="ic-space-s">
       <h1>Inputs</h1>
 
-      <input type="text" name="name" placeholder="Name" autocomplete="off">
-      <input type="email" name="email" placeholder="Email" autocomplete="off">
+      <h4 class="ic-underline">Default inputs:</h4>
+      <input type="text" name="Login" placeholder="Login">
+      <input type="password" name="password" class="form-input" placeholder="Password" required />
       <input type="text" name="disabled" placeholder="Disabled" disabled />
-
       <textarea name="description" placeholder="Description" rows="3"></textarea>
 
-      <select name="social">
-        <option>Instagram</option>
-        <option>Facebook</option>
-        <option>LinkedIn</option>
-        <option>Twitter</option>
-        <option selected>GitHub</option>
-        <option>Reddit</option>
-      </select>
+      <hstack class="ic-space-s ic-align-y-center">
+        <h4 class="ic-underline">Selector:</h4>
+        <select name="social">
+          <option>Instagram</option>
+          <option>Facebook</option>
+          <option>LinkedIn</option>
+          <option>Twitter</option>
+          <option selected>GitHub</option>
+          <option>Reddit</option>
+        </select>
+      </hstack>
 
-      <hstack spacing="s">
-        <label for="range" data-underline>Range</label>
+      <hstack class="ic-space-s">
+        <h4 class="ic-underline">Range:</h4>
         <input id="range" type="range" min="0" max="1" step="0.1">
       </hstack>
+
+      <h4 class="ic-underline">Checkboxes:</h4>
+      <div>
+        <label>
+          <input type="checkbox" name="desires" value="coffe" checked />Coffee in the morning — yes!
+        </label>
+        <label>
+          <input type="checkbox" name="desires" value="friday" />Friday every day — absolutely!
+        </label>
+        <label>
+          <input type="checkbox" name="desires" value="work" disabled />Working after 6 PM — no way!
+        </label>
+      </div>
+
+      <h4 class="ic-underline">Radios:</h4>
+      <div>
+        <label>
+          <input type="radio" name="weekend" value="stayhome" />Stay home, do nothing, recharge
+        </label>
+        <label>
+          <input type="radio" name="weekend" value="adventure" />Go on a spontaneous adventure
+        </label>
+        <label>
+          <input type="radio" name="weekend" value="sleep" disabled />Sleep until further notice (currently unavailable
+          😴)
+        </label>
+      </div>
     </vstack>
   </section>
 
   <!-- Lists Section -->
-  <section class="mt-l">
-    <vstack spacing="s">
+  <section class="ic-mt-l">
+    <vstack class="ic-space-s">
       <h1>Lists</h1>
 
       <ul>
@@ -164,8 +181,8 @@
   </section>
 
   <!-- Blockquote Section -->
-  <section class="mt-l">
-    <vstack spacing="s">
+  <section class="ic-mt-l">
+    <vstack class="ic-space-s">
       <h1>Blockquote</h1>
 
       <blockquote>
@@ -179,33 +196,34 @@
   </section>
 
   <!-- Links Section -->
-  <section class="mt-l">
-    <vstack spacing="s">
+  <section class="ic-mt-l">
+    <vstack class="ic-space-s">
       <h1>Links</h1>
 
-      <hstack spacing="s">
+      <hstack class="ic-space-m ic-align-y-center">
         <a href="#">simple link</a>
-        <a href="https://github.com/alexsad95/initcss" class="text" target="_blank" rel="noreferrer noopener">
-          <svg class="w-s" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <a href="#" class="ic-text">
+          <svg class="ic-w-s" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
             <path
               d="M24 12L18.3431 17.6569L16.9289 16.2426L21.1716 12L16.9289 7.75736L18.3431 6.34315L24 12ZM2.82843 12L7.07107 16.2426L5.65685 17.6569L0 12L5.65685 6.34315L7.07107 7.75736L2.82843 12ZM9.78845 21H7.66009L14.2116 3H16.3399L9.78845 21Z">
             </path>
           </svg>
           with icon
         </a>
+        <a href="#" class="ic-button">Like Button</a>
       </hstack>
     </vstack>
   </section>
 
   <!-- Details Section -->
-  <section class="mt-l">
-    <vstack spacing="s">
+  <section class="ic-mt-l">
+    <vstack class="ic-space-s">
       <h1>Details</h1>
 
       <details>
         <summary>More Info</summary>
-        <div class="divider-medium ma-0"></div>
-        <div class="details-content">
+        <div class="ic-divider-medium ic-ma-0"></div>
+        <div class="ic-details-content">
           <p>This is the hidden content revealed when you expand the details.</p>
         </div>
       </details>
@@ -213,29 +231,29 @@
   </section>
 
   <!-- Dividers Section -->
-  <section class="mt-l">
+  <section class="ic-mt-l">
     <h1>Dividers</h1>
 
-    <div class="divider"></div>
-    <div class="divider-with-text">or</div>
-    <div class="divider-dotted"></div>
-    <div class="divider-medium"></div>
-    <div class="divider-thick"></div>
+    <div class="ic-divider"></div>
+    <div class="ic-divider-text">or</div>
+    <div class="ic-divider-dotted"></div>
+    <div class="ic-divider-dashed"></div>
+    <div class="ic-divider-medium"></div>
+    <div class="ic-divider-thick"></div>
 
-    <hstack align-items="center">
+    <hstack>
       <span>Left</span>
-      <div class="v-divider"></div>
+      <div class="ic-divider-vertical"></div>
       <span>Right</span>
     </hstack>
   </section>
 
   <!-- Tables Section -->
-  <section class="mt-l">
-    <vstack spacing="s">
+  <section class="ic-mt-l">
+    <vstack class="ic-space-s">
       <h1>Tables</h1>
 
-      <label data-underline>Default table:</label>
-
+      <h4 class="ic-underline">Default table:</h4>
       <table>
         <caption>Status of the club members 2021</caption>
         <thead>
@@ -281,9 +299,8 @@
         </tfoot>
       </table>
 
-      <label data-underline>Hoverable with horizontal dividers:</label>
-
-      <table class="mt-s" data-horizontal-dividers data-hoverable>
+      <h4 class="ic-underline">Hoverable with horizontal dividers:</h4>
+      <table class="ic-horizontal-dividers ic-hoverable">
         <tr>
           <th>Firstname</th>
           <th>Lastname</th>
@@ -301,9 +318,8 @@
         </tr>
       </table>
 
-      <label data-underline>Vertical zebra stripes:</label>
-
-      <table class="mt-s" data-vertical-zebra>
+      <h4 class="ic-underline">Vertical zebra stripes:</h4>
+      <table class="ic-vertical-zebra">
         <tr>
           <th>Firstname</th>
           <th>Lastname</th>
@@ -324,9 +340,8 @@
         </tr>
       </table>
 
-      <label data-underline>Horizontal zebra stripes:</label>
-
-      <table class="mt-s" data-horizontal-zebra>
+      <h4 class="ic-underline">Horizontal zebra stripes:</h4>
+      <table class="ic-horizontal-zebra">
         <tr>
           <th>Firstname</th>
           <th>Lastname</th>
@@ -354,11 +369,11 @@
         </tr>
       </table>
 
-      <label data-underline>Colgroup:</label>
-
-      <table class="mt-s">
+      <h4 class="ic-underline">Colgroup:</h4>
+      <table>
         <colgroup>
-          <col span="2">
+          <col span="5">
+          <col span="2" class="ic-highlight-col">
         </colgroup>
         <tr>
           <th>MON</th>
@@ -408,63 +423,24 @@
       </table>
   </section>
 
-  <!-- Checkboxes Section -->
-  <section class="mt-l">
-    <h1>Checkboxes</h1>
-
-    <div class="mt-s">
-      <label>
-        <input type="checkbox" name="desires" value="coffe" checked />Coffee in the morning — yes!
-      </label>
-
-      <label>
-        <input type="checkbox" name="desires" value="friday" />Friday every day — absolutely!
-      </label>
-
-      <label>
-        <input type="checkbox" name="desires" value="work" disabled />Working after 6 PM — no way!
-      </label>
-    </div>
-  </section>
-
-  <!-- Radios Section -->
-  <section class="mt-l">
-    <h1>Radios</h1>
-
-    <div class="mt-s">
-      <label>
-        <input type="radio" name="weekend" value="stayhome" />Stay home, do nothing, recharge
-      </label>
-
-      <label>
-        <input type="radio" name="weekend" value="adventure" />Go on a spontaneous adventure
-      </label>
-
-      <label>
-        <input type="radio" name="weekend" value="sleep" disabled />Sleep until further notice (currently unavailable
-        😴)
-      </label>
-    </div>
-  </section>
-
   <!-- Fieldsets Section -->
-  <section class="mt-l">
-    <vstack spacing="s">
+  <section class="ic-mt-l">
+    <vstack class="ic-space-s">
       <h1>Fieldsets</h1>
 
-      <fieldset data-bordered>
+      <fieldset class="ic-bordered">
         Fieldset without &lt;legend&gt; tag
       </fieldset>
 
-      <hstack spacing="s" shrink>
-        <fieldset data-dotted>
+      <hstack class="ic-space-s ic-shrink">
+        <fieldset class="ic-dotted">
           <legend>Dotted-bordered fieldset:</legend>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor malesuada eget
           vitae
           augue.
         </fieldset>
 
-        <fieldset data-dashed>
+        <fieldset class="ic-dashed">
           <legend>Dashed-bordered fieldset:</legend>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor malesuada eget
           vitae
@@ -472,8 +448,8 @@
         </fieldset>
       </hstack>
 
-      <hstack spacing="s" shrink>
-        <fieldset data-bordered>
+      <hstack class="ic-space-s ic-shrink">
+        <fieldset class="ic-bordered">
           <legend>Bordered vertical (default) fieldset:</legend>
           <label>
             <input type="checkbox" name="vertical" value="a" />A
@@ -483,8 +459,8 @@
           </label>
         </fieldset>
 
-        <fieldset data-horizontal>
-          <legend data-underline>Not bordered horizontal fieldset:</legend>
+        <fieldset class="ic-horizontal">
+          <legend class="ic-underline">Not bordered horizontal fieldset:</legend>
           <label>
             <input type="radio" name="horizontal" value="a" />A
           </label>
@@ -497,27 +473,40 @@
   </section>
 
   <!-- Typography Section -->
-  <section class="mt-l">
-    <vstack spacing="s">
+  <section class="ic-mt-l">
+    <vstack class="ic-space-s">
       <h1>Typography</h1>
 
-      <fieldset data-bordered>
-        <legend>Headings:</legend>
+      <fieldset class="ic-bordered">
+        <hstack class="ic-space-s">
+          <div class="first-col">
+            <legend>Headings:</legend>
+            <h1>H1 tag</h1>
+            <h2>H2 tag</h2>
+            <h3>H3 tag</h3>
+            <h4>H4 tag</h4>
+            <h5>H5 tag</h5>
+            <h6>H6 tag</h6>
+          </div>
 
-        <h1>H1 tag</h1>
-        <h2>H2 tag</h2>
-        <h3>H3 tag</h3>
+          <div class="second-col">
+            <legend>Another titles:</legend>
+            <h1 class="ic-highlight-text">Highlighted Text</h1>
+            <h1 class="ic-primary-text">MEGA PRIMARY TEXT</h1>
+          </div>
+
+        </hstack>
       </fieldset>
 
-      <fieldset data-bordered>
+      <fieldset class="ic-bordered">
         <legend>Large paragraph:</legend>
-        <p data-large>
+        <p class="ic-large">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
           malesuada eget vitae augue.
         </p>
       </fieldset>
 
-      <fieldset data-bordered>
+      <fieldset class="ic-bordered">
         <legend>Default paragraph:</legend>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
@@ -525,17 +514,17 @@
         </p>
       </fieldset>
 
-      <fieldset data-bordered>
+      <fieldset class="ic-bordered">
         <legend>Small paragraph:</legend>
-        <p data-small>
+        <p class="ic-small">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
           malesuada eget vitae augue. Cras fermentum imperdiet lorem. Quisque eu mauris laoreet, molestie augue
           at, gravida dui.
         </p>
       </fieldset>
 
-      <hstack spacing="s" shrink>
-        <fieldset data-bordered>
+      <hstack class="ic-space-s ic-shrink">
+        <fieldset class="ic-bordered">
           <legend><code>small</code> tag:</legend>
           <small>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non arcu sed leo porttitor
@@ -544,9 +533,8 @@
           </small>
         </fieldset>
 
-        <fieldset data-bordered>
+        <fieldset class="ic-bordered">
           <legend>Text-level semantics:</legend>
-
           <strong>strong</strong>
           <b>b</b>
           <em>em</em>
@@ -566,21 +554,19 @@
   </section>
 
   <!-- Code Section -->
-  <section class="mt-l">
-    <vstack spacing="s">
+  <section class="ic-mt-l">
+    <vstack class="ic-space-s">
       <h1>Code</h1>
 
-      <fieldset data-bordered>
+      <fieldset class="ic-bordered">
         <legend><code>pre</code> and <code>code</code> tags:</legend>
 
-        <p>
-          Use the <code>fetch()</code> function to make HTTP requests in JavaScript.
-        </p>
+        <p>Use the <code>fetch()</code> function to make HTTP requests in JavaScript</p>
 
-        <div class="code-block">
-          <div class="code-block__header">
-            <span class="code-block__lang">JS</span>
-            <button class="code-block__copy-btn">Copy</button>
+        <div class="ic-code-block">
+          <div class="ic-code-block__header">
+            <span class="ic-code-block__lang">JS</span>
+            <button class="ic-code-block__copy-btn">Copy</button>
           </div>
           <pre><code>function fetchData() {
   fetch('/api/data')
@@ -590,17 +576,17 @@
         </div>
       </fieldset>
 
-      <fieldset data-bordered>
+      <fieldset class="ic-bordered">
         <legend><code>samp</code> tag:</legend>
         <p>Program output: <samp>Connected successfully</samp></p>
       </fieldset>
 
-      <fieldset data-bordered>
+      <fieldset class="ic-bordered">
         <legend><code>kbd</code> tag:</legend>
         <p>Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save the file</p>
       </fieldset>
 
-      <fieldset data-bordered>
+      <fieldset class="ic-bordered">
         <legend><code>var</code> tag:</legend>
         <p>Let <var>x</var> be the number of users online</p>
       </fieldset>
@@ -608,100 +594,102 @@
   </section>
 
   <!-- Avatars Section -->
-  <section class="mt-l">
-    <vstack spacing="s">
+  <section class="ic-mt-l">
+    <vstack class="ic-space-s">
       <h1>Avatars</h1>
 
-      <figure class="avatar">
-        <label data-underline>With name:</label>
-        <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix&flip=true"
-          alt="felix-avatar-1" />
-        <figcaption class="avatar__name">Tom Smith</figcaption>
-      </figure>
+      <hstack class="ic-space-s ic-align-y-center">
+        <h4 class="ic-underline">With name:</h4>
+        <figure class="ic-avatar">
+          <img class="ic-avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix&flip=true"
+            alt="felix-avatar-1" />
+          <figcaption>Tom Smith</figcaption>
+        </figure>
+      </hstack>
 
-      <hstack spacing="s" data-wrap shrink>
-        <figure class="avatar">
-          <label data-underline>Default rounded:</label>
-          <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix&flip=true"
+      <hstack class="ic-space-s ic-wrap">
+        <h4 class="ic-underline">Default rounded:</h4>
+        <figure class="ic-avatar">
+          <img class="ic-avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix&flip=true"
             alt="felix-avatar-1" />
         </figure>
 
-        <figure class="avatar" data-soft>
-          <label data-underline>Soft rounded:</label>
-          <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
+        <h4 class="ic-underline">Soft rounded:</h4>
+        <figure class="ic-avatar ic-soft">
+          <img class="ic-avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
             alt="felix-avatar-1" />
         </figure>
 
-        <figure class="avatar" data-square>
-          <label data-underline>Square rounded:</label>
-          <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
+        <h4 class="ic-underline">Square rounded:</h4>
+        <figure class="ic-avatar ic-square">
+          <img class="ic-avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
             alt="felix-avatar-1" />
         </figure>
       </hstack>
 
-      <hstack spacing="s" data-wrap shrink>
-        <figure class="avatar" data-small>
-          <label data-underline>Small:</label>
-          <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
+      <hstack class="ic-space-s ic-wrap">
+        <figure class="ic-avatar ic-small">
+          <h4 class="ic-underline">Small:</h4>
+          <img class="ic-avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
             alt="felix-avatar-2" />
         </figure>
 
-        <figure class="avatar">
-          <label data-underline>Default:</label>
-          <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
+        <figure class="ic-avatar">
+          <h4 class="ic-underline">Default:</h4>
+          <img class="ic-avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
             alt="felix-avatar-3" />
         </figure>
 
-        <figure class="avatar" data-medium>
-          <label data-underline>Medium:</label>
-          <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
+        <figure class="ic-avatar ic-medium">
+          <h4 class="ic-underline">Medium:</h4>
+          <img class="ic-avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
             alt="felix-avatar-3" />
         </figure>
 
-        <figure class="avatar" data-large>
-          <label data-underline>Large:</label>
-          <img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
+        <figure class="ic-avatar ic-large">
+          <h4 class="ic-underline">Large:</h4>
+          <img class="ic-avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix"
             alt="felix-avatar-4" />
         </figure>
       </hstack>
 
-      <hstack spacing="s" data-wrap shrink>
-        <vstack spacing="xs">
-          <label data-underline>Small group:</label>
-          <ul class="avatar-group" data-small>
-            <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Nolan"
-                alt="Nolan" /></li>
-            <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Maria"
-                alt="Maria" /></li>
-            <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Aiden"
-                alt="Aiden" /></li>
-            <li class="avatar avatar--more"><span>+5</span></li>
+      <hstack class="ic-space-s ic-wrap">
+        <vstack class="ic-space-xs">
+          <h4 class="ic-underline">Small group:</h4>
+          <ul class="ic-avatar-group ic-small">
+            <li class="ic-avatar"><img class="ic-avatar__image"
+                src="https://api.dicebear.com/9.x/notionists/svg?seed=Nolan" alt="Nolan" /></li>
+            <li class="ic-avatar"><img class="ic-avatar__image"
+                src="https://api.dicebear.com/9.x/notionists/svg?seed=Maria" alt="Maria" /></li>
+            <li class="ic-avatar"><img class="ic-avatar__image"
+                src="https://api.dicebear.com/9.x/notionists/svg?seed=Aiden" alt="Aiden" /></li>
+            <li class="ic-avatar ic-avatar--more"><span>+5</span></li>
           </ul>
         </vstack>
 
-        <vstack spacing="xs">
-          <label data-underline>Default avatar group:</label>
-          <ul class="avatar-group">
-            <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Nolan"
-                alt="Nolan" /></li>
-            <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Maria"
-                alt="Maria" /></li>
-            <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Aiden"
-                alt="Aiden" /></li>
-            <li class="avatar avatar--more"><span>+5</span></li>
+        <vstack class="ic-space-xs">
+          <h4 class="ic-underline">Default avatar group:</h4>
+          <ul class="ic-avatar-group">
+            <li class="ic-avatar"><img class="ic-avatar__image"
+                src="https://api.dicebear.com/9.x/notionists/svg?seed=Nolan" alt="Nolan" /></li>
+            <li class="ic-avatar"><img class="ic-avatar__image"
+                src="https://api.dicebear.com/9.x/notionists/svg?seed=Maria" alt="Maria" /></li>
+            <li class="ic-avatar"><img class="ic-avatar__image"
+                src="https://api.dicebear.com/9.x/notionists/svg?seed=Aiden" alt="Aiden" /></li>
+            <li class="ic-avatar ic-avatar--more"><span>+5</span></li>
           </ul>
         </vstack>
 
-        <vstack spacing="xs">
-          <label data-underline>Large group:</label>
-          <ul class="avatar-group" data-large>
-            <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Nolan"
-                alt="Nolan" /></li>
-            <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Maria"
-                alt="Maria" /></li>
-            <li class="avatar"><img class="avatar__image" src="https://api.dicebear.com/9.x/notionists/svg?seed=Aiden"
-                alt="Aiden" /></li>
-            <li class="avatar avatar--more"><span>+5</span></li>
+        <vstack class="ic-space-xs">
+          <h4 class="ic-underline">Large group:</h4>
+          <ul class="ic-avatar-group ic-large">
+            <li class="ic-avatar"><img class="ic-avatar__image"
+                src="https://api.dicebear.com/9.x/notionists/svg?seed=Nolan" alt="Nolan" /></li>
+            <li class="ic-avatar"><img class="ic-avatar__image"
+                src="https://api.dicebear.com/9.x/notionists/svg?seed=Maria" alt="Maria" /></li>
+            <li class="ic-avatar"><img class="ic-avatar__image"
+                src="https://api.dicebear.com/9.x/notionists/svg?seed=Aiden" alt="Aiden" /></li>
+            <li class="ic-avatar ic-avatar--more"><span>+5</span></li>
           </ul>
         </vstack>
       </hstack>
@@ -709,21 +697,22 @@
   </section>
 
   <!-- Images Section -->
-  <section class="mt-l">
-    <vstack spacing="s">
+  <section class="ic-mt-l">
+    <vstack class="ic-space-s">
       <h1>Images</h1>
 
-      <figure class="article-image">
+      <figure class="ic-article-image">
         <img
           src="https://cdn.prod.website-files.com/64ccc2cbb5ca5d428651752c/6717ba59a5c95604e4d638d7_6717b8680d642f849aac1c28_unique-brutalist-building-habitat-76-moshe-safdie.jpeg"
-          alt="Habitat 67" class="article-image__img" />
-        <figcaption class="article-image__caption">Figure 1: Habitat 67, Montreal (small pic)</figcaption>
+          alt="Habitat 67" class="ic-article-image__img" />
+        <figcaption class="ic-article-image__caption">Figure 1: Habitat 67, Montreal (small pic)</figcaption>
       </figure>
 
-      <figure class="article-image">
+      <figure class="ic-article-image">
         <img src="https://i.pinimg.com/736x/0d/23/8a/0d238afc2948e8e4b39ebf4e09ab272c.jpg"
-          alt="Bank of London and South America" class="article-image__img" />
-        <figcaption class="article-image__caption">Figure 2: Bank of London and South America, Buenos Aires (large pic)
+          alt="Bank of London and South America" class="ic-article-image__img" />
+        <figcaption class="ic-article-image__caption">Figure 2: Bank of London and South America, Buenos Aires (large
+          pic)
         </figcaption>
       </figure>
     </vstack>
