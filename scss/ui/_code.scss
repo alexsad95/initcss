@@ -16,7 +16,7 @@ pre code {
 }
 
 code {
-  font-family: "Fira Code", monospace;
+  font-family: var(--font-mono);
   font-size: 0.8rem;
   background: var(--sub-alt-color);
   border-radius: var(--size-2xs);

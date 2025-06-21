@@ -4,7 +4,7 @@
 
 :root {
   @include variables.sizes;
-  @include variables.main;
+  @include variables.fonts;
 
   .dark {
     @include variables.dark-theme;

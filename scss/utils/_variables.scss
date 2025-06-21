@@ -43,8 +43,10 @@ $dark-highlight: #efdb43;
 $dark-black: #000000;
 $dark-selector-image: #{helpers.arrow-icon-url("#d6d2bc")};
 
-@mixin main {
-  --font: "Roboto Mono", "Roboto Mono", "Vazirmatn", monospace;
+@mixin fonts {
+  --font-base: "Roboto Mono", monospace;
+  --font-heading: "Monaco", sans-serif;
+  --font-mono: "Consolas", monospace;
 }
 
 @mixin sizes {

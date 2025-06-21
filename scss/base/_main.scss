@@ -10,7 +10,7 @@ body {
   margin: 0 auto;
   max-width: 969px;
   padding: var(--size-m);
-  font-family: var(--font);
+  font-family: var(--font-base);
   line-height: 1.4;
   color: var(--text-color);
   background: var(--bg-color);
@@ -22,7 +22,7 @@ body {
 }
 
 ::selection {
-  background-color: var(--main-color);
+  background: var(--text-color);
   color: var(--sub-alt-color);
 }
 

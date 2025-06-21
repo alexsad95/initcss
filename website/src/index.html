@@ -343,7 +343,7 @@
 
       <hstack class="ic-space-s">
         <h4 class="ic-underline">Range:</h4>
-        <input id="range" type="range" min="0" max="1" step="0.1">
+        <input id="range" type="range" min="0" max="2" step="0.1">
       </hstack>
 
       <h4 class="ic-underline">Checkboxes:</h4>
@@ -785,12 +785,12 @@
         <div class="ic-code-block">
           <div class="ic-code-block__header">
             <span class="ic-code-block__lang">JS</span>
-            <button class="ic-code-block__copy-btn">Copy</button>
+            <button class="ic-code-block__copy-btn ic-small">Copy</button>
           </div>
           <pre><code>function fetchData() {
   fetch('/api/data')
-  .then(response => response.json())
-  .then(data => console.log(data));
+    .then(response => response.json())
+    .then(data => console.log(data));
 }</code></pre>
         </div>
       </fieldset>
