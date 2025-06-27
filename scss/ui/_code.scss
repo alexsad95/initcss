@@ -21,7 +21,7 @@ code {
   font-family: var(--font-mono);
   font-size: 0.8rem;
   background: var(--sub-alt-color);
-  border-radius: var(--size-2xs);
+  border-radius: var(--size-xs);
   padding: 0.2rem 0.4rem;
 }
 
@@ -46,6 +46,7 @@ code {
   &__lang {
     display: inline;
     padding-top: 0.35rem;
+    border-radius: var(--size-xs);
   }
 
   &__copy-btn {

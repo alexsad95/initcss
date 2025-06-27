@@ -16,9 +16,6 @@ a {
     gap: 0.5em;
     text-decoration: none;
     align-items: center;
-    &:focus-visible {
-      border-radius: var(--size-xs);
-    }
   }
 
   &:hover {
@@ -30,6 +27,5 @@ a {
     box-shadow:
       0 0 0 0.1rem var(--bg-color),
       0 0 0 0.2rem var(--text-color);
-    border-radius: calc(var(--size-xs) / 2);
   }
 }

@@ -68,12 +68,11 @@ input[type="range"] {
   appearance: none;
   padding: 0;
   width: 100%;
-  border-radius: var(--size-xs);
 
   // remove the standard style in Firefox
   &::-moz-range-track {
     background-color: #ccc;
-    border-radius: 2px;
+    border-radius: var(--size-xs);
     height: var(--size-2xs);
   }
 
@@ -98,12 +97,12 @@ input[type="range"] {
 
 input[type="checkbox"] {
   @include checkbox-and-radio-style;
-  border-radius: 4px;
+  border-radius: var(--size-2xs); // make sure that it is definitely not round when changing on "xs"
 }
 
 input[type="radio"] {
   @include checkbox-and-radio-style;
-  border-radius: 100%;
+  border-radius: var(--size-xs);
 }
 
 textarea {
