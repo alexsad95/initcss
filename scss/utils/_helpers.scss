@@ -1,5 +1,6 @@
-/* UTILITY MIXINS */
+// UTILITY MIXINS AND FUNCTIONS
 
+@use "sass:meta";
 @use "sass:string";
 
 @mixin outline-property-basis($type-of-var) {
@@ -30,9 +31,9 @@
   }
 }
 
-@function arrow-icon-url($color) {
-  $hex: if(string.index($color, "#") == 1, string.slice($color, 2), $color);
-  $encoded-color: "%23" + $hex;
+@function arrow-icon-url-image($color) {
+  $hex: if(meta.type-of($color) == "color", "#{$color}", $color);
+  $encoded-color: "%23" + string.slice($hex, 2);
   $svg: "<svg viewBox='0 0 100 100' width='14' height='14' xmlns='http://www.w3.org/2000/svg'><path d='M10 30 L50 70 L90 30' stroke='" +
     $encoded-color + "' stroke-width='10' fill='none' stroke-linecap='round'/></svg>";
   $url: 'url("data:image/svg+xml,' + $svg + '")';

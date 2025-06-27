@@ -1,0 +1,44 @@
+// MAIN SCSS VARIABLES
+
+// fonts
+$font-base: "Roboto Mono", monospace !default;
+$font-heading: "Roboto Mono", monospace !default;
+$font-mono: "Consolas", monospace !default;
+
+// light colors
+$light-bg-color: #efead0 !default;
+$light-main-color: #5f605e !default;
+$light-caret-color: #5f605e !default;
+$light-sub-color: #8f8e84 !default;
+$light-sub-alt-color: #dbd6c4 !default;
+$light-text-color: #333538 !default;
+$light-success-color: #05aa6d !default;
+$light-success-extra-color: #{mix(black, $light-success-color, 20%)} !default;
+$light-info-color: #2196f3 !default;
+$light-info-extra-color: #{mix(black, $light-info-color, 20%)} !default;
+$light-danger-color: #c43c53 !default;
+$light-danger-extra-color: #{mix(black, $light-danger-color, 20%)} !default;
+$light-warning-color: #d2ad3e !default;
+$light-warning-extra-color: #{mix(black, $light-warning-color, 20%)} !default;
+$light-highlight: #efdb43 !default;
+$light-black: #000000 !default;
+$light-selector-color: #333538 !default;
+
+// dark colors
+$dark-bg-color: #2f3338 !default;
+$dark-main-color: #d6d2bc !default;
+$dark-caret-color: #d6d2bc !default;
+$dark-sub-alt-color: #3a3c3d !default;
+$dark-sub-color: #8f8e84 !default;
+$dark-text-color: #d6d2bc !default;
+$dark-success-color: #05aa6d !default;
+$dark-success-extra-color: #{mix(black, $dark-success-color, 20%)} !default;
+$dark-info-color: #2196f3 !default;
+$dark-info-extra-color: #{mix(black, $dark-info-color, 20%)} !default;
+$dark-danger-color: #ff4a59 !default;
+$dark-danger-extra-color: #{mix(black, $dark-danger-color, 20%)} !default;
+$dark-warning-color: #feb53f !default;
+$dark-warning-extra-color: #{mix(black, $dark-warning-color, 20%)} !default;
+$dark-highlight: #efdb43 !default;
+$dark-black: #000000 !default;
+$dark-selector-color: #d6d2bc !default;

@@ -29,9 +29,11 @@ input[type="color"] {
   padding: var(--size-16px);
   border-radius: var(--size-2xs);
   border: var(--size-2px) solid;
+
   &.active {
     display: block;
   }
+
   & hstack:not(:last-child) {
     margin-bottom: var(--size-10px);
   }

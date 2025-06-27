@@ -1,52 +1,16 @@
-/* VARIABLES MIXINS */
+// GENERATION OF CSS VARIABLES
 
 @use "helpers";
 @use "sizes" as *;
+@use "scss-variables" as *;
 
 $sizes: map-merge($sizes-1, $sizes-2);
 $sizes: map-merge($sizes, $ext-size);
 
-// light colors
-$light-bg-color: #efead0;
-$light-main-color: #5f605e;
-$light-caret-color: #5f605e;
-$light-sub-color: #8f8e84;
-$light-sub-alt-color: #dbd6c4;
-$light-text-color: #333538;
-$light-success-color: #05aa6d;
-$light-success-extra-color: #{mix(black, $light-success-color, 20%)};
-$light-info-color: #2196f3;
-$light-info-extra-color: #{mix(black, $light-info-color, 20%)};
-$light-danger-color: #c43c53;
-$light-danger-extra-color: #{mix(black, $light-danger-color, 20%)};
-$light-warning-color: #d2ad3e;
-$light-warning-extra-color: #{mix(black, $light-warning-color, 20%)};
-$light-highlight: #efdb43;
-$light-black: #000000;
-
-// dark colors
-$dark-bg-color: #2f3338;
-$dark-main-color: #d6d2bc;
-$dark-caret-color: #d6d2bc;
-$dark-sub-alt-color: #3a3c3d;
-$dark-sub-color: #8f8e84;
-$dark-text-color: #d6d2bc;
-$dark-success-color: #05aa6d;
-$dark-success-extra-color: #{mix(black, $dark-success-color, 20%)};
-$dark-info-color: #2196f3;
-$dark-info-extra-color: #{mix(black, $dark-info-color, 20%)};
-$dark-danger-color: #ff4a59;
-$dark-danger-extra-color: #{mix(black, $dark-danger-color, 20%)};
-$dark-warning-color: #feb53f;
-$dark-warning-extra-color: #{mix(black, $dark-warning-color, 20%)};
-$dark-highlight: #efdb43;
-$dark-black: #000000;
-$dark-selector-image: #{helpers.arrow-icon-url("#d6d2bc")};
-
 @mixin fonts {
-  --font-base: "Roboto Mono", monospace;
-  --font-heading: "Monaco", sans-serif;
-  --font-mono: "Consolas", monospace;
+  --font-base: #{$font-base};
+  --font-heading: #{$font-heading};
+  --font-mono: #{$font-mono};
 }
 
 @mixin sizes {
@@ -72,7 +36,7 @@ $dark-selector-image: #{helpers.arrow-icon-url("#d6d2bc")};
   --warning-extra-color: #{$light-warning-extra-color};
   --highlight: #{$light-highlight};
   --black: #{$light-black};
-  --selector-image: #{helpers.arrow-icon-url("#333538")};
+  --selector-image: #{helpers.arrow-icon-url-image($light-selector-color)};
 }
 
 @mixin dark-theme {
@@ -92,5 +56,5 @@ $dark-selector-image: #{helpers.arrow-icon-url("#d6d2bc")};
   --warning-extra-color: #{$dark-warning-extra-color};
   --highlight: #{$dark-highlight};
   --black: #{$dark-black};
-  --selector-image: #{helpers.arrow-icon-url("#d6d2bc")};
+  --selector-image: #{helpers.arrow-icon-url-image($dark-selector-color)};
 }
