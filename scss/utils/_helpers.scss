@@ -59,7 +59,7 @@ $radius-mini-map: (
   @return unquote($url);
 }
 
-@function get-radius-value($key: scss-vars.$radius-key, $map: $radius-map) {
+@function get-radius-value($key: scss-vars.$rounded, $map: $radius-map) {
   $default: "xs";
 
   @if map.has-key($map, $key) {
@@ -71,6 +71,6 @@ $radius-mini-map: (
   @return map.get($map, $default);
 }
 
-@function get-radius-value-for-mini($key: scss-vars.$radius-key) {
+@function get-radius-value-for-mini($key: scss-vars.$rounded) {
   @return get-radius-value($key, $radius-mini-map);
 }
