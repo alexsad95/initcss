@@ -1,6 +1,7 @@
 /* BADGES */
 
 @use "../utils/scss-variables" as *;
+@use "../utils/helpers";
 
 $danger: $dark-danger-color;
 $primary: $dark-info-color;
@@ -35,7 +36,7 @@ $ic-colors: (
   gap: 0.25rem;
   padding: 0.1rem 0.5rem;
   font-size: 0.875rem;
-  border-radius: var(--size-xs);
+  border-radius: var(--radius);
   background: var(--ic-badge-bg);
   color: var(--ic-badge-color);
   padding: 0.5rem;
@@ -53,7 +54,8 @@ $ic-colors: (
   }
 
   &.ic-large {
-    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 1.5rem;
     height: 40px;
   }
 

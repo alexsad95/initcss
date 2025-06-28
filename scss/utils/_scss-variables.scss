@@ -1,5 +1,9 @@
 // MAIN SCSS VARIABLES
 
+// value for main border-radius of elements
+// "0", "3xs", "2xs", "xs", "s" sizes
+$radius-key: "xs" !default;
+
 // fonts
 $font-base: "Roboto Mono", monospace !default;
 $font-heading: "Roboto Mono", monospace !default;

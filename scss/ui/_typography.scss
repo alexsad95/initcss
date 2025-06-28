@@ -91,7 +91,7 @@ dd {
 
 mark {
   background-color: var(--highlight);
-  border-radius: var(--size-xs);
+  border-radius: var(--radius-mini);
   padding: var(--size-3xs);
   color: var(--black);
 }
@@ -99,7 +99,7 @@ mark {
 kbd {
   color: var(--bg-color);
   background-color: var(--sub-color);
-  border-radius: var(--size-xs);
+  border-radius: var(--radius-mini);
   padding: 0.2rem 0.3rem;
   margin: 0;
   display: inline-block;

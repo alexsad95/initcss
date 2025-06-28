@@ -2,7 +2,7 @@
 
 pre {
   background: var(--sub-alt-color);
-  border-radius: var(--size-xs);
+  border-radius: var(--radius);
   color: var(--text-color);
   padding: 1rem;
   overflow-x: auto;
@@ -21,13 +21,13 @@ code {
   font-family: var(--font-mono);
   font-size: 0.8rem;
   background: var(--sub-alt-color);
-  border-radius: var(--size-xs);
+  border-radius: var(--radius-mini);
   padding: 0.2rem 0.4rem;
 }
 
 .ic-code-block {
   background: var(--sub-alt-color);
-  border-radius: var(--size-xs);
+  border-radius: var(--radius);
   position: relative;
 
   &__header {
@@ -35,6 +35,7 @@ code {
     justify-content: flex-end;
     padding: 0.25rem 0.5rem;
     background: var(--sub-alt-color);
+    border-radius: var(--radius);
     font-size: 0.75rem;
     font-family: monospace;
     position: absolute;
@@ -46,7 +47,7 @@ code {
   &__lang {
     display: inline;
     padding-top: 0.35rem;
-    border-radius: var(--size-xs);
+    border-radius: var(--radius);
   }
 
   &__copy-btn {

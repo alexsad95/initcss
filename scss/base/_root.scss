@@ -5,6 +5,7 @@
 :root {
   @include var.sizes;
   @include var.fonts;
+  @include var.radius;
 
   .dark {
     @include var.dark-theme;

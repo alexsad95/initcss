@@ -7,6 +7,11 @@
 $sizes: map-merge($sizes-1, $sizes-2);
 $sizes: map-merge($sizes, $ext-size);
 
+@mixin radius {
+  --radius: #{helpers.get-radius-value()};
+  --radius-mini: #{helpers.get-radius-value-for-mini()};
+}
+
 @mixin fonts {
   --font-base: #{$font-base};
   --font-heading: #{$font-heading};

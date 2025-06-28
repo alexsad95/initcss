@@ -1,7 +1,25 @@
 // UTILITY MIXINS AND FUNCTIONS
 
+@use "sass:map";
 @use "sass:meta";
 @use "sass:string";
+@use "../utils/scss-variables" as scss-vars;
+
+$radius-map: (
+  "0": 0,
+  "3xs": 0.125rem,
+  "2xs": 0.25rem,
+  "xs": 0.5rem,
+  "s": 1rem
+);
+
+$radius-mini-map: (
+  "0": 0,
+  "3xs": 0.125rem,
+  "2xs": 0.25rem,
+  "xs": 0.25rem,
+  "s": 0.25rem
+);
 
 @mixin outline-property-basis($type-of-var) {
   border: 2px solid var(--#{$type-of-var}-color);
@@ -39,4 +57,20 @@
   $url: 'url("data:image/svg+xml,' + $svg + '")';
 
   @return unquote($url);
+}
+
+@function get-radius-value($key: scss-vars.$radius-key, $map: $radius-map) {
+  $default: "xs";
+
+  @if map.has-key($map, $key) {
+    @return map.get($map, $key);
+  }
+
+  @warn 'Unknown radius key "#{$key}", falling back to "#{$default}"';
+
+  @return map.get($map, $default);
+}
+
+@function get-radius-value-for-mini($key: scss-vars.$radius-key) {
+  @return get-radius-value($key, $radius-mini-map);
 }
