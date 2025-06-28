@@ -9,17 +9,16 @@ type Themes = 'dark' | 'light';
 
 // Base page elements
 const toggleThemeButton = document.getElementById('theme-button');
-// const themeChangeButton = document.getElementById('theme-changing');
+const githubButton = document.getElementById('github-link-button');
 const activeOutlineButton = document.getElementById('active-outline-button');
 const activeButton = document.getElementById('active-button');
-// const themeChangingBlock = document.getElementById('theme-changing-block');
 
 /**
  * Main event handler for initializing UI elements and setting up theme
  * and button actions after page load
  */
 document.addEventListener('DOMContentLoaded', () => {
-  if (!(toggleThemeButton && activeOutlineButton && activeButton)) {
+  if (!(toggleThemeButton && githubButton && activeOutlineButton && activeButton)) {
     console.error(
       'Not found some elements: ',
       toggleThemeButton,
@@ -40,11 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
   checkThemeForIcons();
   setupCopyButtons();
 
-  // Indeterminated checkbox
-  // (indeterminateCheckbox as HTMLInputElement).indeterminate = true;
-
   // Add events for buttons
-  // document.addEventListener('click', (event) => closeActivatedThemeChanger(event));
   toggleThemeButton.addEventListener('click', toggleTheme);
   activeOutlineButton.addEventListener('click', () => toggleActiveButton(activeOutlineButton));
   activeButton.addEventListener('click', () => toggleActiveButton(activeButton));
@@ -53,10 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
     ...defaultTippyOptions,
     content: 'Theme switcher',
   });
-  // tippy(themeChangeButton, {
-  //   ...defaultTippyOptions,
-  //   content: 'Change themes',
-  // });
+
+  tippy(githubButton, {
+    ...defaultTippyOptions,
+    content: 'Github link',
+  });
 });
 
 /**
@@ -114,6 +110,13 @@ function checkThemeForIcons(): void {
   themeDarkSvg.style.display = isLightTheme ? 'none' : 'block';
 }
 
+/**
+ * Sets up code block copy buttons.
+ *
+ * For each `.ic-code-block__copy-btn`, sets up a click event listener that copies the
+ * text content of the `<code>` element inside the closest `.ic-code-block` to the
+ * clipboard.
+ */
 function setupCopyButtons(): void {
   const buttons = document.querySelectorAll<HTMLButtonElement>('.ic-code-block__copy-btn');
 
@@ -130,36 +133,3 @@ function setupCopyButtons(): void {
     });
   });
 }
-
-/**
- * Activates or deactivates theme changing block
- */
-// function activateThemeChanger(): void {
-//   if (!themeChangingBlock) {
-//     console.error('Not found theme changing block');
-//     return;
-//   }
-
-//   themeChangingBlock.classList.toggle('active');
-// }
-
-/**
- * Closes theme changing block if it's activated and user clicked outside of it
- */
-// function closeActivatedThemeChanger(event: MouseEvent): void {
-//   if (!themeChangingBlock) {
-//     console.error('Not found theme changing block');
-//     return;
-//   }
-
-//   const target = event.target as HTMLElement;
-
-//   if (
-//     target &&
-//     !target.closest('#theme-changing') &&
-//     !target.closest('#theme-changing-block') &&
-//     themeChangingBlock.classList.contains('active')
-//   ) {
-//     themeChangingBlock.classList.remove('active');
-//   }
-// }

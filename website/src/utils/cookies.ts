@@ -10,15 +10,13 @@ export function setCookie(name: string, value: string, days: number): void {
  * Function for getting a cookie value
  */
 export function getCookie(name: string): string | null {
-  const value = `; ${document.cookie}`;
-  const parts = value.split(`; ${name}=`);
-  const lastPart = parts.pop(); // Contains cookie value
+  const match = document.cookie.match(new RegExp(`(?:^|; )${encodeURIComponent(name)}=([^;]*)`));
+  return match ? decodeURIComponent(match[1]) : null;
+}
 
-  if (parts.length !== 2 || !lastPart) {
-    return null;
-  }
-
-  // If the last part is not undefined, return the first part of it (the cookie value)
-  // after splitting it by `;` (which is a separator for cookies)
-  return lastPart.split(';').shift() ?? null;
+/**
+ * Function for deleting a cookie
+ */
+export function deleteCookie(name: string): void {
+  document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
 }
