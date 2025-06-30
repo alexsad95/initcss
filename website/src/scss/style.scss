@@ -3,11 +3,11 @@
 // @import "../../../css/init.css"; // for local development
 
 .tippy-arrow {
-  color: var(--text-color);
+  color: var(--color-text);
 }
 
 .tippy-box[data-theme~="custom"] {
-  background: var(--text-color);
-  color: var(--bg-color);
+  background: var(--color-text);
+  color: var(--color-background);
   border-radius: var(--radius);
 }

@@ -3,7 +3,7 @@
 @mixin divider-style() {
   border: none;
   height: 1px;
-  background: var(--sub-color);
+  background: var(--color-main);
   border-radius: var(--radius);
   margin: 1rem 0;
 }
@@ -23,20 +23,20 @@
 
   &-dotted {
     border: none;
-    border-top: 1px dotted var(--sub-color);
+    border-top: 1px dotted var(--color-main);
     margin: 1.5rem 0;
   }
 
   &-dashed {
     border: none;
-    border-top: 1px dashed var(--sub-color);
+    border-top: 1px dashed var(--color-main);
     margin: 1.5rem 0;
   }
 
   &-vertical {
     width: 1px;
     height: 1.5em;
-    background: var(--sub-color);
+    background: var(--color-main);
     margin: 0 1rem;
   }
 
@@ -44,7 +44,7 @@
     display: flex;
     align-items: center;
     text-align: center;
-    color: var(--sub-color);
+    color: var(--color-main);
     margin: 1rem 0;
   }
 
@@ -52,7 +52,7 @@
   &-text::after {
     content: "";
     flex: 1;
-    border-bottom: 1px solid var(--sub-color);
+    border-bottom: 1px solid var(--color-main);
   }
 
   &-text::before {

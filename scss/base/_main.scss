@@ -12,18 +12,18 @@ body {
   padding: var(--size-m);
   font-family: var(--font-base);
   line-height: 1.4;
-  color: var(--text-color);
-  background: var(--bg-color);
+  color: var(--color-text);
+  background: var(--color-background);
 }
 
 ::-moz-selection {
-  background: var(--text-color);
-  color: var(--sub-alt-color);
+  background: var(--color-text);
+  color: var(--color-sub-alt);
 }
 
 ::selection {
-  background: var(--text-color);
-  color: var(--sub-alt-color);
+  background: var(--color-text);
+  color: var(--color-sub-alt);
 }
 
 :autofill,
@@ -31,8 +31,8 @@ body {
 :-webkit-autofill:hover,
 :-webkit-autofill:focus,
 :-webkit-autofill:active {
-  -webkit-text-fill-color: var(--text-color);
-  -webkit-box-shadow: 0 0 0 1000px var(--sub-alt-color) inset !important;
+  -webkit-text-fill-color: var(--color-text);
+  -webkit-box-shadow: 0 0 0 1000px var(--color-sub-alt) inset !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
 }
@@ -42,20 +42,20 @@ body {
 }
 
 .ic-bordered {
-  border: 2px solid var(--main-color);
+  border: 2px solid var(--color-main);
 }
 
 .ic-dashed {
-  border: 2px dashed var(--main-color);
+  border: 2px dashed var(--color-main);
 }
 
 .ic-dotted {
-  border: 2px dotted var(--main-color);
+  border: 2px dotted var(--color-main);
 }
 
 .ic-underline {
   text-decoration: underline;
   text-underline-offset: 4px;
   text-decoration-thickness: 2px;
-  text-decoration-color: var(--sub-color);
+  text-decoration-color: var(--color-main);
 }

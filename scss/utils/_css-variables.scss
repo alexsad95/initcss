@@ -1,7 +1,9 @@
 // GENERATION OF CSS VARIABLES
 
+@use "sass:map";
 @use "helpers";
 @use "sizes" as *;
+@use "themes" as *;
 @use "scss-variables" as *;
 
 $sizes: map-merge($sizes-1, $sizes-2);
@@ -24,42 +26,20 @@ $sizes: map-merge($sizes, $ext-size);
   }
 }
 
-@mixin light-theme {
-  --bg-color: #{$light-bg-color};
-  --main-color: #{$light-main-color};
-  --caret-color: #{$light-caret-color};
-  --sub-color: #{$light-sub-color};
-  --sub-alt-color: #{$light-sub-alt-color};
-  --text-color: #{$light-text-color};
-  --success-color: #{$light-success-color};
-  --success-extra-color: #{$light-success-extra-color};
-  --info-color: #{$light-info-color};
-  --info-extra-color: #{$light-info-extra-color};
-  --danger-color: #{$light-danger-color};
-  --danger-extra-color: #{$light-danger-extra-color};
-  --warning-color: #{$light-warning-color};
-  --warning-extra-color: #{$light-warning-extra-color};
-  --highlight: #{$light-highlight};
-  --black: #{$light-black};
-  --selector-image: #{helpers.arrow-icon-url-image($light-selector-color)};
-}
+@mixin apply-theme-vars($theme-name: "9009-light") {
+  $actual-theme: map.get($themes, $theme-name);
 
-@mixin dark-theme {
-  --bg-color: #{$dark-bg-color};
-  --main-color: #{$dark-main-color};
-  --caret-color: #{$dark-caret-color};
-  --sub-alt-color: #{$dark-sub-alt-color};
-  --sub-color: #{$dark-sub-color};
-  --text-color: #{$dark-text-color};
-  --success-color: #{$dark-success-color};
-  --success-extra-color: #{$dark-success-extra-color};
-  --info-color: #{$dark-info-color};
-  --info-extra-color: #{$dark-info-extra-color};
-  --danger-color: #{$dark-danger-color};
-  --danger-extra-color: #{$dark-danger-extra-color};
-  --warning-color: #{$dark-warning-color};
-  --warning-extra-color: #{$dark-warning-extra-color};
-  --highlight: #{$dark-highlight};
-  --black: #{$dark-black};
-  --selector-image: #{helpers.arrow-icon-url-image($dark-selector-color)};
+  @if $actual-theme == null {
+    @error "The `#{$theme-name}` theme isn't found.";
+  }
+
+  @each $key, $value in $actual-theme {
+    --color-#{$key}: #{$value};
+  }
+
+  --color-success-extra: #{mix(black, map.get($actual-theme, "success"), 20%)};
+  --color-info-extra: #{mix(black, map.get($actual-theme, "info"), 20%)};
+  --color-warning-extra: #{mix(black, map.get($actual-theme, "warning"), 20%)};
+  --color-danger-extra: #{mix(black, map.get($actual-theme, "danger"), 20%)};
+  --colored-selector-image: #{helpers.arrow-icon-url-image(map.get($actual-theme, "text"))};
 }

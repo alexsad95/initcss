@@ -3,11 +3,11 @@
 table {
   width: 100%;
   border-spacing: 0;
-  border: 2px solid var(--text-color);
+  border: 2px solid var(--color-main);
 
   td,
   th {
-    border: 1px solid var(--sub-color);
+    border: 1px solid var(--color-main);
     padding: 0.6rem;
   }
 
@@ -16,7 +16,7 @@ table {
   }
 
   colgroup col.ic-highlight-col {
-    background: var(--sub-alt-color);
+    background: var(--color-sub-alt);
   }
 
   &.ic-horizontal-dividers {
@@ -25,26 +25,26 @@ table {
     td,
     th {
       border: none;
-      border-bottom: 1px solid var(--sub-color);
+      border-bottom: 1px solid var(--color-main);
     }
   }
 
   &.ic-hoverable {
     tr:hover {
-      background: var(--sub-alt-color);
+      background: var(--color-sub-alt);
     }
   }
 
   &.ic-vertical-zebra {
     td:nth-child(even),
     th:nth-child(even) {
-      background: var(--sub-alt-color);
+      background: var(--color-sub-alt);
     }
   }
 
   &.ic-horizontal-zebra {
     tr:nth-child(even) {
-      background: var(--sub-alt-color);
+      background: var(--color-sub-alt);
     }
   }
 }

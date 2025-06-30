@@ -2,7 +2,7 @@
 
 a {
   display: inline-block;
-  color: var(--sub-color);
+  color: var(--color-sub);
   transition:
     color 0.2s,
     opacity 0.2s,
@@ -19,14 +19,14 @@ a {
   }
 
   &:hover {
-    color: var(--text-color);
+    color: var(--color-text);
   }
 
   &:focus-visible {
     outline: none;
     box-shadow:
-      0 0 0 0.1rem var(--bg-color),
-      0 0 0 0.2rem var(--text-color);
+      0 0 0 0.1rem var(--color-background),
+      0 0 0 0.2rem var(--color-text);
     border-radius: var(--radius);
   }
 }

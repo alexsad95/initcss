@@ -4,8 +4,8 @@ h1 {
   font-size: 1.8rem;
 
   &.ic-highlight-text {
-    background: var(--text-color);
-    color: var(--bg-color);
+    background: var(--color-text);
+    color: var(--color-background);
     font-size: 3rem;
     display: inline;
     padding: 0 0.2rem;
@@ -90,15 +90,15 @@ dd {
 }
 
 mark {
-  background-color: var(--highlight);
+  background-color: var(--color-highlight);
   border-radius: var(--radius-mini);
   padding: var(--size-3xs);
-  color: var(--black);
+  color: var(--color-black);
 }
 
 kbd {
-  color: var(--bg-color);
-  background-color: var(--sub-color);
+  color: var(--color-background);
+  background-color: var(--color-sub);
   border-radius: var(--radius-mini);
   padding: 0.2rem 0.3rem;
   margin: 0;

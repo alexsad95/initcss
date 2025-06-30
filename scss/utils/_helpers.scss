@@ -22,9 +22,9 @@ $radius-mini-map: (
 );
 
 @mixin outline-property-basis($type-of-var) {
-  border: 2px solid var(--#{$type-of-var}-color);
-  background: var(--bg-color);
-  color: var(--#{$type-of-var}-color);
+  border: 2px solid var(--color-#{$type-of-var});
+  background: var(--color-background);
+  color: var(--color-#{$type-of-var});
 }
 
 @mixin button-style($type-of-button) {
@@ -35,15 +35,15 @@ $radius-mini-map: (
   }
 
   &.ic-#{$button-class} {
-    background: var(--#{$type-of-button}-color);
-    color: var(--bg-color);
+    background: var(--color-#{$type-of-button});
+    color: var(--color-background);
 
     &:hover {
-      background: var(--#{$type-of-button}-extra-color);
+      background: var(--color-#{$type-of-button}-extra);
     }
 
     &:active {
-      background: var(--#{$type-of-button}-extra-color);
+      background: var(--color-#{$type-of-button}-extra);
       opacity: 0.8;
     }
   }

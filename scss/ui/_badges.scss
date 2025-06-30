@@ -1,18 +1,14 @@
 /* BADGES */
 
+@use "sass:map";
 @use "../utils/scss-variables" as *;
-@use "../utils/helpers";
-
-$danger: $dark-danger-color;
-$primary: $dark-info-color;
-$success: $dark-success-color;
-$warning: $dark-warning-color;
+@use "../utils/themes" as *;
 
 $ic-colors: (
-  primary: $primary,
-  danger: $danger,
-  warning: $warning,
-  success: $success
+  primary: map-get(map-get($themes, $theme), "info"),
+  danger: map-get(map-get($themes, $theme), "danger"),
+  warning: map-get(map-get($themes, $theme), "warning"),
+  success: map-get(map-get($themes, $theme), "success")
 );
 
 @mixin ic-badge-variant($name, $color) {
@@ -27,9 +23,9 @@ $ic-colors: (
 }
 
 .ic-badge {
-  --primary: var(--info-color);
-  --ic-badge-bg: var(--sub-alt-color);
-  --ic-badge-color: var(--text-color);
+  --primary: var(--color-info);
+  --ic-badge-bg: var(--color-sub-alt);
+  --ic-badge-color: var(--color-text);
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -75,7 +71,7 @@ $ic-colors: (
     background: var(--ic-badge-color);
     color: var(--ic-badge-bg);
     border-radius: 9999px;
-    border: 1px solid var(--sub-color);
+    border: 1px solid var(--color-sub);
     display: flex;
     align-items: center;
     justify-content: center;
