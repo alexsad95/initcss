@@ -22,15 +22,25 @@
   }
 
   &-dotted {
-    border: none;
-    border-top: 1px dotted var(--color-main);
+    height: 4px;
     margin: 1.5rem 0;
+    border: none;
+    background-image: radial-gradient(var(--color-main) 1px, transparent 1px);
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: 4px 4px;
   }
 
   &-dashed {
-    border: none;
-    border-top: 1px dashed var(--color-main);
+    height: 2px;
     margin: 1.5rem 0;
+    background-image: repeating-linear-gradient(
+      to right,
+      var(--color-main),
+      var(--color-main) 12px,
+      transparent 12px,
+      transparent 20px
+    );
   }
 
   &-vertical {

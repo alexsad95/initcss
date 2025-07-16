@@ -55,7 +55,23 @@ body {
 
 .ic-underline {
   text-decoration: underline;
-  text-underline-offset: 4px;
+  text-underline-offset: 6px;
   text-decoration-thickness: 2px;
   text-decoration-color: var(--color-main);
+}
+
+.ic-underline-dashed {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--color-main);
+  text-decoration-style: dashed;
+}
+
+.ic-underline-dotted {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--color-main);
+  text-decoration-style: dotted;
 }
