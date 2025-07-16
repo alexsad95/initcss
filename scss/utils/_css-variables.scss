@@ -34,7 +34,7 @@ $sizes: map-merge($sizes, $ext-size);
   }
 
   @each $key, $value in $actual-theme {
-    --color-#{$key}: #{$value};
+    --color-#{"" + $key}: #{$value};
   }
 
   --color-success-extra: #{mix(black, map.get($actual-theme, "success"), 20%)};

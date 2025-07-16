@@ -3,50 +3,41 @@ import tippy from 'tippy.js';
 import { defaultTippyOptions } from './utils/constants';
 import { getCookie, setCookie } from './utils/cookies';
 
-import './scss/style.scss';
-
-type Themes = 'dark' | 'light';
+import './components/theme-customizer';
+import './scss/main.scss';
 
 // Base page elements
-const toggleThemeButton = document.getElementById('theme-button');
+const themeCustomizerButton = document.getElementById('theme-customizer-button');
 const githubButton = document.getElementById('github-link-button');
-const activeOutlineButton = document.getElementById('active-outline-button');
 const activeButton = document.getElementById('active-button');
+const activeOutlineButton = document.getElementById('active-outline-button');
 
 /**
  * Main event handler for initializing UI elements and setting up theme
  * and button actions after page load
  */
 document.addEventListener('DOMContentLoaded', () => {
-  if (!(toggleThemeButton && githubButton && activeOutlineButton && activeButton)) {
+  initTheme();
+
+  if (!(themeCustomizerButton && githubButton && activeOutlineButton && activeButton)) {
     console.error(
       'Not found some elements: ',
-      toggleThemeButton,
-      activeOutlineButton,
+      themeCustomizerButton,
       activeButton,
+      activeOutlineButton,
     );
     return;
   }
 
-  // Get saved theme from cookie
-  const savedTheme = getCookie('theme');
-  if (savedTheme) {
-    applyTheme(savedTheme as Themes);
-  } else {
-    applyTheme('dark'); // Default theme
-  }
-
-  checkThemeForIcons();
   setupCopyButtons();
 
   // Add events for buttons
-  toggleThemeButton.addEventListener('click', toggleTheme);
-  activeOutlineButton.addEventListener('click', () => toggleActiveButton(activeOutlineButton));
   activeButton.addEventListener('click', () => toggleActiveButton(activeButton));
+  activeOutlineButton.addEventListener('click', () => toggleActiveButton(activeOutlineButton));
 
-  tippy(toggleThemeButton, {
+  tippy(themeCustomizerButton, {
     ...defaultTippyOptions,
-    content: 'Theme switcher',
+    content: 'Theme customizing',
   });
 
   tippy(githubButton, {
@@ -70,52 +61,7 @@ function toggleActiveButton(activeButtonEl: HTMLElement | null): void {
 }
 
 /**
- * For switching theme
- */
-function toggleTheme(): void {
-  const isLightTheme = document.body.className === 'light';
-  const newTheme = isLightTheme ? 'dark' : 'light';
-
-  applyTheme(newTheme);
-  checkThemeForIcons();
-}
-
-/**
- * For applying a theme
- */
-function applyTheme(theme: Themes): void {
-  document.body.className = theme;
-  setCookie('theme', theme, 365);
-}
-
-/**
- * Changing icons in theme button based on current theme
- */
-function checkThemeForIcons(): void {
-  if (!toggleThemeButton) {
-    console.error('Not found theme button');
-    return;
-  }
-
-  const themeChildrenElements = toggleThemeButton.children;
-  if (themeChildrenElements.length < 2) {
-    console.error('Expected at least two child elements for the theme button');
-    return;
-  }
-
-  const [themeLightSvg, themeDarkSvg] = Array.from(themeChildrenElements) as HTMLElement[];
-  const isLightTheme = document.body.className === 'light';
-
-  themeLightSvg.style.display = isLightTheme ? 'block' : 'none';
-  themeDarkSvg.style.display = isLightTheme ? 'none' : 'block';
-}
-
-/**
  * Sets up code block copy buttons.
- *
- * For each `.ic-code-block__copy-btn`, sets up a click event listener that copies the
- * text content of the `<code>` element inside the closest `.ic-code-block` to the
- * clipboard.
  */
 function setupCopyButtons(): void {
   const buttons = document.querySelectorAll<HTMLButtonElement>('.ic-code-block__copy-btn');
@@ -132,4 +78,15 @@ function setupCopyButtons(): void {
       });
     });
   });
+}
+
+function applyTheme(themeName: string): void {
+  document.documentElement.setAttribute('data-theme', themeName);
+  setCookie('theme', themeName);
+}
+
+function initTheme(): void {
+  const saved = getCookie('theme');
+  const theme = saved || 'gruvbox-dark';
+  applyTheme(theme);
 }

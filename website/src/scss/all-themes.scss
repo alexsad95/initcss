@@ -1,0 +1,19 @@
+// Added variables with colors for all themes
+
+@use "sass:map";
+@use "../../../scss/utils/helpers";
+@use "../../../scss/utils/themes" as *;
+
+@each $name, $theme in $themes {
+  [data-theme="#{$name}"] {
+    @each $key, $value in $theme {
+      --color-#{"" + $key}: #{$value};
+    }
+
+    --color-success-extra: #{mix(black, map.get($theme, "success"), 20%)};
+    --color-info-extra: #{mix(black, map.get($theme, "info"), 20%)};
+    --color-warning-extra: #{mix(black, map.get($theme, "warning"), 20%)};
+    --color-danger-extra: #{mix(black, map.get($theme, "danger"), 20%)};
+    --colored-selector-image: #{helpers.arrow-icon-url-image(map.get($theme, "text"))};
+  }
+}
